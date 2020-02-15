@@ -1,6 +1,12 @@
 a:hover{
 	color: red;
 }
+.relative {
+	position: relative;
+}
+.vertical_mid{
+	vertical-align: middle;
+}
 .top{
 	height: 30px;
 	background-color: #000000;
@@ -252,4 +258,33 @@ a:hover{
 
 .navigation_list_detailed li:hover .navigation_list_all_text{
 	display:block;
+}
+
+.footer {
+	padding: 30px 0;
+	text-align: center;
+	background-color: #000000;
+}
+
+.footer img {
+	background-repeat: no-repeat;
+	padding-right: 12px;
+}
+
+.footer a {
+	color: #6f6f6f;
+	margin: 0 22px;
+	font-size: 14px;
+	font-weight: 400;
+}
+
+.footer .text a:first-child {
+	margin-left: 0;
+}
+
+.footer a:hover {
+	color: #6f6f6f;
+	font-size: 14px;
+	font-weight: 400;
+	text-decoration: none;
 }
