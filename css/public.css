@@ -1,0 +1,255 @@
+a:hover{
+	color: red;
+}
+.top{
+	height: 30px;
+	background-color: #000000;
+}
+.top_content{
+	width: 1190px;
+	height: 30px;
+	margin: 0 auto;
+	line-height: 30px;
+}
+.top_left a,.top_text a{
+	color: #FFFFFF;
+	margin: 0 12px;
+}
+
+.top_left{
+	width: 440px;
+	height: 30px;
+}
+.top_content i{
+	height: 16px;
+	border-left: 1px solid white;
+	
+}
+.top_text{
+	width: 230px;
+	height: 30px;
+	
+}
+.top_photo{
+	background: url(../public_img/ia_300000196.png);
+}
+
+.top_icon{
+	width: 9px;
+	height: 4px;
+	display: inline-block;
+	background-position:-3px -16px;
+}
+.top_user{
+	position: relative;
+}
+.top_right > span{
+	display: inline-block;
+	margin-left: 22px;
+	height: 30px;
+}
+.top_right_hover{
+	position: absolute;
+	width: 90px;
+	height: 37px;
+	display: none;
+	background-position:0px 0px;
+	top: 24px;
+	left: 0;
+}
+
+.top_user:hover .top_icon{
+	background-position:-3px -12px;
+}
+
+.top_user:hover .top_right_hover{
+	display: inline-block;
+}
+
+.top_right_user{
+	display: inline-block;
+	width: 12px;
+	height: 12px;
+	background: url(../public_img/ia_300000194.png);
+	background-size: 100% 100%;
+	margin-right: 6px;
+	vertical-align: middle;
+}
+
+.top_right a{
+	color: #FFFFFF;
+}
+
+.top_right_hover a{
+	display: block;
+	margin-top: 6px;
+	border: 1px solid #898989;
+	border-top:none ;
+	width: 90px;
+	height: 30px;
+	line-height: 30px;
+	text-align: center;
+	color: #000000;
+}
+.top_right_hover a:hover{
+	background-color: #bfbfbf;
+	color: red;
+}
+.top_right_vip{
+	display: inline-block;
+	width: 12px;
+	height: 12px;
+	margin-right: 6px;
+	vertical-align: middle;
+	background: url(../public_img/ia_300000197.png);
+}
+.top_right_phone{
+	display: inline-block;
+	width: 7px;
+	height: 12px;
+	margin-right: 6px;
+	vertical-align: middle;
+	background: url(../public_img/mobile-sephora.png);
+}
+.search{
+	padding: 24px 0;
+}
+.relative{
+	position: relative;
+}
+.search_log{
+	width: 320px;
+	height: 36px;
+}
+.search_input{
+	height: 36px;
+	width: 650px;
+}
+.search_input a:hover{
+	color: white;
+}
+.search_input_text{
+	width: 520px;
+	height: 34px;
+	line-height: 34px;
+	padding-left: 20px;
+	font-size: 12px;
+	border: 1px solid #dedede;
+}
+.search_goods_list{
+	display: inline-block;
+	height: 36px;
+	width: 90px;
+	background-color: #000000;
+	color: white;
+	text-align: center;
+	line-height: 34px;
+	font-size: 16px;
+}
+.search_cart{
+	width: 188px;
+	height: 34px;
+	border: 1px solid #dedede;
+	
+	
+}
+.search_cart_link{
+	display: inline-block;
+	width: 188px;
+	height: 34px;
+	font-size: 16px;
+	color: #000000;
+	line-height: 34px;
+	text-align: center;
+}
+.search_cart_link img{
+	vertical-align: middle;
+}
+.search_cart a:hover{
+	color: #000000;
+}
+.search_cart_link b{
+	color: red;
+}
+.search_promise{
+	position: absolute;
+	top: 0;
+	right: 0;
+}
+.navigation_list{
+	background: url(../public_img/ia_300000206.png);
+	height: 36px;
+	width: 240px;
+	line-height: 36px;
+}
+.navigation_list_all{
+	font-size: 16px;
+	color: white;
+	margin-left: 18px;
+}
+.navigation_list_detailed{
+	width: 240px;
+}
+.navigation_list_detailed>li{
+	padding:8px 0px 0px 15px ;
+	height: 48px;
+	border-bottom: 1px solid #BFBFBF;
+}
+.navigation_list_detailed a{
+	margin-right: 10px;
+}
+.navigation_list_detailed_text{
+	display: block;
+	color: #000000;
+	font-size: 14px;
+	font-weight: 700;
+	margin-bottom: 5px;
+}
+.navigation_list_all_text{
+	width: 920px;
+	height: 520px;
+	position: absolute;
+	top: 0;
+	left: 240px;
+	display: none;
+	padding: 30px 0px 0px 30px;
+}
+.navigation_list_all_text_title{
+	height: 40px;
+	width: 600px;
+	border-bottom:1px solid #BFBFBF ;
+	margin-bottom:20px ;
+	padding-bottom:17px ;
+	line-height: 40px;
+	font-size:18px ;
+	font-weight: 400;
+	color: #000000;
+	display: inline-block;
+}
+.navigation_list_all_text_body{
+	width: 630px;
+	display: inline-block;
+}
+.navigation_list_all_text_body_title{
+	display: inline-block;
+	margin-right: 40px;
+	width: 160px;
+}
+.navigation_list_all_text_body_title>li{
+	margin-bottom: 20px;
+	font-size:16px ;
+	color: #000000;
+}
+.navigation_list_all_text_body_explain>li{
+	display: inline-block;
+	margin-right: 10px;
+	font-size:12px ;
+	color: #898989;
+}
+.navigation_list_all_text_photo{
+	display: inline-block;
+}
+
+.navigation_list_detailed li:hover .navigation_list_all_text{
+	display:block;
+}
