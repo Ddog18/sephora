@@ -1,0 +1,205 @@
+.logo_box {
+	width: 100%;
+	height: 89px;
+}
+
+.logo_box .txt {
+	font-size: 16px;
+	letter-spacing: 1px;
+	color: #333;
+	margin: 42px 0 0 30px;
+}
+
+.logo_box .logo {
+	margin: 28px 0 0;
+	cursor: pointer;
+}
+
+.login_box {
+	margin-top: 30px;
+}
+
+.login_box .grey {
+	color: #9d9d9d;
+}
+
+
+.login_box a {
+	color: #000;
+	cursor: pointer;
+}
+
+.login_box:hover a {
+	color: red;
+	cursor: pointer;
+	text-decoration: underline;
+}
+
+.login_box:hover .triangle {
+	border-left-color: red;
+}
+
+.triangle {
+	width: 0;
+	height: 0;
+	border-top: 4px solid transparent;
+	border-left: 5px solid #000;
+	border-bottom: 4px solid transparent;
+	margin-top: 5px;
+	margin-left: 2px;
+	display: inline-block;
+}
+
+.bg {
+	width: 100%;
+	height: 804px;
+	background: url(../img/register/bg.jpg) no-repeat scroll 50% 0;
+}
+
+.bg .table {
+	margin-top: 28px;
+	margin-left: 80px;
+}
+
+form p {
+	width: 100px;
+	height: 32px;
+	font-size: 14px;
+	color: #000000;
+	line-height: 32px;
+	margin-right: 10px;
+	text-align: center;
+	display: inline-block;
+}
+
+form .list input {
+	width: 298px;
+	height: 30px;
+	border: 1px solid #ccc;
+	text-indent: 20px;
+	outline: none;
+}
+
+form input:hover {
+	border-bottom: 1px solid #000;
+}
+
+.table .list .get_btn {
+	width: 120px;
+	height: 32px;
+	background: #ccc;
+	font-size: 14px;
+	color: white;
+	border: 0;
+	margin-left: 10px;
+	cursor: pointer;
+	transition: all .5s;
+	-webkit-transition: all .5s;
+}
+
+.table .list img {
+	margin-left: 10px;
+}
+
+.table .submit_btn {
+	margin-left: 110px;
+	margin-top: 38px;
+}
+
+.submit_btn button {
+	width: 300px;
+	height: 30px;
+	line-height: 30px;
+	background-color: #999;
+	color: white;
+	font-size: 14px;
+	border: 0;
+	letter-spacing: 2px;
+	text-align: center;
+}
+
+.check_box {
+	width: 300px;
+	line-height: 30px;
+}
+
+.check_box a {
+	color: #000;
+	cursor: pointer;
+}
+
+.check_box  a:hover{
+	color: red;
+	cursor: pointer;
+	text-decoration: underline;
+}
+
+.check_box .black_cor {
+	color: black;
+	margin: 0 -4px;
+}
+
+.check_box .fr a {
+	color: #9d9d9d;
+}
+
+.check_box .fr:hover div,
+.check_box .fr:hover a {
+	color: red;
+	border-left-color: red;
+}
+
+.check_box .triangle.color_grey {
+	border-left-color: #9d9d9d;
+}
+
+.errorTip {
+	margin-left: 110px;
+	height: 34px;
+	line-height: 24px;
+}
+
+
+
+.icon {
+	display: inline-block;
+	background: url(../img/register/icon.png) no-repeat;
+}
+
+.errorTip .errorRedIcon {
+	display: block;
+	margin: 5px 0 0;
+	width: 14px;
+	height: 14px;
+	background-position: -38px -14px;
+	opacity: 0;
+}
+
+.errorTip .errorFont {
+	display: block;
+	color: red;
+	margin-left: 5px;
+	opacity: 0;
+}
+.table .errorRed {
+	width: 18px;
+	height: 18px;
+	position: absolute;
+	margin: 7px 0 0 270px;
+	background-position: -20px -36px;
+	display: none;
+}
+
+.table .errorRedLine {
+	width: 299px;
+	height: 1px;
+	position: absolute;
+	margin: 31px 0 0;
+	background-color: #ff0700;
+	display: none;
+}
+.table .input_box{
+	display: inline-block;
+	
+}
+
