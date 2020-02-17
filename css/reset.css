@@ -2,7 +2,6 @@
 
 html,
 body {
-    color: #898989;
     background: #FFF;
     font-family: "Microsoft YaHei UI", "Microsoft YaHei UI Light", "微软雅黑", "宋体", Helvetica-Black-SemiBold, Tahoma, Arial, sans-serif;
     font-size: 12px;
@@ -17,7 +16,6 @@ ul,
 ol,
 li,
 h1,
-h2,
 h3,
 h4,
 h5,
@@ -80,7 +78,7 @@ th {
 }
 
 h1,
-h2,
+
 h3,
 h4,
 h5,
@@ -88,9 +86,7 @@ h6 {
     font-weight: normal;
 }
 
-h2 {
-    font-size: 16px;
-}
+
 
 h3 {
     font-size: 14px;

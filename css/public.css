@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-=======
-
->>>>>>> 7f1ad2624f7b102c2806a7c936dd62b65b4d5fc7
 a:hover{
 	color: red;
 }
@@ -205,6 +201,7 @@ a:hover{
 	display: none;
 }
 .navigation_list_detailed>li{
+	background-color: white;
 	line-height: 15px;
 	padding:8px 0px 0px 15px ;
 	height: 48px;
@@ -222,6 +219,7 @@ a:hover{
 	margin-bottom: 5px;
 }
 .navigation_list_all_text{
+	background-color: white;
 	width: 920px;
 	height: 482px;
 	position: absolute;
