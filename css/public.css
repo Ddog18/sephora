@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+=======
+
+>>>>>>> 7f1ad2624f7b102c2806a7c936dd62b65b4d5fc7
 a:hover{
 	color: red;
 }
@@ -336,3 +340,55 @@ a:hover{
 	font-size: 14px;
 	font-weight: 400;
 	text-decoration: none;
+}
+.footer_explain{
+	font-size: 0px;
+	width: 100%;
+	background-color: white;
+}
+.footer_explain_ico{
+	width: 236px;
+	height: 96px;
+	display: inline-block;
+}
+.footer_explain_ico>em{
+	width: 49px;
+	height: 49px;
+	display: block;
+	margin: 0 auto;
+	background-repeat: no-repeat;
+	background-image: url(../public_img/ia_300000229.png);
+}
+.footer_explain_ico_a{
+	background-position: -137px 0;
+}
+.footer_explain_ico_b{
+	background-position: -90px 0;
+}
+.footer_explain_ico_c{
+	background-position: 0 0;
+}
+.footer_explain_ico_d{
+	background-position: -180px 0;
+}
+.footer_explain_ico>em .footer_explain_ico_e{
+	width: 45px;
+	background-position: -47px 0;
+}
+.footer_explain_ico_text{
+	text-align: center;
+	display: block;
+	font-weight: 700;
+	height: 18px;
+	line-height: 18px;
+	margin-top: 14px;
+	color: #000000;
+	font-size: 12px;
+}
+.footer_explain_split{
+	height: 24px;
+	width: 1px;
+	background-color:#9d9d9d;
+	margin-bottom: 17px;
+	display: inline-block;
+}
