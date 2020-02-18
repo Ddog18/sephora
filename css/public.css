@@ -394,6 +394,9 @@ a:hover {
 	font-weight: 400;
 	text-decoration: none;
 }
+.footer .text span{
+	color: #6f6f6f;
+}
 .footer_explain{
 	font-size: 0px;
 	width: 100%;
