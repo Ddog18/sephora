@@ -3,7 +3,42 @@
 	<head>
 		<meta charset="utf-8">
 		<title></title>
+		<link rel="stylesheet" type="text/css" href="./css/reset.css" />
+		<link rel="stylesheet" type="text/css" href="css/public.css" />
+		<link rel="stylesheet" type="text/css" href="lib/Validform_v5.3.2/css/style.css" />
+		<link rel="stylesheet" type="text/css" href="css/register.css" />
+		<link rel="stylesheet" type="text/css" href="css/index.css" />
+		<link  rel="stylesheet" type="text/css" href="lib/Magnifier/css/base.css" />
+		<link rel="stylesheet" href="./css/goods_details.css">
+		<script src="js/jquery-3.4.1.min.js"></script>
+		<script type="text/javascript" src="./lib/Magnifier/js/jquery.jqzoom.js"></script>
+		<script type="text/javascript" src="./lib/Magnifier/js/base.js"></script>
 	</head>
 	<body>
+		<div class="head"></div>
+		<div class="goods_body">
+			<div class="container clearfix">
+				<div id="preview" class="spec-preview fl"> <span class="jqzoom"><img jqimg="./img/goods_details/2_n_07809_640x640.jpg" src="./img/goods_details/2_n_07809_640x640.jpg" /></span> </div>
+				  <!--缩图开始-->
+				  <div class="spec-scroll"> <a class="prev">&lt;</a> <a class="next">&gt;</a>
+				    <div class="items">
+				      <ul>
+				        <li><img  bimg="./img/goods_details/2_n_07809_640x640.jpg" src="./img/goods_details/2_n_07809_640x640.jpg" onmousemove="preview(this);"></li>
+				        <li><img  bimg="./img/goods_details/1_n_07809_640x640.jpg" src="./img/goods_details/1_n_07809_640x640.jpg" onmousemove="preview(this);"></li>
+				      </ul>
+				    </div>
+				  </div>
+				  <!--缩图结束-->
+				</div>
+				<div class="goods_body_explain fr">
+					
+				</div>
+			</div>
+		</div>
+		<script>
+			$(function() {
+				$('.head').load('head.html');
+			})
+		</script>
 	</body>
 </html>

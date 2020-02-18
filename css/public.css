@@ -1,8 +1,4 @@
-<<<<<<< HEAD
-a:hover{
-=======
 a:hover {
->>>>>>> 9b1ca7e6781e0bd6bef4f90a5aa94e7d255511d9
 	color: red;
 }
 
@@ -233,20 +229,20 @@ a:hover {
 }
 
 .navigation_list_detailed {
+	position: relative;
+	top:-1px;
+	z-index: 100;
 	width: 240px;
 	display: none;
 	background-color: white;
 }
-<<<<<<< HEAD
 .navigation_list_detailed>li{
 	background-color: white;
-=======
-
+}
 .navigation_list_detailed>li {
->>>>>>> 9b1ca7e6781e0bd6bef4f90a5aa94e7d255511d9
 	line-height: 15px;
 	padding: 8px 0px 0px 15px;
-	height: 48px;
+	height: 52px;
 	border-bottom: 1px solid #BFBFBF;
 }
 
@@ -262,17 +258,14 @@ a:hover {
 	font-weight: 700;
 	margin-bottom: 5px;
 }
-<<<<<<< HEAD
 .navigation_list_all_text{
 	background-color: white;
-=======
-
+}
 .navigation_list_all_text {
->>>>>>> 9b1ca7e6781e0bd6bef4f90a5aa94e7d255511d9
 	width: 920px;
 	height: 482px;
 	position: absolute;
-	top: 36px;
+	top: 0px;
 	left: 240px;
 	display: none;
 	padding: 30px 0px 0px 30px;
@@ -344,21 +337,16 @@ a:hover {
 	display: block;
 }
 
-<<<<<<< HEAD
 .navigation_list_quick{
-=======
-<<<<<<< HEAD .navigation_list_quick {
->>>>>>> 9b1ca7e6781e0bd6bef4f90a5aa94e7d255511d9
+}
+.navigation_list_quick {
 	width: 760px;
 	height: 36px;
 }
-<<<<<<< HEAD
 .navigation_list_quick_text{
 	margin-top: 16px;
-=======
-
+}
 .navigation_list_quick_text {
->>>>>>> 9b1ca7e6781e0bd6bef4f90a5aa94e7d255511d9
 	margin-left: 40px;
 }
 
@@ -377,15 +365,6 @@ a:hover {
 	color: red;
 }
 
-a:hover {
-	color: red;
-}
-<<<<<<< HEAD
-a:hover{
-	color:red;
-}
-=======
->>>>>>> 9b1ca7e6781e0bd6bef4f90a5aa94e7d255511d9
 
 .footer {
 	padding: 30px 0;
@@ -415,7 +394,6 @@ a:hover{
 	font-weight: 400;
 	text-decoration: none;
 }
-<<<<<<< HEAD
 .footer_explain{
 	font-size: 0px;
 	width: 100%;
@@ -467,6 +445,35 @@ a:hover{
 	margin-bottom: 17px;
 	display: inline-block;
 }
-=======
-
->>>>>>> 9b1ca7e6781e0bd6bef4f90a5aa94e7d255511d9
+.foot_map{
+	width: 100%;
+	background-color: white;
+}
+.foot_map_content{
+	height: 150px;
+	padding: 30px 0 50px;
+	background-repeat: no-repeat;
+	background-position: right 40px;
+	border-top: 2px solid #000;
+	background-image: url(../public_img/ia_300000230.png);
+}
+.foot_map_content>li{
+	width: 190px;
+	line-height: 24px;
+	display: inline-block;
+	vertical-align: top;
+}
+.foot_map_content>li>a{
+	display: block;
+	height: 26px;
+	line-height: 26px;
+}
+.foot_map_content_frist{
+	font-weight: bolder;
+	color:#000;
+	margin-bottom: 10px;
+}
+.foot_map_content_phone{
+	color:#000;
+	font-weight: 700;
+}
