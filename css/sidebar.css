@@ -1,0 +1,58 @@
+.fixedright{
+	position: fixed;
+	right: 104px;
+	bottom: 60px;
+}
+.fixedright_info>li{
+	height: 40px;
+	width: 40px;
+}
+.fixedright_info>li>a{
+	display: block;
+	width: 40px;
+	height: 40px;
+}
+.fixedright_info_text{
+	position: absolute;
+	display: none;
+	width: 80px;
+	height: 40px;
+	line-height: 40px;
+	text-align: center;
+	color:#fff;
+	font-size: 12px;
+	top: 0;
+	left: -80px;
+	background-color: rgba(0,0,0,0.8);
+	font-style: normal;
+}
+.fixedright_ico{
+	background-image: url(../img/index/sprite_toolbar_new.png);
+}
+.fixedright_info_user,.fixedright_info_shopp,.fixedright_info_gm,.fixedright_info_move,.fixedright_info_head{
+	width: 40px;
+	height: 40px;
+	display: block;
+	background-color: #aaa;
+}
+.fixedright_info_user{
+	background-position: 0 0;
+}
+.fixedright_info_shopp{
+	background-position: 0 -40px;
+}
+.fixedright_info_gm{
+	background-position: 0 -160px;
+}
+.fixedright_info_move{
+	background-position: 0 -240px;
+}
+.fixedright_info_head{
+	background-position: 0 -280px;
+}
+.fixedright_info>li:hover .fixedright_info_text{
+	display: block;
+} 
+.fixedright_info>li:hover em{
+	background-color: rgba(0,0,0,0.8);
+}

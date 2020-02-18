@@ -10,10 +10,10 @@ ol, ul{ list-style: none outside none;}
 .m, .mt, .mc, .mb{ overflow: hidden; }
 
 /* Clear Fix */ 
-.clearfix:after{content:".";display:block;height:0;clear:both;visibility:hidden;} 
+/* .clearfix:after{content:".";display:block;height:0;clear:both;visibility:hidden;} 
 .clearfix{display:inline-block;} 
 /* Hide from IE Mac */ 
-.clearfix{display:block;} 
+/* .clearfix{display:block;} */ 
 /* End hide from IE Mac */ 
 /* end of clearfix */ 
 /*页面全局结束*/
@@ -61,8 +61,8 @@ ol, ul{ list-style: none outside none;}
 .jqZoomPup{z-index:10;visibility:hidden;position:absolute;top:0px;left:0px;width:20px;height:20px;border:1px solid #aaa;background:#ffffff /*url(../images/zoom.png) 50% center no-repeat*/;opacity: 0.5;-moz-opacity: 0.5;-khtml-opacity: 0.5;filter: alpha(Opacity=50);}
 
 /*图片小图预览列表*/
-.spec-preview{width:350px;height:350px;border:1px solid #DFDFDF;}
-.spec-scroll{clear:both;margin-top:5px;width:352px;}
+.spec-preview{width:320px;height:350px;border:0;}
+.spec-scroll{clear:both;margin-top:5px;width:320px;}
 .spec-scroll .prev{float:left;margin-right:4px;}
 .spec-scroll .next{float:right;}
 .spec-scroll .prev,.spec-scroll .next{display:block;font-family:"宋体";text-align:center;width:10px;height:54px; line-height:54px;border:0;background:white;cursor:pointer;text-decoration:none;}
