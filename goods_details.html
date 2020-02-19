@@ -8,7 +8,7 @@
 		<link rel="stylesheet" type="text/css" href="lib/Validform_v5.3.2/css/style.css" />
 		<link rel="stylesheet" type="text/css" href="css/register.css" />
 		<link rel="stylesheet" type="text/css" href="css/index.css" />
-		<link  rel="stylesheet" type="text/css" href="lib/Magnifier/css/base.css" />
+		<link rel="stylesheet" type="text/css" href="lib/Magnifier/css/base.css" />
 		<link rel="stylesheet" href="./css/goods_details.css">
 		<script src="js/jquery-3.4.1.min.js"></script>
 		<script type="text/javascript" src="./lib/Magnifier/js/jquery.jqzoom.js"></script>
@@ -18,34 +18,39 @@
 		<div class="head"></div>
 		<div class="goods_body">
 			<div class="container clearfix">
-				<div id="preview" class="spec-preview fl"> <span class="jqzoom"><img jqimg="./img/goods_details/2_n_07809_640x640.jpg" src="./img/goods_details/2_n_07809_640x640.jpg" /></span> </div>
-				  <!--缩图开始-->
-				  <div class="spec-scroll fl"> <a class="prev">&lt;</a> <a class="next">&gt;</a>
-				    <div class="items">
-				      <ul>
-				        <li><img  bimg="./img/goods_details/2_n_07809_640x640.jpg" src="./img/goods_details/2_n_07809_640x640.jpg" onmousemove="preview(this);"></li>
-				        <li><img  bimg="./img/goods_details/1_n_07809_640x640.jpg" src="./img/goods_details/1_n_07809_640x640.jpg" onmousemove="preview(this);"></li>
-				      </ul>
-				    </div>
-				  </div>
-				  <!--缩图结束-->
-				  <div class="goods_body_explain fr">
-				  	<div class="goods_body_explain_title clearfix">
+				<div class="fl">
+					<div id="preview" class="spec-preview"> <span class="jqzoom"><img jqimg="./img/goods_details/2_n_07809_640x640.jpg"
+							 src="./img/goods_details/2_n_07809_640x640.jpg" /></span> </div>
+					<!--缩图开始-->
+					<div class="spec-scroll"> <a class="prev">&lt;</a> <a class="next">&gt;</a>
+						<div class="items">
+							<ul>
+								<li><img bimg="./img/goods_details/2_n_07809_640x640.jpg" src="./img/goods_details/2_n_07809_640x640.jpg"
+									 onmousemove="preview(this);"></li>
+								<li><img bimg="./img/goods_details/1_n_07809_640x640.jpg" src="./img/goods_details/1_n_07809_640x640.jpg"
+									 onmousemove="preview(this);"></li>
+							</ul>
+						</div>
+					</div>
+					<!--缩图结束-->
+				</div>
+				<div class="goods_body_explain fr">
+					<div class="goods_body_explain_title clearfix">
 						<div class="goods_body_explain_text fl" style="width: 500px;">
 							<h1>凯卓舒缓白莲花漾面膜惠选套组</h1>
 							<p>KENZOKI MOISTURIZING LOTUS MASK</p>
 							<p>价值：580,优惠折扣：18%</p>
 						</div>
 						<img src="img/goods_details/kenzo_144X60.png" class="fr" />
-				  	</div>
-				  	<div class="goods_body_explain_price clearfix">
+					</div>
+					<div class="goods_body_explain_price clearfix">
 						<p class="goods_body_explain_price_a fl">价格</p>
 						<p class="goods_body_explain_price_b fl">￥</p>
 						<p class="goods_body_explain_price_c fl">470</p>
 						<p class="goods_body_explain_price_d fl">价值</p>
 						<p class="goods_body_explain_price_e fl">￥580</p>
 					</div>
-				  	<div class="goods_body_explain_activity clearfix">
+					<div class="goods_body_explain_activity clearfix">
 						<p class="fl">活动</p>
 						<ul class="goods_body_explain_activity_list fl">
 							<li class="relative">
@@ -61,7 +66,7 @@
 								<div class="goods_body_explain_activity_text">2020.1.30-2.19，购买全场任意产品实际付款满1288元，可获赠2020丝芙兰情人节限定款手链一条。数量共2,000份，赠完即止。</div>
 								<div class="goods_body_explain_activity_info">
 									<div>限时促销<i class="goods_body_explain_activity_arrow goods_ico"></i></div>
-									<div class="goods_body_explain_activity_popu">
+									<div class="goods_body_explain_activity_popu" style="display: none;">
 										<i class="goods_body_explain_popu_i"></i>
 										<div class="goods_body_explain_popu_body">
 											<div class="goods_body_explain_activity_type">满赠</div>
@@ -79,24 +84,277 @@
 							</li>
 						</ul>
 					</div>
-				  	<div class="goods_body_explain_norms clearfix">
+					<div class="goods_body_explain_norms clearfix">
 						<p class="fl">规格</p>
 						<div class="goods_body_explain_norms_specs fl">套装</div>
 					</div>
-				  	<div class="goods_body_explain_price clearfix">
-						<div class="goods_body_explain_price_add fl">
-							<span>加入购物车</span>
-							<i class="goods_body_explain_add_photo goods_ico"></i>
+					<div class="goods_body_explain_num clearfix">
+						<div class="goods_body_explain_numbox fl">
+							<input type="text" value="1" id="numtext" />
 						</div>
-						<div class=""></div>
+						<div class="goods_body_explain_num_arrow fl">
+							<div class="goods_body_explain_num_arrowtop clearfix">
+								<div class="goods_body_explain_num_ico1 goods_ico fl" id="up"></div>
+							</div>
+							<div class="goods_body_explain_num_arrowbottom  clearfix">
+								<div class="goods_body_explain_num_ico2 goods_ico fl" id="down"></div>
+							</div>
+						</div>
 					</div>
-				  </div>
+					<div class="goods_body_explain_shopp clearfix" style="display: inline-block;margin: 20px 10px 0px 40px;">
+						<div class="goods_body_explain_price_add fl clearfix">
+							<span class="fl">加入购物车</span>
+							<i class="goods_body_explain_add_photo goods_ico fl"></i>
+						</div>
+					</div>
+				</div>
+				<div class="goodslike fl">
+					<div class="goodslike_title">
+						<p>猜你喜欢</p>
+					</div>
+					<div class="goodslike_box">
+						<div class="goodslike_concent">
+							<a href="javascript:;">
+								<img src="./img/goods_details/1_n_08043_280x280.jpg" />
+								<div class="goodslike_concent_head">SHISEIDO</div>
+								<div class="goodslike_concent_line"></div>
+								<div class="goodslike_concent_text">资生堂新红妍肌活精华露75ml限量版惠选...</div>
+								<div class="goodslike_concent_price">
+									<span>￥</span>
+									<span>1040</span>
+								</div>
+							</a>
+						</div>
+						<div class="goodslike_concent">
+							<a href="javascript:;">
+								<img src="./img/goods_details/1_n_08043_280x280.jpg" />
+								<div class="goodslike_concent_head">SHISEIDO</div>
+								<div class="goodslike_concent_line"></div>
+								<div class="goodslike_concent_text">资生堂新红妍肌活精华露75ml限量版惠选...</div>
+								<div class="goodslike_concent_price">
+									<span>￥</span>
+									<span>1040</span>
+								</div>
+							</a>
+						</div>
+						<div class="goodslike_concent">
+							<a href="javascript:;">
+								<img src="./img/goods_details/1_n_08043_280x280.jpg" />
+								<div class="goodslike_concent_head">SHISEIDO</div>
+								<div class="goodslike_concent_line"></div>
+								<div class="goodslike_concent_text">资生堂新红妍肌活精华露75ml限量版惠选...</div>
+								<div class="goodslike_concent_price">
+									<span>￥</span>
+									<span>1040</span>
+								</div>
+							</a>
+						</div>
+						<div class="goodslike_concent">
+							<a href="javascript:;">
+								<img src="./img/goods_details/1_n_08043_280x280.jpg" />
+								<div class="goodslike_concent_head">SHISEIDO</div>
+								<div class="goodslike_concent_line"></div>
+								<div class="goodslike_concent_text">资生堂新红妍肌活精华露75ml限量版惠选...</div>
+								<div class="goodslike_concent_price">
+									<span>￥</span>
+									<span>1040</span>
+								</div>
+							</a>
+						</div>
+						<div class="goodslike_concent">
+							<a href="javascript:;">
+								<img src="./img/goods_details/1_n_08043_280x280.jpg" />
+								<div class="goodslike_concent_head">SHISEIDO</div>
+								<div class="goodslike_concent_line"></div>
+								<div class="goodslike_concent_text">资生堂新红妍肌活精华露75ml限量版惠选...</div>
+								<div class="goodslike_concent_price">
+									<span>￥</span>
+									<span>1040</span>
+								</div>
+							</a>
+						</div>
+						<div class="goodslike_concent">
+							<a href="javascript:;">
+								<img src="./img/goods_details/1_n_08043_280x280.jpg" />
+								<div class="goodslike_concent_head">SHISEIDO</div>
+								<div class="goodslike_concent_line"></div>
+								<div class="goodslike_concent_text">资生堂新红妍肌活精华露75ml限量版惠选...</div>
+								<div class="goodslike_concent_price">
+									<span>￥</span>
+									<span>1040</span>
+								</div>
+							</a>
+						</div>
+						<div class="goodslike_concent">
+							<a href="javascript:;">
+								<img src="./img/goods_details/1_n_08043_280x280.jpg" />
+								<div class="goodslike_concent_head">SHISEIDO</div>
+								<div class="goodslike_concent_line"></div>
+								<div class="goodslike_concent_text">资生堂新红妍肌活精华露75ml限量版惠选...</div>
+								<div class="goodslike_concent_price">
+									<span>￥</span>
+									<span>1040</span>
+								</div>
+							</a>
+						</div>
+						<div class="goodslike_concent">
+							<a href="javascript:;">
+								<img src="./img/goods_details/1_n_08043_280x280.jpg" />
+								<div class="goodslike_concent_head">SHISEIDO</div>
+								<div class="goodslike_concent_line"></div>
+								<div class="goodslike_concent_text">资生堂新红妍肌活精华露75ml限量版惠选...</div>
+								<div class="goodslike_concent_price">
+									<span>￥</span>
+									<span>1040</span>
+								</div>
+							</a>
+						</div>
+						<div class="goodslike_concent">
+							<a href="javascript:;">
+								<img src="./img/goods_details/1_n_08043_280x280.jpg" />
+								<div class="goodslike_concent_head">SHISEIDO</div>
+								<div class="goodslike_concent_line"></div>
+								<div class="goodslike_concent_text">资生堂新红妍肌活精华露75ml限量版惠选...</div>
+								<div class="goodslike_concent_price">
+									<span>￥</span>
+									<span>1040</span>
+								</div>
+							</a>
+						</div>
+						<div class="goodslike_concent">
+							<a href="javascript:;">
+								<img src="./img/goods_details/1_n_08043_280x280.jpg" />
+								<div class="goodslike_concent_head">SHISEIDO</div>
+								<div class="goodslike_concent_line"></div>
+								<div class="goodslike_concent_text">资生堂新红妍肌活精华露75ml限量版惠选...</div>
+								<div class="goodslike_concent_price">
+									<span>￥</span>
+									<span>1040</span>
+								</div>
+							</a>
+						</div>
+					</div>
+				</div>
+				<div class="goodsmain fr clearfix">
+					<div class="goodsmain_title">
+						<ul class="clearfix">
+							<li>基本信息</li>
+							<li>所有评论</li>
+							<li>产品咨询</li>
+							<li>配送信息</li>
+						</ul>
+					</div>
+					<div class="goodsmain_list fl">
+						<div class="goodsmain_list_concent">
+							<ul class="clearfix">
+								<li>适用人群: 女士</li>
+								<li>适用部位: 面部</li>
+								<li>功效: 保湿补水</li>
+								<li>适合肤质: 各种肤质</li>
+								<li>质地: 水液</li>
+								<li>规格: 套装</li>
+								<li>货号: VS1005627</li>
+							</ul>
+							<p>套装详情</p>
+							<div class="goodsmain_line"></div>
+							<div class="goodsmain_box clearfix">
+								<div class="goodsmain_box_title fl">
+									<p>主品</p>
+								</div>
+								<div class="goodsmain_box_content_photo fl">
+									<img src="img/goods_details/1_n_06519_150x150.jpg" />
+								</div>
+								<div class="goodsmain_box_content_text fl relative">
+									<p>SHISEIDO</p>
+									<p>资生堂新红妍肌活精华露 50ml</p>
+									<p>￥860.00</p>
+									<span>X1</span>
+								</div>
+							</div>
+							<div class="goodsmain_box clearfix">
+								<div class="goodsmain_box_title fl">
+									<p>赠品</p>
+								</div>
+								<div class="goodsmain_box_content_photo fl">
+									<img src="img/goods_details/1_n_06519_150x150.jpg" />
+								</div>
+								<div class="clear"></div>
+								<div class="goodsmain_box_content_text relative" style="display: block;margin-left: 35%; height: 82px;">
+									<p style="padding-top:18px ;">资生堂红腰子50ML 护理套组</p>
+									<span>X1</span>
+								</div>
+								<div class="goodsmain_box_allphoto">
+									<div class="goodsmain_allphoto_banner">
+										<img src="img/goods_details/OP981987_01.jpg" />
+									</div>
+									<div class="goodsmain_allphoto_banner">
+										<img src="img/goods_details/OP981987_02.jpg" />
+									</div>
+									<div class="goodsmain_allphoto_banner">
+										<img src="img/goods_details/OP981987_03.jpg" />
+									</div>
+									<div class="goodsmain_allphoto_banner">
+										<img src="img/goods_details/OP981987_04.jpg" />
+									</div>
+									<div class="goodsmain_allphoto_banner">
+										<img src="img/goods_details/OP981987_05.jpg" />
+									</div>
+									<div class="goodsmain_allphoto_banner">
+										<img src="img/goods_details/OP981987_06.jpg" />
+									</div>
+									<div class="goodsmain_allphoto_banner">
+										<img src="img/goods_details/OP981987_07.jpg" />
+									</div>
+									<div class="goodsmain_allphoto_banner">
+										<img src="img/goods_details/OP981987_08.jpg" />
+									</div>
+									<div class="goodsmain_allphoto_banner">
+										<img src="img/goods_details/OP981987_14.jpg" />
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="goodspay fl">
+						<div class="goodsmain_pay">
+							<p>价格声明</p>
+							<p >PRICE STATEMENT</p>
+							<p class="goodsmain_line" style="margin-left: 462px;margin-top: 15px;"></p>
+						</div>
+						<div class="goodsmain_pay_content">
+							<p>本店商品标注的促销价，为此商品的实际售价。本店标注的其他价格信息，如划线价、专柜价、建议零售价、价值等，为仅供消费者参考的市场价格信息，来源为有关商品实体店的柜台售价、品牌方建议零售价或者根据有关商品正装产品售价和容量推算的价值等，便于您了解市场行情和价格变动。但是，由于地区、时间和行情波动因素，这些价格的实际情况可能与本店标注的其他价格信息有所不同。</p>
+						</div>
+					</div>
 				</div>
 			</div>
+			<div class="footer_log"></div>
+			<div class="footer"></div>
+		</div>
 		</div>
 		<script>
 			$(function() {
 				$('.head').load('head.html');
+				$('.footer_log').load('footer_log.html');
+				$('.footer').load('footer.html');
+			})
+		</script>
+		<script>
+			$('.goods_body_explain_num_arrowtop').click(function() {
+				$('#numtext').val(parseInt($('#numtext').val()) + 1);
+				$('.goods_body_explain_num_arrowbottom').addClass('cursor');
+				$('#down').addClass('goods_body_explain_num_ico3');
+				$('#down').removeClass('goods_body_explain_num_ico2');
+
+			})
+			$('.goods_body_explain_num_arrowbottom').click(function() {
+				if ($('#numtext').val() > 1) {
+					$('#numtext').val(parseInt($('#numtext').val()) - 1);
+				}
+				if ($('#numtext').val() == 1) {
+					$('.goods_body_explain_num_arrowbottom').removeClass('cursor');
+					$('#down').addClass('goods_body_explain_num_ico2');
+					$('#down').removeClass('goods_body_explain_num_ico3');
+				}
 			})
 		</script>
 	</body>

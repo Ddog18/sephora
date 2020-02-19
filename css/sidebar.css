@@ -1,8 +1,4 @@
-.fixedright{
-	position: fixed;
-	right: 104px;
-	bottom: 60px;
-}
+
 .fixedright_info>li{
 	height: 40px;
 	width: 40px;

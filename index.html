@@ -1517,9 +1517,10 @@
 				</div>
 			</div>
 		</div>
-		<div class="fixedright">
-			<div class="sidebar"></div>
-		</div>
+			<div class="fixedright">
+				<div class="sidebar"></div>
+			</div>
+		
 		<script src="./js/jquery-3.4.1.min.js"></script>
 		<script src="./js/swiper.animate1.0.3.min.js"></script>
 		<script>
@@ -1532,6 +1533,9 @@
 			})
 		</script>
 		<script>
+			var height=$(window).width()/15;
+			$('.fixedleft').css('left',''+height+'px')
+			$('.fixedright').css('right',''+height+'px')
 			$(document).ready(function(){
 				$(document).scroll(function(){
 					$(this).scrollTop()>900?block():none();
