@@ -1,0 +1,101 @@
+table{
+	width: 890px;
+}
+.table {
+	margin-top: 40px;
+	padding-bottom: 28px;
+	border-bottom: 1px solid #dfdfdf;
+}
+.table th:first-child {
+	padding-left: 30px;
+}
+
+.table th {
+	text-align: center;
+	padding-right: 38px;
+	color: #000000;
+}
+.tips {
+	height: 180px;
+	text-align: center;
+}
+
+.tips p {
+	margin-top: 140px;
+}
+
+.tips p a {
+	text-decoration: underline;
+}
+.right_content .nav_link {
+	background-color: #fafafa;
+}
+
+.nav_link .text:first-child {
+	padding-left: 22px;
+}
+
+.nav_link .text {
+	padding: 0 35px 0 0;
+
+}
+
+.nav_link .text p {
+	font-size: 15px;
+	color: #666;
+	height: 38px;
+	line-height: 38px;
+}
+
+.nav_link .text p:hover {
+	color: #e00;
+	text-decoration: none;
+	cursor: pointer;
+}
+
+.now {
+	border-bottom: 2px solid #000000;
+}
+.pagination .jump {
+	font-size: 14px;
+	color: #000;
+	margin-left: 40px;
+}
+
+.pagination .jump input {
+	width: 40px;
+	height: 40px;
+	border: 1px solid #ddd;
+	margin: 0 6px;
+	color: #000;
+	text-align: center;
+	outline: none;
+}
+
+.pagination .down,
+.pagination .up {
+	font-size: 14px;
+	color: #a8a8a8;
+	border: 1px solid #ddd;
+	padding: 15px 20px;
+	cursor: pointer;
+}
+
+.pagination .num {
+	font-size: 14px;
+	color: #FFF;
+	background-color: #000000;
+	padding: 15px 20px;
+	margin: 0 24px;
+	cursor: pointer;
+}
+
+.pagination .confirm {
+	font-size: 14px;
+	color: white;
+	background-color: #000000;
+	border: 0;
+	padding: 14px;
+	outline: none;
+	cursor: pointer;
+}

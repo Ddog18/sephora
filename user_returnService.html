@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="css/reset.css" />
+		<link rel="stylesheet" type="text/css" href="css/public.css" />
+		<link rel="stylesheet" type="text/css" href="css/sidebar.css" />
+		<link rel="stylesheet" type="text/css" href="css/user/user_public.css" />
+		<link rel="stylesheet" type="text/css" href="css/youlike.css" />
+		<link rel="stylesheet" type="text/css" href="css/user/user_returnService.css" />
+	</head>
+	<body>
+		<div class="head_get"></div>
+		<div class="content">
+			<div class="container ">
+				<div class="top_box clearfix">
+					<div class=" fl left_box"></div>
+					<div class="fl right_box">
+						<div class="right_title">退货售后</div>
+						<div class="right_content_box ">
+							<div class="right_content">
+								<div class="nav_link">
+									<ul class="clearfix">
+										<li class="fl">
+											<div class="text">
+												<p class="now">全部</p>
+											</div>
+										</li>
+										<li class="fl">
+											<div class="text">
+												<p>处理中</p>
+											</div>
+										</li>
+										<li class="fl">
+											<div class="text">
+												<p>已完成</p>
+											</div>
+										</li>
+									</ul>
+								</div>
+								<div class="table">
+									<table>
+										<tr>
+											<th class="">商品</th>
+											<th class="">数量</th>
+											<th class="">退单情况</th>
+											<th class="">操作</th>
+										</tr>
+									</table>
+								</div>
+								<div class="tips">
+									<p>您目前没有相关申请。</p>
+								</div>
+								<div class="pagination clearfix">
+									<div class="fr clearfix">
+										<div class="fl up">
+											<上一页</div> <div class="fl num">1
+										</div>
+										<div class="fl down">下一页></div>
+										<div class="fl jump">
+											到第
+											<input type="text" name="" />
+											页
+											<button type="button" class="confirm">确定</button>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="sidebar_get"></div>
+		<div class="foot_get"></div>
+		<script src="js/jquery-3.4.1.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/user_public.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/sidebar.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/user_orderonline.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			$(function() {
+				$('.foot_get').load('footer.html');
+				$('.head_get').load('head.html');
+				$('.left_box').load('user_public.html');
+				$('.sidebar_get').load('sidebar.html');
+			});
+		</script>
+	</body>
+</html>

@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="css/reset.css" />
+		<link rel="stylesheet" type="text/css" href="css/public.css" />
+		<link rel="stylesheet" type="text/css" href="css/sidebar.css"/>
+		<link rel="stylesheet" type="text/css" href="css/user/user_public.css" />
+		<link rel="stylesheet" type="text/css" href="css/youlike.css"/>
+		<link rel="stylesheet" type="text/css" href="css/user/user_orderonline.css" />
+	</head>
+	<body>
+		<div class="head_get"></div>
+		<div class="content">
+			<div class="container clearfix">
+				<div class=" fl left_box"></div>
+				<div class="fl right_box">
+					<div class="right_title">线上订单</div>
+					<div class="right_content_box ">
+						<div class="right_content">
+							<div class="nav_link">
+								<ul class="clearfix">
+									<li class="fl">
+										<div class="text"><p class="now">全部</p></div>
+									</li>
+									<li class="fl">
+										<div class="text"><p>待支付</p></div>
+									</li>
+									<li class="fl">
+										<div class="text"><p>处理中</p></div>
+									</li>
+									<li class="fl">
+										<div class="text"><p>配送中</p></div>
+									</li>
+									<li class="fl">
+										<div class="text"><p>已完成</p></div>
+									</li>
+								</ul>
+							</div>
+							<div class="table ">
+								<table>
+									<tr>
+										<th class="time relative">
+											<div class="first clearfix">
+												<a href="javascript:;" class="fl">最近三个月订单</a>
+												<div class="fl order_triangle"></div>
+											</div>
+											<div class="time_list">
+												<div class="link clearfix">
+													<a href="javascript:;" class="fl">最近三个月订单</a>
+													<div class="fl order_triangle"></div>
+												</div>
+												<div class="link">
+													<a href="javascript:;">最近三个月订单</a>
+												</div>
+												<div class="link"><a href="javascript:;">今年内的订单</a></div>
+												<div class="link"><a href="javascript:;">2019年的订单</a></div>
+												<div class="link"><a href="javascript:;">2018年的订单</a></div>
+												<div class="link"><a href="javascript:;">2018年以前的订单</a></div>
+												</ul>
+											</div>
+										</th>
+										<th class="">&nbsp;</th>
+										<th class="">&nbsp;</th>
+										<th class="">&nbsp;</th>
+										<th class="">商品</th>
+										<th class="">&nbsp;</th>
+										<th class="">&nbsp;</th>
+										<th class="">数量</th>
+										<th class="">单价</th>
+										<th class="">&nbsp;</th>
+										<th class="">&nbsp;</th>
+										<th class="">收货人</th>
+										<th class="">&nbsp;</th>
+										<th class="">&nbsp;</th>
+										<th class="">合计</th>
+										<th class="">&nbsp;</th>
+										<th class="">&nbsp;</th>
+										<th class="state clearfix">
+											<div class="first relative">
+												<a href="javascript:;" class="fl">全部状态</a>
+												<div class="fl order_triangle "></div>
+											</div>
+											<div class="state_list">
+												<div class="link clearfix">
+													<a href="javascript:;" class="fl">全部状态</a>
+													<div class="fl order_triangle "></div>
+												</div>
+												<div class="link"><a href="javascript:;">全部状态</a></div>
+												<div class="link"><a href="javascript:;">待支付</a></div>
+												<div class="link"><a href="javascript:;">处理中</a></div>
+												<div class="link"><a href="javascript:;">配送中</a></div>
+												<div class="link"><a href="javascript:;">已完成</a></div>
+											</div>
+										</th>
+										<th class="">&nbsp;</th>
+										<th class="">&nbsp;</th>
+										<th class=""><span>操作</span></th>
+										<th class="">&nbsp;</th>
+									</tr>
+								</table>
+							</div>
+							<div class="tips">
+								<p>您最近是三个月没有购买个商品,<a href="index.html">立即购物</a>。</p>
+							</div>
+							<div class="pagination clearfix">
+								<div class="fr clearfix">
+									<div class="fl up"><上一页</div>
+									<div class="fl num">1</div>
+									<div class="fl down">下一页></div>
+									<div class="fl jump">
+										到第
+										<input type="text" name="" />
+										页
+										<button type="button" class="confirm">确定</button>
+									</div>
+									
+								</div>
+							</div>
+							<div class="youLike"></div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="sidebar_get"></div>
+		<div class="foot_get"></div>
+		<script src="js/jquery-3.4.1.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/user_public.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/sidebar.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/user_orderonline.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			$(function() {
+				$('.foot_get').load('footer.html');
+				$('.head_get').load('head.html');
+				$('.left_box').load('user_public.html');
+				$('.youLike').load('userlike.html');
+				$('.sidebar_get').load('sidebar.html');
+			});
+		</script>
+	</body>
+</html>

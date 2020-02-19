@@ -6,7 +6,7 @@
 	margin-left: 59px;
 }
 
-.right_list .right_content {
+.right_content_box {
 	border-left: 1px solid #ccc;
 }
 
@@ -20,7 +20,11 @@
 }
 
 .right_content {
+	padding-top: 20px;
 	padding-left: 60px;
+}
+.right_link:first-child{
+	margin-top: 0;
 }
 
 .right_link {
@@ -103,6 +107,7 @@
 	background-color: #fafafa;
 	padding-left: 30px;
 	padding-right: 28px;
+	padding-bottom: 20px;
 }
 
 .integral .text {
@@ -154,6 +159,7 @@
 .order_tip {
 	background-color: #fafafa;
 	margin-left: 10px;
+	padding-bottom: 19px;
 }
 
 .order_tip .text {
@@ -200,6 +206,7 @@
 .coupon {
 	margin-top: 30px;
 }
+
 .after_goods .title,
 .order_list .title,
 .coupon .title {
@@ -220,6 +227,7 @@
 	color: #000000;
 	margin-top: 2px;
 }
+
 .after_goods table,
 .order_list table {
 	width: 100%;
@@ -241,16 +249,19 @@ table th:first-child {
 	height: 130px;
 	text-align: center;
 }
+
 .after_goods .tips p,
-.order_list .tips p{
+.order_list .tips p {
 	margin-top: 60px;
 }
+
 .after_goods .tips a,
-.order_list .tips a{
+.order_list .tips a {
 	color: #000000;
 	text-decoration: underline;
 }
+
 .after_goods .tips a:hover,
-.order_list .tips a:hover{
+.order_list .tips a:hover {
 	color: red;
 }

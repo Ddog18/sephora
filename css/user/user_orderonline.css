@@ -1,0 +1,141 @@
+.content {
+	margin-top: 30px;
+}
+
+.right_title {
+	padding-bottom: 22px;
+	letter-spacing: 2px;
+	font-size: 16px;
+	color: #000000;
+	margin-left: 60px;
+	border-bottom: 1px solid #000;
+}
+
+.right_content_box {
+	border-left: 1px solid #ccc;
+}
+
+.right_content {
+	padding-left: 60px;
+	padding-top: 20px;
+}
+
+.right_box {
+	margin-left: 59px;
+}
+
+
+.right_content .nav_link {
+	margin-top: 20px;
+	background-color: #fafafa;
+}
+
+.nav_link .text:first-child {
+	padding-left: 22px;
+}
+
+.nav_link .text {
+	padding: 0 35px 0 0;
+
+}
+
+.nav_link .text p {
+	font-size: 15px;
+	color: #666;
+	height: 38px;
+	line-height: 38px;
+}
+
+.nav_link .text p:hover {
+	color: #e00;
+	text-decoration: none;
+	cursor: pointer;
+}
+
+.now {
+	border-bottom: 2px solid #000000;
+}
+
+.order_triangle {
+	width: 0;
+	height: 0;
+	border-top: 4px solid #000;
+	border-left: 4px solid transparent;
+	border-right: 4px solid transparent;
+	margin: 8px 0 0 8px;
+}
+
+.time_list {
+	width: 140px;
+	position: absolute;
+	background-color: #fff;
+	border: 1px solid #eee;
+	box-shadow: 0 0 8px #ddd;
+	margin: -26px 0 0 -21px;
+	padding-left: 20px;
+	display: none;
+}
+
+.state_list .link,
+.time_list .link {
+	padding: 8px 0;
+}
+
+
+.state_list {
+	width: 85px;
+	position: absolute;
+	background-color: #fff;
+	border: 1px solid #eee;
+	box-shadow: 0 0 8px #ddd;
+	margin: -10px 0 0 -21px;
+	padding-left: 20px;
+	display: none;
+}
+
+.table {
+	margin-top: 40px;
+	padding-bottom: 28px;
+	border-bottom: 1px solid #dfdfdf;
+}
+
+table {
+	width: 100%;
+}
+
+.table th {
+	padding-right: 20px;
+	color: #000000;
+}
+
+.table th a {
+	cursor: pointer;
+}
+
+.table th:first-child {
+	padding-left: 26px;
+	padding-right: 68px;
+}
+
+a {
+	color: #000000;
+}
+
+a:hover {
+	color: red;
+	text-decoration: underline;
+}
+
+.tips {
+	height: 130px;
+	text-align: center;
+}
+
+.tips p {
+	margin-top: 140px;
+}
+
+.tips p a {
+	text-decoration: underline;
+}
+
