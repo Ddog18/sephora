@@ -1,3 +1,4 @@
+//推荐头像和上传头像切换
 $('.user_img').on('click','.recom_title',function () {
 	$(this).addClass('white');
 	$(this).siblings('.upload_title').removeClass('white');
@@ -16,3 +17,4 @@ $('#btn').click(function () {
 	// 为判断
 	alert('保存成功');
 })
+//上传头像弹窗

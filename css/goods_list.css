@@ -1,0 +1,140 @@
+.sidebar_get {
+	position: fixed;
+	right: 20px;
+	bottom: 60px;
+}
+
+.head_get {
+	box-shadow: 0 0 8px 0 rgba(0, 0, 0, .15);
+}
+
+.top_title a {
+	color: #000000;
+}
+
+.top_title a:hover {
+	color: #dc002f;
+	text-decoration: none;
+}
+
+.top_title .right_arrow {
+	margin: 0 12px;
+}
+
+.top_title {
+	margin-top: 32px;
+	padding-bottom: 20px;
+	border-bottom: 1px solid #CCCCCC;
+}
+
+.icon {
+	display: inline-block;
+	background: url(../img/list_img/ia_2700000113.png) no-repeat;
+}
+
+.brand .brand_search_input {
+	width: 170px;
+	height: 22px;
+	border: 1px solid #ddd;
+	padding-left: 20px;
+	background: url(../img/list_img/ia_2700000105.png) 5px no-repeat;
+	display: none;
+}
+
+.more {
+	margin-right: 10px;
+}
+
+.brand .brand_title {
+	font-size: 14px;
+	font-weight: 600;
+	padding-left: 14px;
+	padding-right: 78px;
+}
+
+.brand .more,
+.brand .down {
+	color: #666;
+}
+
+.brand .more:hover,
+.brand .down:hover {
+	transition: background-position 0.15s ease-in-out;
+	color: #dc002f;
+}
+
+.brand .more:hover .more_icon {
+	transition: background-position 0.15s ease-in-out;
+	background-position: -37px -64px;
+}
+
+.brand .down:hover .down_icon {
+	transition: background-position 0.15s ease-in-out;
+	background-position: 0 -42px;
+}
+
+.brand .brand_search_input::placeholder {
+	font-size: 14px;
+}
+
+.more_icon {
+	display: inline-block;
+	width: 9px;
+	height: 9px;
+	margin-right: 5px;
+	background-position: -37px -54px;
+	cursor: pointer;
+}
+
+.down_icon {
+	display: inline-block;
+	width: 9px;
+	height: 6px;
+	margin-left: 5px;
+	background-position: 0 -33px;
+	cursor: pointer;
+}
+
+.brand {
+	margin-top: 40px;
+}
+
+.brand_log_box ul {
+	width: 96%;
+	border-top: 1px solid #CCCCCC;
+	border-left: 1px solid #CCCCCC;
+	box-sizing: border-box;
+}
+
+.brand_log_box .brand_list {
+	width: 130px;
+	border-bottom: 1px solid #CCCCCC;
+	border-right: 1px solid #CCCCCC;
+	box-sizing: border-box;
+}
+
+.brand_log_box .brand_list img {
+	width: 100%;
+	height: 100%;
+}
+
+.brand_log_box .brand_list .mask {
+	position: absolute;
+	width: 100%;
+	height: 58px;
+	line-height: 58px;
+	bottom: 0;
+	color: white;
+	text-align: center;
+	background: rgba(0, 0, 0, 0.8);
+	display: none;
+}
+
+.brand_log_box .brand_list:hover .mask {
+	display: block;
+}
+
+.brand_log_box {
+	width: 950px;
+
+}
