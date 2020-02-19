@@ -3,7 +3,134 @@
 	<head>
 		<meta charset="utf-8">
 		<title></title>
+		<link rel="stylesheet" type="text/css" href="css/reset.css" />
+		<link rel="stylesheet" type="text/css" href="css/public.css" />
+		<link rel="stylesheet" type="text/css" href="css/sidebar.css" />
+		<link rel="stylesheet" type="text/css" href="css/user/user_public.css" />
+		<link rel="stylesheet" type="text/css" href="css/youlike.css" />
+		<link rel="stylesheet" type="text/css" href="css/user/user_infor.css" />
 	</head>
 	<body>
+		<div class="head_get"></div>
+		<div class="content">
+			<div class="container clearfix">
+				<div class=" fl left_box"></div>
+				<div class="fl right_box">
+					<div class="right_title">编辑个人资料</div>
+					<div class="right_content_box ">
+						<div class="right_content">
+							<form>
+								<div class="clearfix link">
+									<div class="em fl"></div>
+									<p class="fl">姓名/称谓</p>
+									<input type="text" name="" id="username" value="" class="input"/>
+								</div>
+								<div class="clearfix link">
+									<div class="em fl marg"></div>
+									<p class="fl">手&nbsp;机</p>
+									<input type="text" name="" id="userphone" value="" class="input" />
+								</div>
+								<div class="clearfix link">
+									<div class="em fl marg"></div>
+									<p class="fl">邮&nbsp;箱</p>
+									<input type="text" name="" id="usermail" value="" class="input"/>
+									<div class="tip">
+										<em>*</em>
+										<span>E-mail地址默认为注册账户邮箱,修改E-mail地址同时会修改注册账户。邮箱仅能设置一次,请谨慎填写</span>
+									</div>
+								</div>
+								<div class="clearfix link">
+									<div class="em fl marg"></div>
+									<p class="fl">性&nbsp;别</p>
+									<input type="radio" name="sex" value="W">
+									<span class="sex_man">男</span>
+									<input type="radio" name="sex" value="M">
+									<span>女</span>
+								</div>
+								<div class="clearfix link">
+									<div class="em fl marg"></div>
+									<p class="fl">生&nbsp;日</p>
+									<input  id="birthday" type="text" onclick="WdatePicker({dateFmt:'yyyy年MM月dd日'})"placeholder="1993年1月1日" class="input"/>
+									<div class="tip">
+										<em>*</em>
+										<span>生日仅能设置一次，请谨慎填写。</span>
+									</div>
+								</div>
+								<div class="link">
+									<div class="title clearfix noem_marg relative">
+										<p class="fl text">头&nbsp;像</p>
+										<div class="user_img clearfix fl">
+											<div class="fl black recom_title">推荐头像</div>
+											<div class="fl white upload_title">上传头像</div>
+										</div>
+									</div>
+									<!-- 推荐头像 -->
+									<div class="recommend">
+										<ul class="clearfix">
+											<li class="fl"><img src="img/user/headportrait/ia_1100000003.png" ></li>
+											<li class="fl"><img src="img/user/headportrait/ia_1100000004.png" ></li>
+											<li class="fl"><img src="img/user/headportrait/ia_1100000005.png" ></li>
+											<li class="fl"><img src="img/user/headportrait/ia_1100000006.png" ></li>
+											<li class="fl"><img src="img/user/headportrait/ia_1100000007.png" ></li>
+											<li class="fl"><img src="img/user/headportrait/ia_1100000008.png" ></li>
+											<li class="fl"><img src="img/user/headportrait/ia_1100000009.png" ></li>
+											<li class="fl"><img src="img/user/headportrait/ia_1100000010.png" ></li>
+											<li class="fl"><img src="img/user/headportrait/ia_1100000011.png" ></li>
+											<li class="fl"><img src="img/user/headportrait/ia_1100000012.png" ></li>
+											<li class="fl"><img src="img/user/headportrait/ia_1100000013.png" ></li>
+											<li class="fl"><img src="img/user/headportrait/ia_1100000014.png" ></li>
+										</ul>
+									</div>
+									<!-- 上传头像 -->
+									<div class="upload relative">
+											<img src="img/user/headportrait/upload.jpg" >
+											<div class="mask">修改头像</div>
+									</div>
+								</div>
+								<div class="link clearfix noem_marg">
+									<p class="fl">昵&nbsp;称</p>
+									<input type="text" name="" id="" value="" class="input" />
+								</div>
+								<div class="link clearfix ">
+									<p class="fl">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;省市区</p>
+									<select name="province">
+										<option value="" selected="">请选择</option>
+									</select>
+									<select name="city">
+										<option value="" selected="">请选择</option>
+									</select>
+									<select name="area">
+										<option value="" selected="">请选择</option>
+									</select>
+								</div>
+								<div class="link clearfix noem_marg">
+									<p class="fl">地&nbsp;址</p>
+									<input type="text" name="" id="" value="" class="address"/>
+								</div>
+								<button type="button" id="btn">保存修改</button>
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="foot_log"></div>
+		<div class="sidebar_get"></div>
+		<div class="foot_get"></div>
+		<script src="js/jquery-3.4.1.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="lib/My97DatePicker/WdatePicker.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/user_public.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/sidebar.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/user_infor.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			$(function() {
+				$('.foot_get').load('footer.html');
+				$('.head_get').load('head.html');
+				$('.left_box').load('user_public.html');
+				$('.youLike').load('userlike.html');
+				$('.foot_log').load('footer_log.html')
+				$('.sidebar_get').load('sidebar.html');
+			});
+		</script>
 	</body>
 </html>
