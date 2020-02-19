@@ -1,7 +1,6 @@
 $(document).ready(function() {
 	$(document).scroll(function() {
 		var scrollTop = $(this).scrollTop();
-		console.log(scrollTop)
 	})
 })
 

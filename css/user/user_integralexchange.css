@@ -1,0 +1,69 @@
+.right_box {
+	width: 950px;
+}
+
+.right_content {
+	height: 880px;
+}
+
+.integral_box {
+	height: 130px;
+	margin-top: 34px;
+	background-color: #fafafa;
+}
+
+.integral_box .left {
+	padding: 21px 0 0 22px;
+}
+
+.integral_box .left .text {
+	font-size: 14px;
+	color: #000000;
+	padding-bottom: 34px;
+}
+
+.integral_box .left .num {
+	font-size: 28px;
+	color: #000000;
+	margin-right: 10px;
+}
+
+.left .num_box .text {
+	padding: 0;
+	margin-top: 12px;
+}
+
+.integral_box .right {
+	color: #666;
+	margin-top: 86px;
+	margin-left: 60px;
+}
+
+table {
+	width: 100%;
+}
+
+.table td:first-child,
+.table th:first-child {
+	padding-left: 21px;
+}
+
+.table {
+	margin-top: 36px;
+}
+
+.table th {
+	background-color: #fafafa;
+	height: 43px;
+	line-height: 43px;
+}
+
+.table td {
+	height: 43px;
+	line-height: 43px;
+	border-bottom: 2px solid #FAFAFA;
+}
+
+.pagination {
+	margin-top: 22px;
+}

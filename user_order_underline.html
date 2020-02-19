@@ -3,7 +3,70 @@
 	<head>
 		<meta charset="utf-8">
 		<title></title>
+		<link rel="stylesheet" type="text/css" href="css/reset.css" />
+		<link rel="stylesheet" type="text/css" href="css/public.css" />
+		<link rel="stylesheet" type="text/css" href="css/sidebar.css" />
+		<link rel="stylesheet" type="text/css" href="css/user/user_public.css" />
+		<link rel="stylesheet" type="text/css" href="css/youlike.css" />
+		<link rel="stylesheet" type="text/css" href="css/user/user_orderunderline.css" />
 	</head>
 	<body>
+		<div class="head_get"></div>
+		<div class="content">
+			<div class="container clearfix">
+				<div class=" fl left_box"></div>
+				<div class="fl right_box">
+					<div class="right_title">线下订单</div>
+					<div class="right_content_box ">
+						<div class="right_content">
+							<div class="table ">
+								<table>
+									<tr>
+										<th class="time">
+											<div class="first clearfix">
+												最近三个月订单
+											</div>
+										</th>
+										<th class="">&nbsp;</th>
+										<th class="">&nbsp;</th>
+										<th class="">&nbsp;</th>
+										<th class="">商品</th>
+										<th class="">&nbsp;</th>
+										<th class="">&nbsp;</th>
+										<th class="">数量</th>
+										<th class="">&nbsp;</th>
+										<th class="">&nbsp;</th>
+										<th class="">单价</th>
+										<th class="">&nbsp;</th>
+										<th class="">&nbsp;</th>
+										<th class="">合计</th>
+										<th class="">&nbsp;</th>
+										<th class="">&nbsp;</th>
+									</tr>
+								</table>
+							</div>
+							<div class="tips">
+								<p>您最近是三个月没有购买个商品,<a href="index.html">立即购物</a>。</p>
+							</div>
+							<div class="youLike"></div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="sidebar_get"></div>
+		<div class="foot_get"></div>
+		<script src="js/jquery-3.4.1.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/user_public.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/sidebar.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			$(function() {
+				$('.foot_get').load('footer.html');
+				$('.head_get').load('head.html');
+				$('.left_box').load('user_public.html');
+				$('.youLike').load('userlike.html');
+				$('.sidebar_get').load('sidebar.html');
+			});
+		</script>
 	</body>
 </html>

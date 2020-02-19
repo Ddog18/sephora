@@ -1,0 +1,51 @@
+.right_content_box {
+	border-left: 1px solid #ccc;
+}
+
+.table {
+	/* margin-top: 40px; */
+	padding-bottom: 28px;
+	border-bottom: 1px solid #dfdfdf;
+}
+
+/* table {
+	width: 100%;
+} */
+
+.table th {
+	padding-right: 38px;
+	color: #000000;
+}
+
+.table th a {
+	cursor: pointer;
+}
+
+.table th:first-child {
+	padding-left: 26px;
+	padding-right: 68px;
+}
+
+a {
+	color: #000000;
+}
+
+a:hover {
+	color: red;
+	text-decoration: underline;
+}
+
+.tips {
+	height: 130px;
+	text-align: center;
+}
+
+.tips p {
+	margin-top: 140px;
+}
+
+.tips p a {
+	text-decoration: underline;
+}
+
+
