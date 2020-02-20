@@ -1,29 +1,3 @@
-.content {
-	margin-top: 30px;
-}
-
-.right_title {
-	padding-bottom: 22px;
-	letter-spacing: 2px;
-	font-size: 16px;
-	color: #000000;
-	margin-left: 60px;
-	border-bottom: 1px solid #000;
-}
-
-.right_content_box {
-	border-left: 1px solid #ccc;
-}
-
-.right_content {
-	padding-left: 60px;
-	padding-top: 20px;
-}
-
-.right_box {
-	margin-left: 59px;
-}
-
 
 .right_content .nav_link {
 	margin-top: 20px;
