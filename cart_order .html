@@ -8,12 +8,17 @@
 	<link rel="stylesheet" type="text/css" href="css/public.css" />
 	<link rel="stylesheet" type="text/css" href="css/cart.css"/>
 	<link rel="stylesheet" type="text/css" href="css/cart_order.css"/>
+	<link rel="stylesheet" type="text/css" href="css/order_list_public.css"/>
+	<link rel="stylesheet" type="text/css" href="css/order_gift.css"/>
 	<style>
 		.cart_top_step_wrap_a{
 			background-position: -145px 0;
 		}
 		.cart_top_step_wrap_b{
 				background-position: 0 -50px;
+		}
+		.operation{
+			display: none;
 		}
 	</style>
 	<body>
@@ -99,27 +104,62 @@
 				<div class="cart_address_content relative">
 					<div class="cart_address_content_title">已购清单</div>
 					<div class="cart_address_content_text " style="border: 0;height: auto; padding: 20px ;" >
-						<label class="cart_address_content_news">
-							<input type="radio" value="on" name="news_radio" style="margin-right: 10px;"/>
-							工作日、双休与假日均可送货
-						</label>
-						<label class="cart_address_content_news">
-							<input type="radio" value="on" name="news_radio" style="margin-right: 10px;"/>
-							只双休日、假日送货  (工作日不送)
-						</label>
-						<label class="cart_address_content_news">
-							<input type="radio" value="on" name="news_radio" style="margin-right: 10px;"/>
-							只工作日送货  (双休日、假日不用送) (注: 写字楼/商用地址客户请选择)
-						</label>
+						<div class="address_list"></div>
 					</div>
 				</div>
 			</div>
 		</div>
-		<div class="foot_log"></div>
+		<div class="cart_address">
+			<div class="container">
+				<div class="cart_address_content relative">
+					<div class="cart_address_content_text"style="height: auto; border: 0;padding: 19px ;">
+						<div class="order_detail_result clearfix" style="margin: 0;">
+							<div class="fr list">
+								<div class="link ">
+									<span>商品总额：</span>
+									<span>￥310.00</span>
+								</div>
+								<div class="link ">
+									<span>折扣金额：</span>
+									<span>￥0.00</span>
+								</div>
+								<div class="link ">
+									<span>优惠券抵扣：</span>
+									<span>￥0.00</span>
+								</div>
+								<div class="link ">
+									<span>运费：</span>
+									<span>￥0.00</span>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="cart_address">
+			<div class="container">
+				<div class="cart_body_settlement clearfix">
+					<div class="cart_body_settlement_left fl relative">
+						<a href="cart.html" style="margin-left: 50px;"><返回购物车</a>
+					</div>
+					<div class="cart_body_settlement_right fr clearfix">
+						<div class="cart_settlement_right_text fl">
+								<span>已选 <em class="cart_allnum">0</em> 件</span>
+								<span>合计</span>
+								<span>￥<em class="cart_allmoney">0.00</em></span>
+						</div>
+						<div class="cart_settlement_right_submit fl"><a href="index.html" style="color: white;">立即结算</a></div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="foot_log" style="margin-top: 80px;"></div>
 		<div class="foot"></div>
 		<script src="./js/jquery-3.4.1.min.js"></script>
 		<script>
 			$(function() {
+				$('.address_list').load('order_list_public.html');
 				$('.heard_top').load('heard_top.html');
 				$('.head').load('head.html');
 				$('.foot_log').load('footer_log.html');

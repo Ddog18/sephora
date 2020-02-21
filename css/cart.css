@@ -89,7 +89,8 @@ body{
 	cursor: pointer;
 	height: 14px;
 	background-repeat: no-repeat;
-	background-position: -42px  0;
+	background-position:-28px 0px;
+	
 }
 .cart_body_title{
 	height: 47px;
@@ -282,6 +283,8 @@ body{
 .cart_youlike_content_title_ul{
 	width: 4907px;
 	height: 308px;
+	top: 0;
+	left: 0;
 	display: inline-block;
 	position: absolute;
 }

@@ -14,21 +14,26 @@
 		<script type="text/javascript" src="./lib/Magnifier/js/jquery.jqzoom.js"></script>
 		<script type="text/javascript" src="./lib/Magnifier/js/base.js"></script>
 	</head>
+	<style>
+		.newline{
+			border-bottom: 2px solid black;
+		}
+	</style>
 	<body>
 		<div class="heard_top"></div>
 		<div class="head"></div>
 		<div class="goods_body">
 			<div class="container clearfix">
 				<div class="fl">
-					<div id="preview" class="spec-preview"> <span class="jqzoom"><img jqimg="./img/goods_details/2_n_07809_640x640.jpg"
-							 src="./img/goods_details/2_n_07809_640x640.jpg" /></span> </div>
+					<div id="preview" class="spec-preview"> <span class="jqzoom"><img jqimg="./img/goods_details/2_n_07766_640x640.jpg" src="./img/goods_details/2_n_07766_640x640.jpg" /></span> 
+					</div>
 					<!--缩图开始-->
 					<div class="spec-scroll"> <a class="prev">&lt;</a> <a class="next">&gt;</a>
 						<div class="items">
 							<ul>
-								<li><img bimg="./img/goods_details/2_n_07809_640x640.jpg" src="./img/goods_details/2_n_07809_640x640.jpg"
+								<li><img bimg="./img/goods_details/2_n_07766_640x640.jpg" src="./img/goods_details/2_n_07766_640x640.jpg"
 									 onmousemove="preview(this);"></li>
-								<li><img bimg="./img/goods_details/1_n_07809_640x640.jpg" src="./img/goods_details/1_n_07809_640x640.jpg"
+								<li><img bimg="./img/goods_details/1_n_07766_640x640.jpg" src="./img/goods_details/1_n_07766_640x640.jpg"
 									 onmousemove="preview(this);"></li>
 							</ul>
 						</div>
@@ -239,10 +244,10 @@
 				<div class="goodsmain fr clearfix">
 					<div class="goodsmain_title">
 						<ul class="clearfix">
-							<li>基本信息</li>
-							<li>所有评论</li>
-							<li>产品咨询</li>
-							<li>配送信息</li>
+							<li id="goodsmain_title_news">基本信息</li>
+							<li id="goodsmain_title_constituent">成分功效</li>
+							<li id="goodsmain_title_details">商品细节</li>
+							<li id="goodsmain_title_state">价格声明</li>
 						</ul>
 					</div>
 					<div class="goodsmain_list fl">
@@ -358,6 +363,28 @@
 					$('#down').removeClass('goods_body_explain_num_ico3');
 				}
 			})
+		</script>
+		<script>
+			$('.goodsmain_title ').find('li').click(function(){
+				if(!$(this).hasClass('newline')){
+					$(this).addClass('newline');
+				}
+				$(this).siblings('li').removeClass('newline')
+			})
+			
+			$('#goodsmain_title_news').click(function(){
+				$(document).scrollTop(700)
+			})
+			$('#goodsmain_title_constituent').click(function(){
+				$(document).scrollTop(3049)
+			})
+			$('#goodsmain_title_details').click(function(){
+				$(document).scrollTop(3749)
+			})
+			$('#goodsmain_title_state').click(function(){
+				$(document).scrollTop(5449)
+			})
+				
 		</script>
 	</body>
 </html>
