@@ -1,0 +1,85 @@
+.goods_list_infor_title {
+	width: 100%;
+	padding-top: 10px;
+}
+
+.goods_list_infor_title li:first-child {
+	width: 216px;
+	margin: 0 433px 0 110px;
+}
+
+.goods_list_infor_title li {
+	width: 44px;
+	margin-right: 80px;
+}
+
+.goods_list_infor_title li:last-child {
+	margin-right: 0;
+	margin-left: 14px;
+}
+
+.goods_list_infor {
+	margin-bottom: 30px;
+	margin-top: 10px;
+}
+
+.goods_list_infor .goods_img {
+	margin-right: 20px;
+}
+
+.goods_list_infor .goods_img img {
+	width: 90px;
+	height: 90px;
+}
+
+.goods_list_infor .goods_price,
+.goods_list_infor .goods_num,
+.goods_list_infor .operation,
+.goods_list_infor .subtotal,
+.goods_list_infor .infor {
+	margin-top: 21px;
+
+}
+
+.goods_list_infor .goods_price,
+.goods_list_infor .operation,
+.goods_list_infor .subtotal {
+	width: 44px;
+	margin-right: 80px;
+	text-align: center;
+}
+
+.goods_list_infor .goods_num {
+	width: 24px;
+	margin-right: 100px;
+	text-align: center;
+}
+
+.goods_list_infor .operation {
+	width: 52px;
+	margin-right: 0;
+}
+
+.goods_list_infor .operation a {
+	color: #000000;
+}
+
+.goods_list_infor .operation a:hover {
+	color: red;
+	text-decoration: underline;
+}
+
+.goods_list_infor .infor {
+	width: 216px;
+	margin-right: 431px;
+}
+
+.goods_list_infor .goods_name {
+	color: #000;
+	font-size: 12px;
+	font-weight: 600;
+}
+
+.goods_list_infor .subname {
+	margin: 8px 0;
+}
