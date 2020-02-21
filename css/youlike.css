@@ -1,14 +1,16 @@
-.likeico{
+.likeico {
 	background-image: url(../img/index/ia_300000224.png);
 }
-.youlike_title_photo{
+
+.youlike_title_photo {
 	width: 387px;
 	height: 36px;
 	background-repeat: no-repeat;
 	background-position: -20px -313px;
 	background-size: 100%;
 }
-.youlike_content_ul_brand{
+
+.youlike_content_ul_brand {
 	width: 194px;
 	margin: 4px 0 0 9px;
 	height: 20px;
@@ -17,13 +19,15 @@
 	font-size: 14px;
 }
 
-.youlike_content{
+.youlike_content {
 	width: 100%;
 }
-.youlike_content_ul{
+
+.youlike_content_ul {
 	font-size: 0;
 }
-.youlike_content_ul>li{
+
+.youlike_content_ul>li {
 	width: 237px;
 	height: 259px;
 	background-color: white;
@@ -31,16 +35,27 @@
 	border-bottom: 1px solid #f7f7f7;
 	display: inline-block;
 }
-.youlike_content_ul>li img{
+
+.youlike_content_ul>li img {
 	width: 180px;
 	height: 180px;
 	margin: 0 0 0 28px;
 }
-.youlike_content_ul_price,.youlike_content_ul_brand,.youlike_content_ul_content{
-	color:#000;
+
+.youlike_content_ul_price,
+.youlike_content_ul_brand,
+.youlike_content_ul_content {
+	color: #000;
 	width: 194px;
 	margin: 0 0 0 20px;
 	font-size: 14px;
 	height: 20px;
 	line-height: 20px;
+}
+
+.youlike_content_ul_content {
+	width: 100%;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
 }

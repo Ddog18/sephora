@@ -1,0 +1,115 @@
+.title {
+	padding-bottom: 18px;
+	letter-spacing: 2px;
+	font-size: 16px;
+	color: #000000;
+	border-bottom: 1px solid #000;
+}
+
+.nav_box {
+	padding: 20px 0;
+}
+
+.head_get {
+	box-shadow: 0 0 8px 0 rgba(0, 0, 0, .15);
+}
+
+.order_num {
+	margin: 10px 0;
+	font-size: 16px;
+	margin: 20px 0;
+}
+
+.order_num .copy {
+	font-size: 10px;
+	padding: 0 3px;
+	font-weight: 400;
+	color: #333;
+	line-height: 15px;
+	margin-left: 10px;
+	cursor: pointer;
+	background: #fafafa;
+	display: inline-block;
+	margin-top: 3px;
+}
+
+.order_num .copy:hover {
+	background: #CCCCCC;
+}
+
+.order_num .sum_price {
+	font-size: 14px;
+}
+
+.order_info .address,
+.order_info .delivery_time,
+.order_info .gift_wrapping,
+.order_info .pay_for {
+	margin-bottom: 5px;
+}
+
+.order_info {
+	margin-bottom: 20px;
+}
+
+.state {
+	padding: 30px 38px 31px 110px;
+	background: #fafafa;
+	overflow: hidden;
+	line-height: 32px;
+}
+
+.state .place_order_time,
+.state .cancel_order_time {
+	margin-top: 3px;
+}
+
+.state .state_infor {
+	margin-right: 100px;
+}
+
+.state .place_order_time {
+	margin-right: 20px;
+}
+
+.state .buy_again {
+	width: 100px;
+	height: 30px;
+	font-size: 14px;
+	text-align: center;
+	background: #e00;
+	color: white;
+}
+
+.sidebar_get {
+	position: fixed;
+	right: 20px;
+	bottom: 60px;
+}
+
+.goods_list {
+	margin-top: 80px;
+}
+
+
+.goods_list .title {
+	font-weight: 600;
+}
+.grey {
+	color: #8C8C8C;
+}
+.state .state_text {
+	font-size: 20px;
+	color: #333;
+	margin-right: 20px;
+}
+
+.state .state_infor i {
+	float: left;
+	width: 32px;
+	height: 32px;
+	background: url(../img/order_icon.png) -128px 0 no-repeat;
+	margin-right: 10px;
+}
+
+

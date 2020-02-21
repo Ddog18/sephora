@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="css/reset.css" />
+		<link rel="stylesheet" type="text/css" href="css/public.css" />
+		<link rel="stylesheet" type="text/css" href="css/youlike.css" />
+		<link rel="stylesheet" type="text/css" href="css/order_details.css" />
+		<link rel="stylesheet" type="text/css" href="css/order_list_public.css"/>
+		<link rel="stylesheet" type="text/css" href="css/sidebar.css" />
+		<link rel="stylesheet" type="text/css" href="css/order_gift.css"/>
+	</head>
+	<body>
+		<div class="head_get"></div>
+		<div class="content">
+			<div class="container">
+				<div class="nav_box">
+					<span><a href="index.html">首页</a></span>
+					<span>></span>
+					<span><a href="user.html">我的丝芙兰</a></span>
+					<span>></span>
+					<span>订单状态</span>
+				</div>
+				<div class="title">
+					<span>我的订单</span>
+				</div>
+				<div class="order_num clearfix">
+					<div class="fl">
+						<span>订单编号：</span>
+						<span>1192778225545448</span>
+					</div>
+					<div class="copy fl">复制</div>
+					<div class="fr sum_price">
+						<span>订单总额:</span>
+						<span class="sum_price_num ">￥310.00</span>
+					</div>
+				</div>
+				<div class="order_info">
+					<div class="address">
+						<span>收货地址：</span>
+						<span class="grey">张玥 13081475269 山东泰安市泰山区</span>
+					</div>
+					<div class="delivery_time">
+						<span>配送时间：</span>
+						<span class="grey">工作日、双休日与假日均可送货</span>
+					</div>
+					<div class="gift_wrapping">
+						<span>礼品包装：</span>
+						<span class="grey">已领取</span>
+					</div>
+					<div class="pay_for">
+						<span>付款方式：</span>
+						<span>在线支付</span>
+					</div>
+				</div>
+				<div class="state clearfix">
+					<div class="state_infor fl">
+						<i></i>
+						<span class="state_text">已取消</span>
+						<span class="state_reason grey">取消原因：支付超时,JOB取消.</span>
+					</div>
+					<div class="place_order_time fl">
+						<span class="text grey">下单时间:</span>
+						<span class="time grey">2020-02-21 11:24:15</span>
+					</div>
+					<div class="cancel_order_time fl">
+						<span class="text grey">取消时间:</span>
+						<span class="time grey">2020-02-21 12:00:01</span>
+					</div>
+					<div class="buy_again fr"><span>再次购买</span></div>
+				</div>
+				<div class="goods_list">
+					<div class="title">
+						<span>商品清单</span>
+					</div>
+				</div>
+				<div class="order_list_get"></div>
+				<div class="gift_get"></div>
+			</div>
+		</div>
+		<div class="foot_log"></div>
+		<div class="sidebar_get"></div>
+		<div class="foot_get"></div>
+		<script src="js/jquery-3.4.1.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/order_gift.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/sidebar.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			$('.head_get').load('head.html');
+			$('.gift_get').load('order_gift.html');
+			$('.order_list_get').load('order_list_public.html')
+			$('.foot_log').load('footer_log.html');
+			$('.sidebar_get').load('sidebar.html');
+			$('.foot_get').load('footer.html');
+		</script>
+		
+	</body>
+</html>
