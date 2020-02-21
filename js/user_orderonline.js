@@ -31,3 +31,12 @@ $('table').on('click','.state',function(){
 		$(this).find('.state_list').hide();
 	}
 });
+$('.operation').on('click','.dele_button',function () {
+	$(this).parents('.buy_goods').remove();
+	if($('.buy_goods').length==0){
+		$('.null_tips').show();
+	}else{
+		$('.null_tips').hide();
+	}
+	
+})

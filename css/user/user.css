@@ -231,6 +231,9 @@
 .after_goods table,
 .order_list table {
 	width: 100%;
+}
+.after_goods thead,
+.order_list thead{
 	border-bottom: 1px solid #dfdfdf;
 }
 
@@ -264,4 +267,20 @@ table th:first-child {
 .after_goods .tips a:hover,
 .order_list .tips a:hover {
 	color: red;
+}
+.tips{
+	display: none;
+}
+table .order_details a,
+table .buy_again a{
+	color: #000000;
+}
+.order_list .order_details a:hover,
+.order_list .buy_again a:hover{
+	color: red;
+	text-decoration: underline;
+}
+.order_list .order_details,
+.order_list .buy_again{
+	margin-top: 10px;
 }
