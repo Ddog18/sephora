@@ -10,9 +10,8 @@
 		<link rel="stylesheet" type="text/css" href="css/index.css" />
 		<link rel="stylesheet" href="./css/youlike.css">
 		<link rel="stylesheet" type="text/css" href="./css/sidebar.css" />
-		
-		
 	</head>
+
 	<style>
 		body {
 			background-color: #f5f5f5;
@@ -20,36 +19,48 @@
 		.navigation_list_detailed{
 			display: block;
 		}
+		/* 本例子css */
+		.slideBox{ width:1190px; height:400px; overflow:hidden; position:relative; border:1px solid #ddd;  }
+		.slideBox .hd{ height:15px; overflow:hidden; position:absolute; right:5px; bottom:5px; z-index:1; }
+		.slideBox .hd ul{ overflow:hidden; zoom:1; float:left;  }
+		.slideBox .hd ul li{ float:left; margin-right:2px;  width:15px; height:15px; line-height:14px; text-align:center; background:#fff; cursor:pointer; }
+		.slideBox .hd ul li.on{ background:#f00; color:#fff; }
+		.slideBox .bd{ position:relative; height:100%; z-index:0;   }
+		.slideBox .bd li{ zoom:1; vertical-align:middle; }
+		.slideBox .bd img{ width:100%; height:100%; display:block;  }
+		
+		/* 下面是前/后按钮代码，如果不需要删除即可 */
+		.slideBox .prev,
+		.slideBox .next{ position:absolute; left:23%; top:50%; margin-top:-25px; display:block; width:32px; height:40px; background:url(./lib/SuperSlide2.1-demo-00/demo/images/slider-arrow.png) -110px 5px no-repeat; filter:alpha(opacity=50);opacity:0.5;   }
+		.slideBox .next{ left:auto; right:3%; background-position:8px 5px; }
+		.slideBox .prev:hover,
+		.slideBox .next:hover{ filter:alpha(opacity=100);opacity:1;  }
+		.slideBox .prevStop{ display:none;  }
+		.slideBox .nextStop{ display:none;  }
 	</style>
 	<body>
+		<div class="heard_top" id="heard_top"></div>
 		<div class="head" id="head"></div>
 		<div class="wheel relative">
 			<!-- 	轮播图 -->
 			<div class="wheel_background" style="background-color: red;"></div>
 			<div class="container relative ">
-				<ul class="wheel_list relative">
-					<li>
-						<a href="javascript:;">
-							<img src="./img/index/hp_love_20200218.jpg" />
-						</a>
-					</li>
-					<li>
-						<a href="javascript:;">
-							<img src="./img/index/ia_300000003.jpg" />
-						</a>
-					</li>
-				</ul>
-				<div class="wheel_body_arrows">
-					<span class="wheel_body_arrows_left fl">
-						<em></em>
-					</span>
-					<span class="wheel_body_arrows_right fr">
-						<em></em>
-					</span>
-				</div>
-				<div class="wheel_body_pagination">
-					<span class="wheel_body_pagination_list"></span>
-					<span class="wheel_body_pagination_list"></span>
+				<div id="slideBox" class="slideBox">
+					<div class="hd">
+						<ul>
+							<li class="wheel_body_pagination_list"></li>
+							<li class="wheel_body_pagination_list"></li>
+							</ul>
+					</div>
+					<div class="bd">
+						<ul>
+							<li><a href="goods_details.html" target="_blank"><img src="./img/index/hp_love_20200218.jpg" /></a></li>
+							<li><a href="goods_details.html" target="_blank"><img src="./img/index/ia_300000003.jpg" /></a></li>
+						</ul>
+					</div>
+					<!-- 下面是前/后按钮代码，如果不需要删除即可 -->
+					<a class="prev" href="javascript:void(0)"></a>
+					<a class="next" href="javascript:void(0)"></a>
 				</div>
 			</div>
 		</div>
@@ -57,13 +68,13 @@
 			<div class="container">
 				<div class="activity_info clearfix">
 					<div class="activity_info_content fl">
-						<a href="javascript:;"><img src="./img/index/ia_300000004.jpg"></a>
+						<a href="goods_details.html"><img src="./img/index/ia_300000004.jpg"></a>
 					</div>
 					<div class="activity_info_content fl">
-						<a href="javascript:;"><img src="./img/index/ia_300000005.jpg"></a>
+						<a href="goods_details.html"><img src="./img/index/ia_300000005.jpg"></a>
 					</div>
 					<div class="activity_info_content fl">
-						<a href="javascript:;"><img src="./img/index/ia_300000006.jpg"></a>
+						<a href="goods_details.html"><img src="./img/index/ia_300000006.jpg"></a>
 					</div>
 				</div>
 			</div>
@@ -73,186 +84,175 @@
 				<div class="brand_title clearfix">
 					<em class="body_title_link_brand ico fl"></em>
 					<div class="brand_title_link fr">
-						<a href="javascript:;" class="brand_title_link_black">热门品牌</a>
-						<a href="javascript:;" class="brand_title_link_fine">独家品牌</a>
-						<a href="javascript:;" class="brand_title_link_fine">全部品牌</a>
+						<a href="goods_details.html" class="brand_title_link_black">热门品牌</a>
+						<a href="goods_details.html" class="brand_title_link_fine">独家品牌</a>
+						<a href="goods_details.html" class="brand_title_link_fine">全部品牌</a>
 					</div>
 				</div>
 				<div class="brand_body clearfix">
 					<!-- 第一部分左边的图 -->
 					<div class="brand_body_left fl">
-						<div class="brand_body_left_p relative">
-							<ul style="width: 590px;height: 320px;">
-								<li>
-									<a href="javascript:;">
-										<img src="./img/index/ia_300000007.jpg" />
-									</a>
-								</li>
-								<li>
-									<a href="javascript:;">
-										<img src="./img/index/ia_300000008.jpg" />
-									</a>
-								</li>
-							</ul>
-							<div class="brand_body_arrows">
-								<span class="brand_body_arrows_left fl">
-									<em></em>
-								</span>
-								<span class="brand_body_arrows_right fr">
-									<em></em>
-								</span>
+						<div class=" slideBox relative" id="brand_body_left_p" style="width: 588px;height: 320px;">
+							<div class="hd">
+								<ul><li></li><li></li></ul>
 							</div>
-							<div class="brand_body_pagination">
-								<span class="brand_body_pagination_list"></span>
-								<span class="brand_body_pagination_list"></span>
+							<div class="bd">
+								<ul>
+									<li><a href="goods_details.html" target="_blank"><img src="./img/index/ia_300000007.jpg" /></a></li>
+									<li><a href="goods_details.html" target="_blank"><img src="./img/index/ia_300000008.jpg" /></a></li>
+								</ul>
 							</div>
+							
+							<!-- 下面是前/后按钮代码，如果不需要删除即可 -->
+							<a class="prev" href="javascript:void(0)"></a>
+							<a class="next" href="javascript:void(0)"></a>
 						</div>
 					</div>
 					<!-- 第一部分右边的图 -->
 					<div class="brand_body_right fr">
 						<ul class="brand_body_right_show">
 							<li>
-								<a href="javascript:;">
+								<a href="goods_details.html">
 									<img src="./img/index/ia_300000010.png" />
 								</a>
 								<div class="brand_body_right_hover">
 									<div class="brand_body_right_hover_text">丝芙兰</div>
-									<a href="javascript:;" class="brand_body_right_hover_link">点击查看</a>
+									<a href="goods_details.html" class="brand_body_right_hover_link">点击查看</a>
 								</div>
 							</li>
 							<li>
-								<a href="javascript:;">
+								<a href="goods_details.html">
 									<img src="./img/index/ia_300000012.png" />
 								</a>
 								<div class="brand_body_right_hover">
 									<div class="brand_body_right_hover_text">丝芙兰</div>
-									<a href="javascript:;" class="brand_body_right_hover_link">点击查看</a>
+									<a href="goods_details.html" class="brand_body_right_hover_link">点击查看</a>
 								</div>
 							</li>
 							<li>
-								<a href="javascript:;">
+								<a href="goods_details.html">
 									<img src="./img/index/ia_300000013.png" />
 								</a>
 								<div class="brand_body_right_hover">
 									<div class="brand_body_right_hover_text">丝芙兰</div>
-									<a href="javascript:;" class="brand_body_right_hover_link">点击查看</a>
+									<a href="goods_details.html" class="brand_body_right_hover_link">点击查看</a>
 								</div>
 							</li>
 							<li>
-								<a href="javascript:;">
+								<a href="goods_details.html">
 									<img src="./img/index/ia_300000015.png" />
 								</a>
 								<div class="brand_body_right_hover">
 									<div class="brand_body_right_hover_text">丝芙兰</div>
-									<a href="javascript:;" class="brand_body_right_hover_link">点击查看</a>
+									<a href="goods_details.html" class="brand_body_right_hover_link">点击查看</a>
 								</div>
 							</li>
 							<li>
-								<a href="javascript:;">
+								<a href="goods_details.html">
 									<img src="./img/index/ia_300000016.png" />
 								</a>
 								<div class="brand_body_right_hover">
 									<div class="brand_body_right_hover_text">丝芙兰</div>
-									<a href="javascript:;" class="brand_body_right_hover_link">点击查看</a>
+									<a href="goods_details.html" class="brand_body_right_hover_link">点击查看</a>
 								</div>
 							</li>
 							<li>
-								<a href="javascript:;">
+								<a href="goods_details.html">
 									<img src="./img/index/ia_300000017.png" />
 								</a>
 								<div class="brand_body_right_hover">
 									<div class="brand_body_right_hover_text">丝芙兰</div>
-									<a href="javascript:;" class="brand_body_right_hover_link">点击查看</a>
+									<a href="goods_details.html" class="brand_body_right_hover_link">点击查看</a>
 								</div>
 							</li>
 							<li>
-								<a href="javascript:;">
+								<a href="goods_details.html">
 									<img src="./img/index/ia_300000018.png" />
 								</a>
 								<div class="brand_body_right_hover">
 									<div class="brand_body_right_hover_text">丝芙兰</div>
-									<a href="javascript:;" class="brand_body_right_hover_link">点击查看</a>
+									<a href="goods_details.html" class="brand_body_right_hover_link">点击查看</a>
 								</div>
 							</li>
 							<li>
-								<a href="javascript:;">
+								<a href="goods_details.html">
 									<img src="./img/index/ia_300000019.png" />
 								</a>
 								<div class="brand_body_right_hover">
 									<div class="brand_body_right_hover_text">丝芙兰</div>
-									<a href="javascript:;" class="brand_body_right_hover_link">点击查看</a>
+									<a href="goods_details.html" class="brand_body_right_hover_link">点击查看</a>
 								</div>
 							</li>
 							<li>
-								<a href="javascript:;">
+								<a href="goods_details.html">
 									<img src="./img/index/ia_300000020.png" />
 								</a>
 								<div class="brand_body_right_hover">
 									<div class="brand_body_right_hover_text">丝芙兰</div>
-									<a href="javascript:;" class="brand_body_right_hover_link">点击查看</a>
+									<a href="goods_details.html" class="brand_body_right_hover_link">点击查看</a>
 								</div>
 							</li>
 							<li>
-								<a href="javascript:;">
+								<a href="goods_details.html">
 									<img src="./img/index/ia_300000022.png" />
 								</a>
 								<div class="brand_body_right_hover">
 									<div class="brand_body_right_hover_text">丝芙兰</div>
-									<a href="javascript:;" class="brand_body_right_hover_link">点击查看</a>
+									<a href="goods_details.html" class="brand_body_right_hover_link">点击查看</a>
 								</div>
 							</li>
 							<li>
-								<a href="javascript:;">
+								<a href="goods_details.html">
 									<img src="./img/index/ia_300000023.png" />
 								</a>
 								<div class="brand_body_right_hover">
 									<div class="brand_body_right_hover_text">丝芙兰</div>
-									<a href="javascript:;" class="brand_body_right_hover_link">点击查看</a>
+									<a href="goods_details.html" class="brand_body_right_hover_link">点击查看</a>
 								</div>
 							</li>
 							<li>
-								<a href="javascript:;">
+								<a href="goods_details.html">
 									<img src="./img/index/ia_300000024.png" />
 								</a>
 								<div class="brand_body_right_hover">
 									<div class="brand_body_right_hover_text">丝芙兰</div>
-									<a href="javascript:;" class="brand_body_right_hover_link">点击查看</a>
+									<a href="goods_details.html" class="brand_body_right_hover_link">点击查看</a>
 								</div>
 							</li>
 							<li>
-								<a href="javascript:;">
+								<a href="goods_details.html">
 									<img src="./img/index/ia_300000026.png" />
 								</a>
 								<div class="brand_body_right_hover">
 									<div class="brand_body_right_hover_text">丝芙兰</div>
-									<a href="javascript:;" class="brand_body_right_hover_link">点击查看</a>
+									<a href="goods_details.html" class="brand_body_right_hover_link">点击查看</a>
 								</div>
 							</li>
 							<li>
-								<a href="javascript:;">
+								<a href="goods_details.html">
 									<img src="./img/index/ia_300000027.png" />
 								</a>
 								<div class="brand_body_right_hover">
 									<div class="brand_body_right_hover_text">丝芙兰</div>
-									<a href="javascript:;" class="brand_body_right_hover_link">点击查看</a>
+									<a href="goods_details.html" class="brand_body_right_hover_link">点击查看</a>
 								</div>
 							</li>
 							<li>
-								<a href="javascript:;">
+								<a href="goods_details.html">
 									<img src="./img/index/ia_300000028.png" />
 								</a>
 								<div class="brand_body_right_hover">
 									<div class="brand_body_right_hover_text">丝芙兰</div>
-									<a href="javascript:;" class="brand_body_right_hover_link">点击查看</a>
+									<a href="goods_details.html" class="brand_body_right_hover_link">点击查看</a>
 								</div>
 							</li>
 							<li>
-								<a href="javascript:;">
+								<a href="goods_details.html">
 									<img src="./img/index/ia_300000029.png" />
 								</a>
 								<div class="brand_body_right_hover">
 									<div class="brand_body_right_hover_text">丝芙兰</div>
-									<a href="javascript:;" class="brand_body_right_hover_link">点击查看</a>
+									<a href="goods_details.html" class="brand_body_right_hover_link">点击查看</a>
 								</div>
 							</li>
 						</ul>
@@ -267,10 +267,10 @@
 				</div>
 				<div class="picks_info clearfix">
 					<div class="picks_info_left fl">
-						<a href="javascript:;"><img src="img/index/ia_300000041.jpg" /></a>
+						<a href="goods_details.html"><img src="img/index/ia_300000041.jpg" /></a>
 						<ul class="picks_info_left_product">
 							<li>
-								<a href="javascript:;">
+								<a href="goods_details.html">
 									<div class="picks_info_product_brand">GUERLARN</div>
 									<div class="picks_info_product_content">娇兰樱花限量版惠选套装</div>
 									<div class="picks_info_product_price">￥420.00~￥1990.00</div>
@@ -278,7 +278,7 @@
 								</a>
 							</li>
 							<li>
-								<a href="javascript:;">
+								<a href="goods_details.html">
 									<div class="picks_info_product_brand">HERA</div>
 									<div class="picks_info_product_content">赫妍黑金气垫粉底液惠选套装</div>
 									<div class="picks_info_product_price">￥450.00</div>
@@ -288,7 +288,7 @@
 						</ul>
 					</div>
 					<div class="picks_info_right fr">
-						<a href="javascript:;">
+						<a href="goods_details.html">
 							<img src="img/index/ia_300000044.gif" />
 						</a>
 					</div>
@@ -301,51 +301,51 @@
 					<em class="category_title_photo_a ico fl"></em>
 					<ul class="category_title_text fr">
 						<li>
-							<a href="javascript:;">惠选套装</a>
+							<a href="goods_details.html">惠选套装</a>
 							<span class="category_title_text_line"></span>
 						</li>
 						<li>
-							<a href="javascript:;">面部精华</a>
+							<a href="goods_details.html">面部精华</a>
 							<span class="category_title_text_line"></span>
 						</li>
 						<li>
-							<a href="javascript:;">美容仪</a>
+							<a href="goods_details.html">美容仪</a>
 							<span class="category_title_text_line"></span>
 						</li>
 						<li>
-							<a href="javascript:;">面膜</a>
+							<a href="goods_details.html">面膜</a>
 							<span class="category_title_text_line"></span>
 						</li>
 						<li>
-							<a href="javascript:;">眼部护理</a>
+							<a href="goods_details.html">眼部护理</a>
 							<span class="category_title_text_line"></span>
 						</li>
 						<li>
-							<a href="javascript:;">清洁</a>
+							<a href="goods_details.html">清洁</a>
 							<span class="category_title_text_line"></span>
 						</li>
 						<li>
-							<a href="javascript:;">卸妆</a>
+							<a href="goods_details.html">卸妆</a>
 							<span class="category_title_text_line"></span>
 						</li>
 						<li>
-							<a href="javascript:;">唇部</a>
+							<a href="goods_details.html">唇部</a>
 							<span class="category_title_text_line"></span>
 						</li>
 						<li>
-							<a href="javascript:;">全部</a>
+							<a href="goods_details.html">全部</a>
 						</li>
 					</ul>
 				</div>
 				<div class="category_body clearfix">
 					<div class="category_body_left fl">
-						<a href="javascript:;">
+						<a href="goods_details.html">
 							<img src="./img/index/ia_300000045.jpg" />
 						</a>
 					</div>
 					<ul class="category_body_right fr">
 						<li class="category_body_right_li">
-							<a href="javascript:;">
+							<a href="goods_details.html">
 								<div class="category_body_right_li_brand">GUERLAIN</div>
 								<div class="category_body_right_li_content">娇兰帝皇蜂姿紧致黄金修护...</div>
 								<div class="category_body_right_li_price">￥2480.00</div>
@@ -353,7 +353,7 @@
 							</a>
 						</li>
 						<li class="category_body_right_li">
-							<a href="javascript:;">
+							<a href="goods_details.html">
 								<div class="category_body_right_li_brand">GUERLAIN</div>
 								<div class="category_body_right_li_content">娇兰帝皇蜂姿紧致黄金修护...</div>
 								<div class="category_body_right_li_price">￥2480.00</div>
@@ -361,7 +361,7 @@
 							</a>
 						</li>
 						<li class="category_body_right_li">
-							<a href="javascript:;">
+							<a href="goods_details.html">
 								<div class="category_body_right_li_brand">GUERLAIN</div>
 								<div class="category_body_right_li_content">娇兰帝皇蜂姿紧致黄金修护...</div>
 								<div class="category_body_right_li_price">￥2480.00</div>
@@ -369,7 +369,7 @@
 							</a>
 						</li>
 						<li class="category_body_right_li">
-							<a href="javascript:;">
+							<a href="goods_details.html">
 								<div class="category_body_right_li_brand">GUERLAIN</div>
 								<div class="category_body_right_li_content">娇兰帝皇蜂姿紧致黄金修护...</div>
 								<div class="category_body_right_li_price">￥2480.00</div>
@@ -377,7 +377,7 @@
 							</a>
 						</li>
 						<li class="category_body_right_li">
-							<a href="javascript:;">
+							<a href="goods_details.html">
 								<div class="category_body_right_li_brand">GUERLAIN</div>
 								<div class="category_body_right_li_content">娇兰帝皇蜂姿紧致黄金修护...</div>
 								<div class="category_body_right_li_price">￥2480.00</div>
@@ -385,7 +385,7 @@
 							</a>
 						</li>
 						<li class="category_body_right_li">
-							<a href="javascript:;">
+							<a href="goods_details.html">
 								<div class="category_body_right_li_brand">GUERLAIN</div>
 								<div class="category_body_right_li_content">娇兰帝皇蜂姿紧致黄金修护...</div>
 								<div class="category_body_right_li_price">￥2480.00</div>
@@ -393,7 +393,7 @@
 							</a>
 						</li>
 						<li class="category_body_right_li">
-							<a href="javascript:;">
+							<a href="goods_details.html">
 								<div class="category_body_right_li_brand">GUERLAIN</div>
 								<div class="category_body_right_li_content">娇兰帝皇蜂姿紧致黄金修护...</div>
 								<div class="category_body_right_li_price">￥2480.00</div>
@@ -401,7 +401,7 @@
 							</a>
 						</li>
 						<li class="category_body_right_li">
-							<a href="javascript:;">
+							<a href="goods_details.html">
 								<div class="category_body_right_li_brand">GUERLAIN</div>
 								<div class="category_body_right_li_content">娇兰帝皇蜂姿紧致黄金修护...</div>
 								<div class="category_body_right_li_price">￥2480.00</div>
@@ -413,49 +413,49 @@
 				<div class="category_footer">
 					<ul class="category_footer_content">
 						<li class="relative">
-							<a href="javascript:;">
+							<a href="goods_details.html">
 								<img src="img/index/ia_300000017.png" />
 							</a>
 							<span class="category_footer_content_line"></span>
 						</li>
 						<li class="relative">
-							<a href="javascript:;">
+							<a href="goods_details.html">
 								<img src="img/index/ia_300000018.png" />
 							</a>
 							<span class="category_footer_content_line"></span>
 						</li>
 						<li class="relative">
-							<a href="javascript:;">
+							<a href="goods_details.html">
 								<img src="img/index/ia_300000019.png" />
 							</a>
 							<span class="category_footer_content_line"></span>
 						</li>
 						<li class="relative">
-							<a href="javascript:;">
+							<a href="goods_details.html">
 								<img src="img/index/ia_300000020.png" />
 							</a>
 							<span class="category_footer_content_line"></span>
 						</li>
 						<li class="relative">
-							<a href="javascript:;">
+							<a href="goods_details.html">
 								<img src="img/index/ia_300000022.png" />
 							</a>
 							<span class="category_footer_content_line"></span>
 						</li>
 						<li class="relative">
-							<a href="javascript:;">
+							<a href="goods_details.html">
 								<img src="img/index/ia_300000023.png" />
 							</a>
 							<span class="category_footer_content_line"></span>
 						</li>
 						<li class="relative">
-							<a href="javascript:;">
+							<a href="goods_details.html">
 								<img src="img/index/ia_300000030.png" />
 							</a>
 							<span class="category_footer_content_line"></span>
 						</li>
 						<li class="relative">
-							<a href="javascript:;">
+							<a href="goods_details.html">
 								<img src="img/index/ia_300000032.png" />
 							</a>
 						</li>
@@ -466,54 +466,54 @@
 		<div class="category">
 			<div class="container">
 				<div class="category_title">
-					<em class="category_title_photo_a ico fl"></em>
+					<em class="category_title_photo_b ico fl"></em>
 					<ul class="category_title_text fr">
 						<li>
-							<a href="javascript:;">惠选套装</a>
+							<a href="goods_details.html">惠选套装</a>
 							<span class="category_title_text_line"></span>
 						</li>
 						<li>
-							<a href="javascript:;">面部精华</a>
+							<a href="goods_details.html">面部精华</a>
 							<span class="category_title_text_line"></span>
 						</li>
 						<li>
-							<a href="javascript:;">美容仪</a>
+							<a href="goods_details.html">美容仪</a>
 							<span class="category_title_text_line"></span>
 						</li>
 						<li>
-							<a href="javascript:;">面膜</a>
+							<a href="goods_details.html">面膜</a>
 							<span class="category_title_text_line"></span>
 						</li>
 						<li>
-							<a href="javascript:;">眼部护理</a>
+							<a href="goods_details.html">眼部护理</a>
 							<span class="category_title_text_line"></span>
 						</li>
 						<li>
-							<a href="javascript:;">清洁</a>
+							<a href="goods_details.html">清洁</a>
 							<span class="category_title_text_line"></span>
 						</li>
 						<li>
-							<a href="javascript:;">卸妆</a>
+							<a href="goods_details.html">卸妆</a>
 							<span class="category_title_text_line"></span>
 						</li>
 						<li>
-							<a href="javascript:;">唇部</a>
+							<a href="goods_details.html">唇部</a>
 							<span class="category_title_text_line"></span>
 						</li>
 						<li>
-							<a href="javascript:;">全部</a>
+							<a href="goods_details.html">全部</a>
 						</li>
 					</ul>
 				</div>
 				<div class="category_body clearfix">
 					<div class="category_body_left fl">
-						<a href="javascript:;">
+						<a href="goods_details.html">
 							<img src="./img/index/ia_300000045.jpg" />
 						</a>
 					</div>
 					<ul class="category_body_right fr">
 						<li class="category_body_right_li">
-							<a href="javascript:;">
+							<a href="goods_details.html">
 								<div class="category_body_right_li_brand">GUERLAIN</div>
 								<div class="category_body_right_li_content">娇兰帝皇蜂姿紧致黄金修护...</div>
 								<div class="category_body_right_li_price">￥2480.00</div>
@@ -521,7 +521,7 @@
 							</a>
 						</li>
 						<li class="category_body_right_li">
-							<a href="javascript:;">
+							<a href="goods_details.html">
 								<div class="category_body_right_li_brand">GUERLAIN</div>
 								<div class="category_body_right_li_content">娇兰帝皇蜂姿紧致黄金修护...</div>
 								<div class="category_body_right_li_price">￥2480.00</div>
@@ -529,7 +529,7 @@
 							</a>
 						</li>
 						<li class="category_body_right_li">
-							<a href="javascript:;">
+							<a href="goods_details.html">
 								<div class="category_body_right_li_brand">GUERLAIN</div>
 								<div class="category_body_right_li_content">娇兰帝皇蜂姿紧致黄金修护...</div>
 								<div class="category_body_right_li_price">￥2480.00</div>
@@ -537,7 +537,7 @@
 							</a>
 						</li>
 						<li class="category_body_right_li">
-							<a href="javascript:;">
+							<a href="goods_details.html">
 								<div class="category_body_right_li_brand">GUERLAIN</div>
 								<div class="category_body_right_li_content">娇兰帝皇蜂姿紧致黄金修护...</div>
 								<div class="category_body_right_li_price">￥2480.00</div>
@@ -545,7 +545,7 @@
 							</a>
 						</li>
 						<li class="category_body_right_li">
-							<a href="javascript:;">
+							<a href="goods_details.html">
 								<div class="category_body_right_li_brand">GUERLAIN</div>
 								<div class="category_body_right_li_content">娇兰帝皇蜂姿紧致黄金修护...</div>
 								<div class="category_body_right_li_price">￥2480.00</div>
@@ -553,7 +553,7 @@
 							</a>
 						</li>
 						<li class="category_body_right_li">
-							<a href="javascript:;">
+							<a href="goods_details.html">
 								<div class="category_body_right_li_brand">GUERLAIN</div>
 								<div class="category_body_right_li_content">娇兰帝皇蜂姿紧致黄金修护...</div>
 								<div class="category_body_right_li_price">￥2480.00</div>
@@ -561,7 +561,7 @@
 							</a>
 						</li>
 						<li class="category_body_right_li">
-							<a href="javascript:;">
+							<a href="goods_details.html">
 								<div class="category_body_right_li_brand">GUERLAIN</div>
 								<div class="category_body_right_li_content">娇兰帝皇蜂姿紧致黄金修护...</div>
 								<div class="category_body_right_li_price">￥2480.00</div>
@@ -569,7 +569,7 @@
 							</a>
 						</li>
 						<li class="category_body_right_li">
-							<a href="javascript:;">
+							<a href="goods_details.html">
 								<div class="category_body_right_li_brand">GUERLAIN</div>
 								<div class="category_body_right_li_content">娇兰帝皇蜂姿紧致黄金修护...</div>
 								<div class="category_body_right_li_price">￥2480.00</div>
@@ -581,49 +581,49 @@
 				<div class="category_footer">
 					<ul class="category_footer_content">
 						<li class="relative">
-							<a href="javascript:;">
+							<a href="goods_details.html">
 								<img src="img/index/ia_300000017.png" />
 							</a>
 							<span class="category_footer_content_line"></span>
 						</li>
 						<li class="relative">
-							<a href="javascript:;">
+							<a href="goods_details.html">
 								<img src="img/index/ia_300000018.png" />
 							</a>
 							<span class="category_footer_content_line"></span>
 						</li>
 						<li class="relative">
-							<a href="javascript:;">
+							<a href="goods_details.html">
 								<img src="img/index/ia_300000019.png" />
 							</a>
 							<span class="category_footer_content_line"></span>
 						</li>
 						<li class="relative">
-							<a href="javascript:;">
+							<a href="goods_details.html">
 								<img src="img/index/ia_300000020.png" />
 							</a>
 							<span class="category_footer_content_line"></span>
 						</li>
 						<li class="relative">
-							<a href="javascript:;">
+							<a href="goods_details.html">
 								<img src="img/index/ia_300000022.png" />
 							</a>
 							<span class="category_footer_content_line"></span>
 						</li>
 						<li class="relative">
-							<a href="javascript:;">
+							<a href="goods_details.html">
 								<img src="img/index/ia_300000023.png" />
 							</a>
 							<span class="category_footer_content_line"></span>
 						</li>
 						<li class="relative">
-							<a href="javascript:;">
+							<a href="goods_details.html">
 								<img src="img/index/ia_300000030.png" />
 							</a>
 							<span class="category_footer_content_line"></span>
 						</li>
 						<li class="relative">
-							<a href="javascript:;">
+							<a href="goods_details.html">
 								<img src="img/index/ia_300000032.png" />
 							</a>
 						</li>
@@ -634,54 +634,54 @@
 		<div class="category">
 			<div class="container">
 				<div class="category_title">
-					<em class="category_title_photo_a ico fl"></em>
+					<em class="category_title_photo_c ico fl"></em>
 					<ul class="category_title_text fr">
 						<li>
-							<a href="javascript:;">惠选套装</a>
+							<a href="goods_details.html">惠选套装</a>
 							<span class="category_title_text_line"></span>
 						</li>
 						<li>
-							<a href="javascript:;">面部精华</a>
+							<a href="goods_details.html">面部精华</a>
 							<span class="category_title_text_line"></span>
 						</li>
 						<li>
-							<a href="javascript:;">美容仪</a>
+							<a href="goods_details.html">美容仪</a>
 							<span class="category_title_text_line"></span>
 						</li>
 						<li>
-							<a href="javascript:;">面膜</a>
+							<a href="goods_details.html">面膜</a>
 							<span class="category_title_text_line"></span>
 						</li>
 						<li>
-							<a href="javascript:;">眼部护理</a>
+							<a href="goods_details.html">眼部护理</a>
 							<span class="category_title_text_line"></span>
 						</li>
 						<li>
-							<a href="javascript:;">清洁</a>
+							<a href="goods_details.html">清洁</a>
 							<span class="category_title_text_line"></span>
 						</li>
 						<li>
-							<a href="javascript:;">卸妆</a>
+							<a href="goods_details.html">卸妆</a>
 							<span class="category_title_text_line"></span>
 						</li>
 						<li>
-							<a href="javascript:;">唇部</a>
+							<a href="goods_details.html">唇部</a>
 							<span class="category_title_text_line"></span>
 						</li>
 						<li>
-							<a href="javascript:;">全部</a>
+							<a href="goods_details.html">全部</a>
 						</li>
 					</ul>
 				</div>
 				<div class="category_body clearfix">
 					<div class="category_body_left fl">
-						<a href="javascript:;">
+						<a href="goods_details.html">
 							<img src="./img/index/ia_300000045.jpg" />
 						</a>
 					</div>
 					<ul class="category_body_right fr">
 						<li class="category_body_right_li">
-							<a href="javascript:;">
+							<a href="goods_details.html">
 								<div class="category_body_right_li_brand">GUERLAIN</div>
 								<div class="category_body_right_li_content">娇兰帝皇蜂姿紧致黄金修护...</div>
 								<div class="category_body_right_li_price">￥2480.00</div>
@@ -689,7 +689,7 @@
 							</a>
 						</li>
 						<li class="category_body_right_li">
-							<a href="javascript:;">
+							<a href="goods_details.html">
 								<div class="category_body_right_li_brand">GUERLAIN</div>
 								<div class="category_body_right_li_content">娇兰帝皇蜂姿紧致黄金修护...</div>
 								<div class="category_body_right_li_price">￥2480.00</div>
@@ -697,7 +697,7 @@
 							</a>
 						</li>
 						<li class="category_body_right_li">
-							<a href="javascript:;">
+							<a href="goods_details.html">
 								<div class="category_body_right_li_brand">GUERLAIN</div>
 								<div class="category_body_right_li_content">娇兰帝皇蜂姿紧致黄金修护...</div>
 								<div class="category_body_right_li_price">￥2480.00</div>
@@ -705,7 +705,7 @@
 							</a>
 						</li>
 						<li class="category_body_right_li">
-							<a href="javascript:;">
+							<a href="goods_details.html">
 								<div class="category_body_right_li_brand">GUERLAIN</div>
 								<div class="category_body_right_li_content">娇兰帝皇蜂姿紧致黄金修护...</div>
 								<div class="category_body_right_li_price">￥2480.00</div>
@@ -713,7 +713,7 @@
 							</a>
 						</li>
 						<li class="category_body_right_li">
-							<a href="javascript:;">
+							<a href="goods_details.html">
 								<div class="category_body_right_li_brand">GUERLAIN</div>
 								<div class="category_body_right_li_content">娇兰帝皇蜂姿紧致黄金修护...</div>
 								<div class="category_body_right_li_price">￥2480.00</div>
@@ -721,7 +721,7 @@
 							</a>
 						</li>
 						<li class="category_body_right_li">
-							<a href="javascript:;">
+							<a href="goods_details.html">
 								<div class="category_body_right_li_brand">GUERLAIN</div>
 								<div class="category_body_right_li_content">娇兰帝皇蜂姿紧致黄金修护...</div>
 								<div class="category_body_right_li_price">￥2480.00</div>
@@ -729,7 +729,7 @@
 							</a>
 						</li>
 						<li class="category_body_right_li">
-							<a href="javascript:;">
+							<a href="goods_details.html">
 								<div class="category_body_right_li_brand">GUERLAIN</div>
 								<div class="category_body_right_li_content">娇兰帝皇蜂姿紧致黄金修护...</div>
 								<div class="category_body_right_li_price">￥2480.00</div>
@@ -737,7 +737,7 @@
 							</a>
 						</li>
 						<li class="category_body_right_li">
-							<a href="javascript:;">
+							<a href="goods_details.html">
 								<div class="category_body_right_li_brand">GUERLAIN</div>
 								<div class="category_body_right_li_content">娇兰帝皇蜂姿紧致黄金修护...</div>
 								<div class="category_body_right_li_price">￥2480.00</div>
@@ -749,49 +749,49 @@
 				<div class="category_footer">
 					<ul class="category_footer_content">
 						<li class="relative">
-							<a href="javascript:;">
+							<a href="goods_details.html">
 								<img src="img/index/ia_300000017.png" />
 							</a>
 							<span class="category_footer_content_line"></span>
 						</li>
 						<li class="relative">
-							<a href="javascript:;">
+							<a href="goods_details.html">
 								<img src="img/index/ia_300000018.png" />
 							</a>
 							<span class="category_footer_content_line"></span>
 						</li>
 						<li class="relative">
-							<a href="javascript:;">
+							<a href="goods_details.html">
 								<img src="img/index/ia_300000019.png" />
 							</a>
 							<span class="category_footer_content_line"></span>
 						</li>
 						<li class="relative">
-							<a href="javascript:;">
+							<a href="goods_details.html">
 								<img src="img/index/ia_300000020.png" />
 							</a>
 							<span class="category_footer_content_line"></span>
 						</li>
 						<li class="relative">
-							<a href="javascript:;">
+							<a href="goods_details.html">
 								<img src="img/index/ia_300000022.png" />
 							</a>
 							<span class="category_footer_content_line"></span>
 						</li>
 						<li class="relative">
-							<a href="javascript:;">
+							<a href="goods_details.html">
 								<img src="img/index/ia_300000023.png" />
 							</a>
 							<span class="category_footer_content_line"></span>
 						</li>
 						<li class="relative">
-							<a href="javascript:;">
+							<a href="goods_details.html">
 								<img src="img/index/ia_300000030.png" />
 							</a>
 							<span class="category_footer_content_line"></span>
 						</li>
 						<li class="relative">
-							<a href="javascript:;">
+							<a href="goods_details.html">
 								<img src="img/index/ia_300000032.png" />
 							</a>
 						</li>
@@ -802,54 +802,54 @@
 		<div class="category">
 			<div class="container">
 				<div class="category_title">
-					<em class="category_title_photo_a ico fl"></em>
+					<em class="category_title_photo_d ico fl"></em>
 					<ul class="category_title_text fr">
 						<li>
-							<a href="javascript:;">惠选套装</a>
+							<a href="goods_details.html">惠选套装</a>
 							<span class="category_title_text_line"></span>
 						</li>
 						<li>
-							<a href="javascript:;">面部精华</a>
+							<a href="goods_details.html">面部精华</a>
 							<span class="category_title_text_line"></span>
 						</li>
 						<li>
-							<a href="javascript:;">美容仪</a>
+							<a href="goods_details.html">美容仪</a>
 							<span class="category_title_text_line"></span>
 						</li>
 						<li>
-							<a href="javascript:;">面膜</a>
+							<a href="goods_details.html">面膜</a>
 							<span class="category_title_text_line"></span>
 						</li>
 						<li>
-							<a href="javascript:;">眼部护理</a>
+							<a href="goods_details.html">眼部护理</a>
 							<span class="category_title_text_line"></span>
 						</li>
 						<li>
-							<a href="javascript:;">清洁</a>
+							<a href="goods_details.html">清洁</a>
 							<span class="category_title_text_line"></span>
 						</li>
 						<li>
-							<a href="javascript:;">卸妆</a>
+							<a href="goods_details.html">卸妆</a>
 							<span class="category_title_text_line"></span>
 						</li>
 						<li>
-							<a href="javascript:;">唇部</a>
+							<a href="goods_details.html">唇部</a>
 							<span class="category_title_text_line"></span>
 						</li>
 						<li>
-							<a href="javascript:;">全部</a>
+							<a href="goods_details.html">全部</a>
 						</li>
 					</ul>
 				</div>
 				<div class="category_body clearfix">
 					<div class="category_body_left fl">
-						<a href="javascript:;">
+						<a href="goods_details.html">
 							<img src="./img/index/ia_300000045.jpg" />
 						</a>
 					</div>
 					<ul class="category_body_right fr">
 						<li class="category_body_right_li">
-							<a href="javascript:;">
+							<a href="goods_details.html">
 								<div class="category_body_right_li_brand">GUERLAIN</div>
 								<div class="category_body_right_li_content">娇兰帝皇蜂姿紧致黄金修护...</div>
 								<div class="category_body_right_li_price">￥2480.00</div>
@@ -857,7 +857,7 @@
 							</a>
 						</li>
 						<li class="category_body_right_li">
-							<a href="javascript:;">
+							<a href="goods_details.html">
 								<div class="category_body_right_li_brand">GUERLAIN</div>
 								<div class="category_body_right_li_content">娇兰帝皇蜂姿紧致黄金修护...</div>
 								<div class="category_body_right_li_price">￥2480.00</div>
@@ -865,7 +865,7 @@
 							</a>
 						</li>
 						<li class="category_body_right_li">
-							<a href="javascript:;">
+							<a href="goods_details.html">
 								<div class="category_body_right_li_brand">GUERLAIN</div>
 								<div class="category_body_right_li_content">娇兰帝皇蜂姿紧致黄金修护...</div>
 								<div class="category_body_right_li_price">￥2480.00</div>
@@ -873,7 +873,7 @@
 							</a>
 						</li>
 						<li class="category_body_right_li">
-							<a href="javascript:;">
+							<a href="goods_details.html">
 								<div class="category_body_right_li_brand">GUERLAIN</div>
 								<div class="category_body_right_li_content">娇兰帝皇蜂姿紧致黄金修护...</div>
 								<div class="category_body_right_li_price">￥2480.00</div>
@@ -881,7 +881,7 @@
 							</a>
 						</li>
 						<li class="category_body_right_li">
-							<a href="javascript:;">
+							<a href="goods_details.html">
 								<div class="category_body_right_li_brand">GUERLAIN</div>
 								<div class="category_body_right_li_content">娇兰帝皇蜂姿紧致黄金修护...</div>
 								<div class="category_body_right_li_price">￥2480.00</div>
@@ -889,7 +889,7 @@
 							</a>
 						</li>
 						<li class="category_body_right_li">
-							<a href="javascript:;">
+							<a href="goods_details.html">
 								<div class="category_body_right_li_brand">GUERLAIN</div>
 								<div class="category_body_right_li_content">娇兰帝皇蜂姿紧致黄金修护...</div>
 								<div class="category_body_right_li_price">￥2480.00</div>
@@ -897,7 +897,7 @@
 							</a>
 						</li>
 						<li class="category_body_right_li">
-							<a href="javascript:;">
+							<a href="goods_details.html">
 								<div class="category_body_right_li_brand">GUERLAIN</div>
 								<div class="category_body_right_li_content">娇兰帝皇蜂姿紧致黄金修护...</div>
 								<div class="category_body_right_li_price">￥2480.00</div>
@@ -905,7 +905,7 @@
 							</a>
 						</li>
 						<li class="category_body_right_li">
-							<a href="javascript:;">
+							<a href="goods_details.html">
 								<div class="category_body_right_li_brand">GUERLAIN</div>
 								<div class="category_body_right_li_content">娇兰帝皇蜂姿紧致黄金修护...</div>
 								<div class="category_body_right_li_price">￥2480.00</div>
@@ -917,49 +917,49 @@
 				<div class="category_footer">
 					<ul class="category_footer_content">
 						<li class="relative">
-							<a href="javascript:;">
+							<a href="goods_details.html">
 								<img src="img/index/ia_300000017.png" />
 							</a>
 							<span class="category_footer_content_line"></span>
 						</li>
 						<li class="relative">
-							<a href="javascript:;">
+							<a href="goods_details.html">
 								<img src="img/index/ia_300000018.png" />
 							</a>
 							<span class="category_footer_content_line"></span>
 						</li>
 						<li class="relative">
-							<a href="javascript:;">
+							<a href="goods_details.html">
 								<img src="img/index/ia_300000019.png" />
 							</a>
 							<span class="category_footer_content_line"></span>
 						</li>
 						<li class="relative">
-							<a href="javascript:;">
+							<a href="goods_details.html">
 								<img src="img/index/ia_300000020.png" />
 							</a>
 							<span class="category_footer_content_line"></span>
 						</li>
 						<li class="relative">
-							<a href="javascript:;">
+							<a href="goods_details.html">
 								<img src="img/index/ia_300000022.png" />
 							</a>
 							<span class="category_footer_content_line"></span>
 						</li>
 						<li class="relative">
-							<a href="javascript:;">
+							<a href="goods_details.html">
 								<img src="img/index/ia_300000023.png" />
 							</a>
 							<span class="category_footer_content_line"></span>
 						</li>
 						<li class="relative">
-							<a href="javascript:;">
+							<a href="goods_details.html">
 								<img src="img/index/ia_300000030.png" />
 							</a>
 							<span class="category_footer_content_line"></span>
 						</li>
 						<li class="relative">
-							<a href="javascript:;">
+							<a href="goods_details.html">
 								<img src="img/index/ia_300000032.png" />
 							</a>
 						</li>
@@ -970,54 +970,54 @@
 		<div class="category">
 			<div class="container">
 				<div class="category_title">
-					<em class="category_title_photo_a ico fl"></em>
+					<em class="category_title_photo_e ico fl"></em>
 					<ul class="category_title_text fr">
 						<li>
-							<a href="javascript:;">惠选套装</a>
+							<a href="goods_details.html">惠选套装</a>
 							<span class="category_title_text_line"></span>
 						</li>
 						<li>
-							<a href="javascript:;">面部精华</a>
+							<a href="goods_details.html">面部精华</a>
 							<span class="category_title_text_line"></span>
 						</li>
 						<li>
-							<a href="javascript:;">美容仪</a>
+							<a href="goods_details.html">美容仪</a>
 							<span class="category_title_text_line"></span>
 						</li>
 						<li>
-							<a href="javascript:;">面膜</a>
+							<a href="goods_details.html">面膜</a>
 							<span class="category_title_text_line"></span>
 						</li>
 						<li>
-							<a href="javascript:;">眼部护理</a>
+							<a href="goods_details.html">眼部护理</a>
 							<span class="category_title_text_line"></span>
 						</li>
 						<li>
-							<a href="javascript:;">清洁</a>
+							<a href="goods_details.html">清洁</a>
 							<span class="category_title_text_line"></span>
 						</li>
 						<li>
-							<a href="javascript:;">卸妆</a>
+							<a href="goods_details.html">卸妆</a>
 							<span class="category_title_text_line"></span>
 						</li>
 						<li>
-							<a href="javascript:;">唇部</a>
+							<a href="goods_details.html">唇部</a>
 							<span class="category_title_text_line"></span>
 						</li>
 						<li>
-							<a href="javascript:;">全部</a>
+							<a href="goods_details.html">全部</a>
 						</li>
 					</ul>
 				</div>
 				<div class="category_body clearfix">
 					<div class="category_body_left fl">
-						<a href="javascript:;">
+						<a href="goods_details.html">
 							<img src="./img/index/ia_300000045.jpg" />
 						</a>
 					</div>
 					<ul class="category_body_right fr">
 						<li class="category_body_right_li">
-							<a href="javascript:;">
+							<a href="goods_details.html">
 								<div class="category_body_right_li_brand">GUERLAIN</div>
 								<div class="category_body_right_li_content">娇兰帝皇蜂姿紧致黄金修护...</div>
 								<div class="category_body_right_li_price">￥2480.00</div>
@@ -1025,7 +1025,7 @@
 							</a>
 						</li>
 						<li class="category_body_right_li">
-							<a href="javascript:;">
+							<a href="goods_details.html">
 								<div class="category_body_right_li_brand">GUERLAIN</div>
 								<div class="category_body_right_li_content">娇兰帝皇蜂姿紧致黄金修护...</div>
 								<div class="category_body_right_li_price">￥2480.00</div>
@@ -1033,7 +1033,7 @@
 							</a>
 						</li>
 						<li class="category_body_right_li">
-							<a href="javascript:;">
+							<a href="goods_details.html">
 								<div class="category_body_right_li_brand">GUERLAIN</div>
 								<div class="category_body_right_li_content">娇兰帝皇蜂姿紧致黄金修护...</div>
 								<div class="category_body_right_li_price">￥2480.00</div>
@@ -1041,7 +1041,7 @@
 							</a>
 						</li>
 						<li class="category_body_right_li">
-							<a href="javascript:;">
+							<a href="goods_details.html">
 								<div class="category_body_right_li_brand">GUERLAIN</div>
 								<div class="category_body_right_li_content">娇兰帝皇蜂姿紧致黄金修护...</div>
 								<div class="category_body_right_li_price">￥2480.00</div>
@@ -1049,7 +1049,7 @@
 							</a>
 						</li>
 						<li class="category_body_right_li">
-							<a href="javascript:;">
+							<a href="goods_details.html">
 								<div class="category_body_right_li_brand">GUERLAIN</div>
 								<div class="category_body_right_li_content">娇兰帝皇蜂姿紧致黄金修护...</div>
 								<div class="category_body_right_li_price">￥2480.00</div>
@@ -1057,7 +1057,7 @@
 							</a>
 						</li>
 						<li class="category_body_right_li">
-							<a href="javascript:;">
+							<a href="goods_details.html">
 								<div class="category_body_right_li_brand">GUERLAIN</div>
 								<div class="category_body_right_li_content">娇兰帝皇蜂姿紧致黄金修护...</div>
 								<div class="category_body_right_li_price">￥2480.00</div>
@@ -1065,7 +1065,7 @@
 							</a>
 						</li>
 						<li class="category_body_right_li">
-							<a href="javascript:;">
+							<a href="goods_details.html">
 								<div class="category_body_right_li_brand">GUERLAIN</div>
 								<div class="category_body_right_li_content">娇兰帝皇蜂姿紧致黄金修护...</div>
 								<div class="category_body_right_li_price">￥2480.00</div>
@@ -1073,7 +1073,7 @@
 							</a>
 						</li>
 						<li class="category_body_right_li">
-							<a href="javascript:;">
+							<a href="goods_details.html">
 								<div class="category_body_right_li_brand">GUERLAIN</div>
 								<div class="category_body_right_li_content">娇兰帝皇蜂姿紧致黄金修护...</div>
 								<div class="category_body_right_li_price">￥2480.00</div>
@@ -1085,49 +1085,49 @@
 				<div class="category_footer">
 					<ul class="category_footer_content">
 						<li class="relative">
-							<a href="javascript:;">
+							<a href="goods_details.html">
 								<img src="img/index/ia_300000017.png" />
 							</a>
 							<span class="category_footer_content_line"></span>
 						</li>
 						<li class="relative">
-							<a href="javascript:;">
+							<a href="goods_details.html">
 								<img src="img/index/ia_300000018.png" />
 							</a>
 							<span class="category_footer_content_line"></span>
 						</li>
 						<li class="relative">
-							<a href="javascript:;">
+							<a href="goods_details.html">
 								<img src="img/index/ia_300000019.png" />
 							</a>
 							<span class="category_footer_content_line"></span>
 						</li>
 						<li class="relative">
-							<a href="javascript:;">
+							<a href="goods_details.html">
 								<img src="img/index/ia_300000020.png" />
 							</a>
 							<span class="category_footer_content_line"></span>
 						</li>
 						<li class="relative">
-							<a href="javascript:;">
+							<a href="goods_details.html">
 								<img src="img/index/ia_300000022.png" />
 							</a>
 							<span class="category_footer_content_line"></span>
 						</li>
 						<li class="relative">
-							<a href="javascript:;">
+							<a href="goods_details.html">
 								<img src="img/index/ia_300000023.png" />
 							</a>
 							<span class="category_footer_content_line"></span>
 						</li>
 						<li class="relative">
-							<a href="javascript:;">
+							<a href="goods_details.html">
 								<img src="img/index/ia_300000030.png" />
 							</a>
 							<span class="category_footer_content_line"></span>
 						</li>
 						<li class="relative">
-							<a href="javascript:;">
+							<a href="goods_details.html">
 								<img src="img/index/ia_300000032.png" />
 							</a>
 						</li>
@@ -1138,54 +1138,54 @@
 		<div class="category">
 			<div class="container">
 				<div class="category_title">
-					<em class="category_title_photo_a ico fl"></em>
+					<em class="category_title_photo_f ico fl"></em>
 					<ul class="category_title_text fr">
 						<li>
-							<a href="javascript:;">惠选套装</a>
+							<a href="goods_details.html">惠选套装</a>
 							<span class="category_title_text_line"></span>
 						</li>
 						<li>
-							<a href="javascript:;">面部精华</a>
+							<a href="goods_details.html">面部精华</a>
 							<span class="category_title_text_line"></span>
 						</li>
 						<li>
-							<a href="javascript:;">美容仪</a>
+							<a href="goods_details.html">美容仪</a>
 							<span class="category_title_text_line"></span>
 						</li>
 						<li>
-							<a href="javascript:;">面膜</a>
+							<a href="goods_details.html">面膜</a>
 							<span class="category_title_text_line"></span>
 						</li>
 						<li>
-							<a href="javascript:;">眼部护理</a>
+							<a href="goods_details.html">眼部护理</a>
 							<span class="category_title_text_line"></span>
 						</li>
 						<li>
-							<a href="javascript:;">清洁</a>
+							<a href="goods_details.html">清洁</a>
 							<span class="category_title_text_line"></span>
 						</li>
 						<li>
-							<a href="javascript:;">卸妆</a>
+							<a href="goods_details.html">卸妆</a>
 							<span class="category_title_text_line"></span>
 						</li>
 						<li>
-							<a href="javascript:;">唇部</a>
+							<a href="goods_details.html">唇部</a>
 							<span class="category_title_text_line"></span>
 						</li>
 						<li>
-							<a href="javascript:;">全部</a>
+							<a href="goods_details.html">全部</a>
 						</li>
 					</ul>
 				</div>
 				<div class="category_body clearfix">
 					<div class="category_body_left fl">
-						<a href="javascript:;">
+						<a href="goods_details.html">
 							<img src="./img/index/ia_300000045.jpg" />
 						</a>
 					</div>
 					<ul class="category_body_right fr">
 						<li class="category_body_right_li">
-							<a href="javascript:;">
+							<a href="goods_details.html">
 								<div class="category_body_right_li_brand">GUERLAIN</div>
 								<div class="category_body_right_li_content">娇兰帝皇蜂姿紧致黄金修护...</div>
 								<div class="category_body_right_li_price">￥2480.00</div>
@@ -1193,7 +1193,7 @@
 							</a>
 						</li>
 						<li class="category_body_right_li">
-							<a href="javascript:;">
+							<a href="goods_details.html">
 								<div class="category_body_right_li_brand">GUERLAIN</div>
 								<div class="category_body_right_li_content">娇兰帝皇蜂姿紧致黄金修护...</div>
 								<div class="category_body_right_li_price">￥2480.00</div>
@@ -1201,7 +1201,7 @@
 							</a>
 						</li>
 						<li class="category_body_right_li">
-							<a href="javascript:;">
+							<a href="goods_details.html">
 								<div class="category_body_right_li_brand">GUERLAIN</div>
 								<div class="category_body_right_li_content">娇兰帝皇蜂姿紧致黄金修护...</div>
 								<div class="category_body_right_li_price">￥2480.00</div>
@@ -1209,7 +1209,7 @@
 							</a>
 						</li>
 						<li class="category_body_right_li">
-							<a href="javascript:;">
+							<a href="goods_details.html">
 								<div class="category_body_right_li_brand">GUERLAIN</div>
 								<div class="category_body_right_li_content">娇兰帝皇蜂姿紧致黄金修护...</div>
 								<div class="category_body_right_li_price">￥2480.00</div>
@@ -1217,7 +1217,7 @@
 							</a>
 						</li>
 						<li class="category_body_right_li">
-							<a href="javascript:;">
+							<a href="goods_details.html">
 								<div class="category_body_right_li_brand">GUERLAIN</div>
 								<div class="category_body_right_li_content">娇兰帝皇蜂姿紧致黄金修护...</div>
 								<div class="category_body_right_li_price">￥2480.00</div>
@@ -1225,7 +1225,7 @@
 							</a>
 						</li>
 						<li class="category_body_right_li">
-							<a href="javascript:;">
+							<a href="goods_details.html">
 								<div class="category_body_right_li_brand">GUERLAIN</div>
 								<div class="category_body_right_li_content">娇兰帝皇蜂姿紧致黄金修护...</div>
 								<div class="category_body_right_li_price">￥2480.00</div>
@@ -1233,7 +1233,7 @@
 							</a>
 						</li>
 						<li class="category_body_right_li">
-							<a href="javascript:;">
+							<a href="goods_details.html">
 								<div class="category_body_right_li_brand">GUERLAIN</div>
 								<div class="category_body_right_li_content">娇兰帝皇蜂姿紧致黄金修护...</div>
 								<div class="category_body_right_li_price">￥2480.00</div>
@@ -1241,7 +1241,7 @@
 							</a>
 						</li>
 						<li class="category_body_right_li">
-							<a href="javascript:;">
+							<a href="goods_details.html">
 								<div class="category_body_right_li_brand">GUERLAIN</div>
 								<div class="category_body_right_li_content">娇兰帝皇蜂姿紧致黄金修护...</div>
 								<div class="category_body_right_li_price">￥2480.00</div>
@@ -1253,49 +1253,49 @@
 				<div class="category_footer">
 					<ul class="category_footer_content">
 						<li class="relative">
-							<a href="javascript:;">
+							<a href="goods_details.html">
 								<img src="img/index/ia_300000017.png" />
 							</a>
 							<span class="category_footer_content_line"></span>
 						</li>
 						<li class="relative">
-							<a href="javascript:;">
+							<a href="goods_details.html">
 								<img src="img/index/ia_300000018.png" />
 							</a>
 							<span class="category_footer_content_line"></span>
 						</li>
 						<li class="relative">
-							<a href="javascript:;">
+							<a href="goods_details.html">
 								<img src="img/index/ia_300000019.png" />
 							</a>
 							<span class="category_footer_content_line"></span>
 						</li>
 						<li class="relative">
-							<a href="javascript:;">
+							<a href="goods_details.html">
 								<img src="img/index/ia_300000020.png" />
 							</a>
 							<span class="category_footer_content_line"></span>
 						</li>
 						<li class="relative">
-							<a href="javascript:;">
+							<a href="goods_details.html">
 								<img src="img/index/ia_300000022.png" />
 							</a>
 							<span class="category_footer_content_line"></span>
 						</li>
 						<li class="relative">
-							<a href="javascript:;">
+							<a href="goods_details.html">
 								<img src="img/index/ia_300000023.png" />
 							</a>
 							<span class="category_footer_content_line"></span>
 						</li>
 						<li class="relative">
-							<a href="javascript:;">
+							<a href="goods_details.html">
 								<img src="img/index/ia_300000030.png" />
 							</a>
 							<span class="category_footer_content_line"></span>
 						</li>
 						<li class="relative">
-							<a href="javascript:;">
+							<a href="goods_details.html">
 								<img src="img/index/ia_300000032.png" />
 							</a>
 						</li>
@@ -1306,54 +1306,54 @@
 		<div class="category">
 			<div class="container">
 				<div class="category_title">
-					<em class="category_title_photo_a ico fl"></em>
+					<em class="category_title_photo_j ico fl"></em>
 					<ul class="category_title_text fr">
 						<li>
-							<a href="javascript:;">惠选套装</a>
+							<a href="goods_details.html">惠选套装</a>
 							<span class="category_title_text_line"></span>
 						</li>
 						<li>
-							<a href="javascript:;">面部精华</a>
+							<a href="goods_details.html">面部精华</a>
 							<span class="category_title_text_line"></span>
 						</li>
 						<li>
-							<a href="javascript:;">美容仪</a>
+							<a href="goods_details.html">美容仪</a>
 							<span class="category_title_text_line"></span>
 						</li>
 						<li>
-							<a href="javascript:;">面膜</a>
+							<a href="goods_details.html">面膜</a>
 							<span class="category_title_text_line"></span>
 						</li>
 						<li>
-							<a href="javascript:;">眼部护理</a>
+							<a href="goods_details.html">眼部护理</a>
 							<span class="category_title_text_line"></span>
 						</li>
 						<li>
-							<a href="javascript:;">清洁</a>
+							<a href="goods_details.html">清洁</a>
 							<span class="category_title_text_line"></span>
 						</li>
 						<li>
-							<a href="javascript:;">卸妆</a>
+							<a href="goods_details.html">卸妆</a>
 							<span class="category_title_text_line"></span>
 						</li>
 						<li>
-							<a href="javascript:;">唇部</a>
+							<a href="goods_details.html">唇部</a>
 							<span class="category_title_text_line"></span>
 						</li>
 						<li>
-							<a href="javascript:;">全部</a>
+							<a href="goods_details.html">全部</a>
 						</li>
 					</ul>
 				</div>
 				<div class="category_body clearfix">
 					<div class="category_body_left fl">
-						<a href="javascript:;">
+						<a href="goods_details.html">
 							<img src="./img/index/ia_300000045.jpg" />
 						</a>
 					</div>
 					<ul class="category_body_right fr">
 						<li class="category_body_right_li">
-							<a href="javascript:;">
+							<a href="goods_details.html">
 								<div class="category_body_right_li_brand">GUERLAIN</div>
 								<div class="category_body_right_li_content">娇兰帝皇蜂姿紧致黄金修护...</div>
 								<div class="category_body_right_li_price">￥2480.00</div>
@@ -1361,7 +1361,7 @@
 							</a>
 						</li>
 						<li class="category_body_right_li">
-							<a href="javascript:;">
+							<a href="goods_details.html">
 								<div class="category_body_right_li_brand">GUERLAIN</div>
 								<div class="category_body_right_li_content">娇兰帝皇蜂姿紧致黄金修护...</div>
 								<div class="category_body_right_li_price">￥2480.00</div>
@@ -1369,7 +1369,7 @@
 							</a>
 						</li>
 						<li class="category_body_right_li">
-							<a href="javascript:;">
+							<a href="goods_details.html">
 								<div class="category_body_right_li_brand">GUERLAIN</div>
 								<div class="category_body_right_li_content">娇兰帝皇蜂姿紧致黄金修护...</div>
 								<div class="category_body_right_li_price">￥2480.00</div>
@@ -1377,7 +1377,7 @@
 							</a>
 						</li>
 						<li class="category_body_right_li">
-							<a href="javascript:;">
+							<a href="goods_details.html">
 								<div class="category_body_right_li_brand">GUERLAIN</div>
 								<div class="category_body_right_li_content">娇兰帝皇蜂姿紧致黄金修护...</div>
 								<div class="category_body_right_li_price">￥2480.00</div>
@@ -1385,7 +1385,7 @@
 							</a>
 						</li>
 						<li class="category_body_right_li">
-							<a href="javascript:;">
+							<a href="goods_details.html">
 								<div class="category_body_right_li_brand">GUERLAIN</div>
 								<div class="category_body_right_li_content">娇兰帝皇蜂姿紧致黄金修护...</div>
 								<div class="category_body_right_li_price">￥2480.00</div>
@@ -1393,7 +1393,7 @@
 							</a>
 						</li>
 						<li class="category_body_right_li">
-							<a href="javascript:;">
+							<a href="goods_details.html">
 								<div class="category_body_right_li_brand">GUERLAIN</div>
 								<div class="category_body_right_li_content">娇兰帝皇蜂姿紧致黄金修护...</div>
 								<div class="category_body_right_li_price">￥2480.00</div>
@@ -1401,7 +1401,7 @@
 							</a>
 						</li>
 						<li class="category_body_right_li">
-							<a href="javascript:;">
+							<a href="goods_details.html">
 								<div class="category_body_right_li_brand">GUERLAIN</div>
 								<div class="category_body_right_li_content">娇兰帝皇蜂姿紧致黄金修护...</div>
 								<div class="category_body_right_li_price">￥2480.00</div>
@@ -1409,7 +1409,7 @@
 							</a>
 						</li>
 						<li class="category_body_right_li">
-							<a href="javascript:;">
+							<a href="goods_details.html">
 								<div class="category_body_right_li_brand">GUERLAIN</div>
 								<div class="category_body_right_li_content">娇兰帝皇蜂姿紧致黄金修护...</div>
 								<div class="category_body_right_li_price">￥2480.00</div>
@@ -1421,49 +1421,217 @@
 				<div class="category_footer">
 					<ul class="category_footer_content">
 						<li class="relative">
-							<a href="javascript:;">
+							<a href="goods_details.html">
 								<img src="img/index/ia_300000017.png" />
 							</a>
 							<span class="category_footer_content_line"></span>
 						</li>
 						<li class="relative">
-							<a href="javascript:;">
+							<a href="goods_details.html">
 								<img src="img/index/ia_300000018.png" />
 							</a>
 							<span class="category_footer_content_line"></span>
 						</li>
 						<li class="relative">
-							<a href="javascript:;">
+							<a href="goods_details.html">
 								<img src="img/index/ia_300000019.png" />
 							</a>
 							<span class="category_footer_content_line"></span>
 						</li>
 						<li class="relative">
-							<a href="javascript:;">
+							<a href="goods_details.html">
 								<img src="img/index/ia_300000020.png" />
 							</a>
 							<span class="category_footer_content_line"></span>
 						</li>
 						<li class="relative">
-							<a href="javascript:;">
+							<a href="goods_details.html">
 								<img src="img/index/ia_300000022.png" />
 							</a>
 							<span class="category_footer_content_line"></span>
 						</li>
 						<li class="relative">
-							<a href="javascript:;">
+							<a href="goods_details.html">
 								<img src="img/index/ia_300000023.png" />
 							</a>
 							<span class="category_footer_content_line"></span>
 						</li>
 						<li class="relative">
-							<a href="javascript:;">
+							<a href="goods_details.html">
 								<img src="img/index/ia_300000030.png" />
 							</a>
 							<span class="category_footer_content_line"></span>
 						</li>
 						<li class="relative">
-							<a href="javascript:;">
+							<a href="goods_details.html">
+								<img src="img/index/ia_300000032.png" />
+							</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<div class="category">
+			<div class="container">
+				<div class="category_title">
+					<em class="category_title_photo_h ico fl"></em>
+					<ul class="category_title_text fr">
+						<li>
+							<a href="goods_details.html">惠选套装</a>
+							<span class="category_title_text_line"></span>
+						</li>
+						<li>
+							<a href="goods_details.html">面部精华</a>
+							<span class="category_title_text_line"></span>
+						</li>
+						<li>
+							<a href="goods_details.html">美容仪</a>
+							<span class="category_title_text_line"></span>
+						</li>
+						<li>
+							<a href="goods_details.html">面膜</a>
+							<span class="category_title_text_line"></span>
+						</li>
+						<li>
+							<a href="goods_details.html">眼部护理</a>
+							<span class="category_title_text_line"></span>
+						</li>
+						<li>
+							<a href="goods_details.html">清洁</a>
+							<span class="category_title_text_line"></span>
+						</li>
+						<li>
+							<a href="goods_details.html">卸妆</a>
+							<span class="category_title_text_line"></span>
+						</li>
+						<li>
+							<a href="goods_details.html">唇部</a>
+							<span class="category_title_text_line"></span>
+						</li>
+						<li>
+							<a href="goods_details.html">全部</a>
+						</li>
+					</ul>
+				</div>
+				<div class="category_body clearfix">
+					<div class="category_body_left fl">
+						<a href="goods_details.html">
+							<img src="./img/index/ia_300000045.jpg" />
+						</a>
+					</div>
+					<ul class="category_body_right fr">
+						<li class="category_body_right_li">
+							<a href="goods_details.html">
+								<div class="category_body_right_li_brand">GUERLAIN</div>
+								<div class="category_body_right_li_content">娇兰帝皇蜂姿紧致黄金修护...</div>
+								<div class="category_body_right_li_price">￥2480.00</div>
+								<img src="img/index/ia_300000046.jpg" />
+							</a>
+						</li>
+						<li class="category_body_right_li">
+							<a href="goods_details.html">
+								<div class="category_body_right_li_brand">GUERLAIN</div>
+								<div class="category_body_right_li_content">娇兰帝皇蜂姿紧致黄金修护...</div>
+								<div class="category_body_right_li_price">￥2480.00</div>
+								<img src="img/index/ia_300000047.jpg" />
+							</a>
+						</li>
+						<li class="category_body_right_li">
+							<a href="goods_details.html">
+								<div class="category_body_right_li_brand">GUERLAIN</div>
+								<div class="category_body_right_li_content">娇兰帝皇蜂姿紧致黄金修护...</div>
+								<div class="category_body_right_li_price">￥2480.00</div>
+								<img src="img/index/ia_300000048.jpg" />
+							</a>
+						</li>
+						<li class="category_body_right_li">
+							<a href="goods_details.html">
+								<div class="category_body_right_li_brand">GUERLAIN</div>
+								<div class="category_body_right_li_content">娇兰帝皇蜂姿紧致黄金修护...</div>
+								<div class="category_body_right_li_price">￥2480.00</div>
+								<img src="img/index/ia_300000049.jpg" />
+							</a>
+						</li>
+						<li class="category_body_right_li">
+							<a href="goods_details.html">
+								<div class="category_body_right_li_brand">GUERLAIN</div>
+								<div class="category_body_right_li_content">娇兰帝皇蜂姿紧致黄金修护...</div>
+								<div class="category_body_right_li_price">￥2480.00</div>
+								<img src="img/index/ia_300000050.jpg" />
+							</a>
+						</li>
+						<li class="category_body_right_li">
+							<a href="goods_details.html">
+								<div class="category_body_right_li_brand">GUERLAIN</div>
+								<div class="category_body_right_li_content">娇兰帝皇蜂姿紧致黄金修护...</div>
+								<div class="category_body_right_li_price">￥2480.00</div>
+								<img src="img/index/ia_300000051.jpg" />
+							</a>
+						</li>
+						<li class="category_body_right_li">
+							<a href="goods_details.html">
+								<div class="category_body_right_li_brand">GUERLAIN</div>
+								<div class="category_body_right_li_content">娇兰帝皇蜂姿紧致黄金修护...</div>
+								<div class="category_body_right_li_price">￥2480.00</div>
+								<img src="img/index/ia_300000052.jpg" />
+							</a>
+						</li>
+						<li class="category_body_right_li">
+							<a href="goods_details.html">
+								<div class="category_body_right_li_brand">GUERLAIN</div>
+								<div class="category_body_right_li_content">娇兰帝皇蜂姿紧致黄金修护...</div>
+								<div class="category_body_right_li_price">￥2480.00</div>
+								<img src="img/index/ia_300000053.jpg" />
+							</a>
+						</li>
+					</ul>
+				</div>
+				<div class="category_footer">
+					<ul class="category_footer_content">
+						<li class="relative">
+							<a href="goods_details.html">
+								<img src="img/index/ia_300000017.png" />
+							</a>
+							<span class="category_footer_content_line"></span>
+						</li>
+						<li class="relative">
+							<a href="goods_details.html">
+								<img src="img/index/ia_300000018.png" />
+							</a>
+							<span class="category_footer_content_line"></span>
+						</li>
+						<li class="relative">
+							<a href="goods_details.html">
+								<img src="img/index/ia_300000019.png" />
+							</a>
+							<span class="category_footer_content_line"></span>
+						</li>
+						<li class="relative">
+							<a href="goods_details.html">
+								<img src="img/index/ia_300000020.png" />
+							</a>
+							<span class="category_footer_content_line"></span>
+						</li>
+						<li class="relative">
+							<a href="goods_details.html">
+								<img src="img/index/ia_300000022.png" />
+							</a>
+							<span class="category_footer_content_line"></span>
+						</li>
+						<li class="relative">
+							<a href="goods_details.html">
+								<img src="img/index/ia_300000023.png" />
+							</a>
+							<span class="category_footer_content_line"></span>
+						</li>
+						<li class="relative">
+							<a href="goods_details.html">
+								<img src="img/index/ia_300000030.png" />
+							</a>
+							<span class="category_footer_content_line"></span>
+						</li>
+						<li class="relative">
+							<a href="goods_details.html">
 								<img src="img/index/ia_300000032.png" />
 							</a>
 						</li>
@@ -1481,10 +1649,10 @@
 		<div class="fixedtop">
 			<div class="container clearfix" style="padding: 10px 0;">
 				<a href="index.html" class="fixedtop_logo fl">
-					<img  src="./img/register/logo.png" />
+					<img src="./img/register/logo.png" />
 				</a>
 				<div class="fixedtop_input clearfix">
-					<input type="text" placeholder="情人节好礼清单" class="fixedtop_input_text fl"/>
+					<input type="text" placeholder="情人节好礼清单" class="fixedtop_input_text fl" />
 					<a href="goods_list.html" class="fixedtop_goods_list fl">搜索</a>
 				</div>
 			</div>
@@ -1492,39 +1660,41 @@
 		<div class="fixedleft">
 			<div class="fixedleft_info">
 				<div class="fixedleft_info_list">
-					<span class="fixedleft_info_list_text">护肤品类</span>
+					<span class="fixedleft_info_list_text" id="protect">护肤品类</span>
 				</div>
 				<div class="fixedleft_info_list">
-					<span class="fixedleft_info_list_text">护肤品类</span>
+					<span class="fixedleft_info_list_text" id="osmetics">彩妆品类</span>
 				</div>
 				<div class="fixedleft_info_list">
-					<span class="fixedleft_info_list_text">护肤品类</span>
+					<span class="fixedleft_info_list_text" id="fragrance">香氛品类</span>
 				</div>
 				<div class="fixedleft_info_list">
-					<span class="fixedleft_info_list_text">护肤品类</span>
+					<span class="fixedleft_info_list_text" id="tool">工具品类</span>
 				</div>
 				<div class="fixedleft_info_list">
-					<span class="fixedleft_info_list_text">护肤品类</span>
+					<span class="fixedleft_info_list_text" id="man">男士品类</span>
 				</div>
 				<div class="fixedleft_info_list">
-					<span class="fixedleft_info_list_text">护肤品类</span>
+					<span class="fixedleft_info_list_text" id="bathing">洗浴护体</span>
 				</div>
 				<div class="fixedleft_info_list">
-					<span class="fixedleft_info_list_text">护肤品类</span>
+					<span class="fixedleft_info_list_text" id="hair">美发护发</span>
 				</div>
 				<div class="fixedleft_info_list">
-					<span class="fixedleft_info_list_text">护肤品类</span>
+					<span class="fixedleft_info_list_text" id="skin">肤食品类</span>
 				</div>
 			</div>
 		</div>
-			<div class="fixedright">
-				<div class="sidebar"></div>
-			</div>
-		
+		<div class="fixedright">
+			<div class="sidebar"></div>
+		</div>
+
 		<script src="./js/jquery-3.4.1.min.js"></script>
+		<script src="./lib/SuperSlide2.1-demo-00/jquery.SuperSlide.2.1.3.js"></script>
 		<script src="./js/swiper.animate1.0.3.min.js"></script>
 		<script>
 			$(function() {
+				$('.heard_top').load('heard_top.html');
 				$('.head').load('head.html');
 				$('.foot_log').load('footer_log.html');
 				$('.foot').load('footer.html');
@@ -1533,24 +1703,64 @@
 			})
 		</script>
 		<script>
-			var height=$(window).width()/15;
-			$('.fixedleft').css('left',''+height+'px')
-			$('.fixedright').css('right',''+height+'px')
-			$(document).ready(function(){
-				$(document).scroll(function(){
-					$(this).scrollTop()>900?block():none();
+			jQuery("#slideBox").slide({mainCell:".bd ul",autoPlay:true});
+			jQuery("#brand_body_left_p").slide({mainCell:".bd ul",autoPlay:true});
+			var height = $(window).width() / 15;
+			$('.fixedleft').css('left', '' + height + 'px')
+			$('.fixedright').css('right', '' + height + 'px')
+			$(document).ready(function() {
+				$(document).scroll(function() {
+					$(this).scrollTop() > 900 ? block() : none();
 				})
 			})
-			function block(){
+
+			function block() {
 				$('.fixedtop').stop().show();
 				$('.fixedleft').stop().show();
 				$('.fixedright').stop().show();
 			}
-			function none(){
+
+			function none() {
 				$('.fixedtop').stop().hide();
 				$('.fixedleft').stop().hide();
 				$('.fixedright').stop().hide();
 			}
+			$(document).scroll(function() {
+			    var scroH = $(document).scrollTop(); 
+				console.log(scroH);
+				if(scroH>1480&&scroH<2180){
+					$('.fixedleft_info_list_text').css('color','black');
+					$('#protect').css('color','red');
+				}
+				if(scroH>2180&&scroH<2780){
+					$('.fixedleft_info_list_text').css('color','black');
+					$('#osmetics').css('color','red');
+				}
+				if(scroH>2780&&scroH<3380){
+					$('.fixedleft_info_list_text').css('color','black');
+					$('#fragrance').css('color','red');
+				}
+				if(scroH>3380&&scroH<3980){
+					$('.fixedleft_info_list_text').css('color','black');
+					$('#tool').css('color','red');
+				}
+				if(scroH>3980&&scroH<4580){
+					$('.fixedleft_info_list_text').css('color','black');
+					$('#man').css('color','red');
+				}
+				if(scroH>4580&&scroH<5180){
+					$('.fixedleft_info_list_text').css('color','black');
+					$('#bathing').css('color','red');
+				}
+				if(scroH>5180&&scroH<5780){
+					$('.fixedleft_info_list_text').css('color','black');
+					$('#hair').css('color','red');
+				}
+				if(scroH>5780&&scroH<6380){
+					$('.fixedleft_info_list_text').css('color','black');
+					$('#skin').css('color','red');
+				}
+			});
 		</script>
 	</body>
 </html>

@@ -1,865 +1,826 @@
 <!DOCTYPE html>
 <!-- 使用时引入jquery和公共的css -->
-<div class="top">
-			<div class="top_content">
-				<span class="top_left fl">
-					<a href="javascript:;">欢迎来到丝芙兰</a>
-					<a href="login.html">请登录</a>
-					<i></i>
-					<a href="register.html">免费注册</a>
-					<a href="javascript:;">手机验证登陆</a>
-				</span>
-				<div class="top_text fl">
-					<a href="javascript:;">丝芙兰正品承诺</a>
-				</div>
-				<span class="top_right fr">
-					<span class="top_user">
-						<span class="top_right_user"></span>
-						<a href="user.html">我的丝芙兰</a>
-						<span class="top_icon top_photo"></span>
-						<span class="top_right_hover top_photo" style="z-index: 100;">
-							<span style="background-color: white;display: block;">
-								<a href="user_order.html" >我的订单</a>
-							</span>
-						</span>
-					</span>
-					<span>
-						<span class="top_right_vip"></span>
-						<a href="vip.html">会员俱乐部</a>
-					</span>
-					<span>
-						<span class="top_right_phone"></span>
-						<a href="javascript:;">手机丝芙兰</a>
-					</span>
-					<span>
-						<a href="javascript:;">美力事业</a>
-					</span>
-					<span>
-						<a href="help.html">帮助中心</a>
-					</span>
-				</span>
-			</div>
+
+<div class="search">
+	<div class="container relative">
+		<div class="search_log fl">
+			<a href="index.html" style="height: 32px;display: inline-block;">
+				<img src="public_img/ia_300000000.png" />
+			</a>
 		</div>
-		<div class="search">
-			<div class="container relative">
-				<div class="search_log fl">
-					<a href="index.html" style="height: 32px;display: inline-block;">
-						<img src="public_img/ia_300000000.png" />
-					</a>
-				</div>
-				<div class="search_input fl">
-					<input type="text" placeholder="情人节好礼清单" class="search_input_text fl"/>
-					<a href="goods_list.html" class="search_goods_list fl">搜索</a>
-					<div class="clear"></div>
-				</div>
-				<div class="search_cart fr">
-					<a href="cart.html" class="search_cart_link">
-						<img src="public_img/ia_300000199.png" >
-						<span>购物车<b class="">0</b>件</span><!-- 数据从购物车获取 -->
-					</a>
-				</div>
-				<div class="clear"></div>
-			</div>
+		<div class="search_input fl">
+			<input type="text" placeholder="情人节好礼清单" class="search_input_text fl" />
+			<a href="goods_list.html" class="search_goods_list fl">搜索</a>
+			<div class="clear"></div>
 		</div>
-		<div class="navigation">
-			<div class="container relative">
-				<a href="javascript:;" class="search_promise"><img src="public_img/ia_300000001.png"></a>
-				<div class="navigation_list fl">
-					<span class="navigation_list_all">全部商品类目</span>
-					<ul class="navigation_list_detailed">
-						<li>
-							<span class="navigation_list_detailed_text relative">功效
-							<span class="navigation_list_all_white"></span>
-							</span>
-							<a href="javascript:;">保湿补水</a>
-							<a href="javascript:;">底妆修容</a>
-							<div class="navigation_list_all_text">
-								<div class="fl" style="width: 600px;">
-									<div class="navigation_list_all_text_title">
-										<span>功效</span>
-									</div>
-									<div class="navigation_list_all_text_body">
-										<ul class="navigation_list_all_text_body_title fl">
-											<li>清洁
-												<ul class="navigation_list_all_text_body_explain">
-													<li><a href="javascript:;">去角质</a></li>
-													<li><a href="javascript:;">卸妆清洁</a></li>
-												</ul>
-											</li>
-											<li>美白
-												<ul class="navigation_list_all_text_body_explain">
-													<li><a href="javascript:;">淡斑</a></li>
-													<li><a href="javascript:;">提亮肤色</a></li>
-													<li><a href="javascript:;">淡化黑眼圈</a></li>
-												</ul>
-											</li>
-										</ul>
-										<ul class="navigation_list_all_text_body_title fl">
-											<li>底妆修容
-												<ul class="navigation_list_all_text_body_explain">
-													<li><a href="javascript:;">去角质</a></li>
-													<li><a href="javascript:;">卸妆清洁</a></li>
-												</ul>
-											</li>
-											<li>抗老
-												<ul class="navigation_list_all_text_body_explain">
-													<li><a href="javascript:;">淡斑</a></li>
-													<li><a href="javascript:;">提亮肤色</a></li>
-													<li><a href="javascript:;">淡化黑眼圈</a></li>
-												</ul>
-											</li>
-											<li>紧致
-												<ul class="navigation_list_all_text_body_explain ">
-													<li><a href="javascript:;">淡斑</a></li>
-													<li><a href="javascript:;">提亮肤色</a></li>
-													<li><a href="javascript:;">淡化黑眼圈</a></li>
-												</ul>
-											</li>
-											<li>保湿
-												<ul class="navigation_list_all_text_body_explain">
-													<li><a href="javascript:;">淡斑</a></li>
-													<li><a href="javascript:;">提亮肤色</a></li>
-													<li><a href="javascript:;">淡化黑眼圈</a></li>
-												</ul>
-											</li>
-										</ul>
-										<ul class="navigation_list_all_text_body_title fl">
-											<li>防晒
-												<ul class="navigation_list_all_text_body_explain">
-													<li><a href="javascript:;">去角质</a></li>
-													<li><a href="javascript:;">卸妆清洁</a></li>
-												</ul>
-											</li>
-											<li>控油
-												<ul class="navigation_list_all_text_body_explain">
-													<li><a href="javascript:;">淡斑</a></li>
-													<li><a href="javascript:;">提亮肤色</a></li>
-													<li><a href="javascript:;">淡化黑眼圈</a></li>
-												</ul>
-											</li>
-											<li>百变妆容
-												<ul class="navigation_list_all_text_body_explain">
-													<li><a href="javascript:;">淡斑</a></li>
-													<li><a href="javascript:;">提亮肤色</a></li>
-													<li><a href="javascript:;">淡化黑眼圈</a></li>
-												</ul>
-											</li>
-										</ul>
-										<div class="clear"></div>
-									</div>
-								</div>
-								<div class="navigation_list_all_text_photo fr">
-									<img src="public_img/hp_tiffany_20181102.jpg " />
-								</div>
-								<div class="clear"></div>
-							</div>
-						</li>
-						<li>
-							<span class="navigation_list_detailed_text relative">护肤
-							<span class="navigation_list_all_white"></span>
-							</span>
-							<a href="javascript:;">新年当红首选</a>
-							<a href="javascript:;">我的'膜'力2020</a>
-							<div class="navigation_list_all_text">
-								<div class="fl" style="width: 600px;">
-									<div class="navigation_list_all_text_title">
-										<span>护肤</span>
-									</div>
-									<div class="navigation_list_all_text_body">
-										<ul class="navigation_list_all_text_body_title fl">
-											<li>清洁
-												<ul class="navigation_list_all_text_body_explain">
-													<li>去角质</li>
-													<li>卸妆清洁</li>
-												</ul>
-											</li>
-											<li>美白
-												<ul class="navigation_list_all_text_body_explain">
-													<li>淡斑</li>
-													<li>提亮肤色</li>
-													<li>淡化黑眼圈</li>
-												</ul>
-											</li>
-										</ul>
-										<ul class="navigation_list_all_text_body_title fl">
-											<li>底妆修容
-												<ul class="navigation_list_all_text_body_explain">
-													<li>去角质</li>
-													<li>卸妆清洁</li>
-												</ul>
-											</li>
-											<li>抗老
-												<ul class="navigation_list_all_text_body_explain">
-													<li>淡斑</li>
-													<li>提亮肤色</li>
-													<li>淡化黑眼圈</li>
-												</ul>
-											</li>
-											<li>紧致
-												<ul class="navigation_list_all_text_body_explain ">
-													<li>淡斑</li>
-													<li>提亮肤色</li>
-													<li>淡化黑眼圈</li>
-												</ul>
-											</li>
-											<li>保湿
-												<ul class="navigation_list_all_text_body_explain">
-													<li>淡斑</li>
-													<li>提亮肤色</li>
-													<li>淡化黑眼圈</li>
-												</ul>
-											</li>
-										</ul>
-										<ul class="navigation_list_all_text_body_title fl">
-											<li>防晒
-												<ul class="navigation_list_all_text_body_explain">
-													<li>去角质</li>
-													<li>卸妆清洁</li>
-												</ul>
-											</li>
-											<li>控油
-												<ul class="navigation_list_all_text_body_explain">
-													<li>淡斑</li>
-													<li>提亮肤色</li>
-													<li>淡化黑眼圈</li>
-												</ul>
-											</li>
-											<li>百变妆容
-												<ul class="navigation_list_all_text_body_explain">
-													<li>淡斑</li>
-													<li>提亮肤色</li>
-													<li>淡化黑眼圈</li>
-												</ul>
-											</li>
-										</ul>
-										<div class="clear"></div>
-									</div>
-								</div>
-								<div class="navigation_list_all_text_photo fr">
-									<img src="public_img/hp_tiffany_20181102.jpg " />
-								</div>
-								<div class="clear"></div>
-							</div>
-						</li>
-						<li>
-							<span class="navigation_list_detailed_text relative">彩妆
-							<span class="navigation_list_all_white"></span>
-							</span>
-							<a href="javascript:;">眉眼传情</a>
-							<a href="javascript:;">年度精选闪亮圣诞</a>
-							<div class="navigation_list_all_text">
-								<div class="fl" style="width: 600px;">
-									<div class="navigation_list_all_text_title">
-										<span>彩妆</span>
-									</div>
-									<div class="navigation_list_all_text_body">
-										<ul class="navigation_list_all_text_body_title fl">
-											<li>清洁
-												<ul class="navigation_list_all_text_body_explain">
-													<li>去角质</li>
-													<li>卸妆清洁</li>
-												</ul>
-											</li>
-											<li>美白
-												<ul class="navigation_list_all_text_body_explain">
-													<li>淡斑</li>
-													<li>提亮肤色</li>
-													<li>淡化黑眼圈</li>
-												</ul>
-											</li>
-										</ul>
-										<ul class="navigation_list_all_text_body_title fl">
-											<li>底妆修容
-												<ul class="navigation_list_all_text_body_explain">
-													<li>去角质</li>
-													<li>卸妆清洁</li>
-												</ul>
-											</li>
-											<li>抗老
-												<ul class="navigation_list_all_text_body_explain">
-													<li>淡斑</li>
-													<li>提亮肤色</li>
-													<li>淡化黑眼圈</li>
-												</ul>
-											</li>
-											<li>紧致
-												<ul class="navigation_list_all_text_body_explain ">
-													<li>淡斑</li>
-													<li>提亮肤色</li>
-													<li>淡化黑眼圈</li>
-												</ul>
-											</li>
-											<li>保湿
-												<ul class="navigation_list_all_text_body_explain">
-													<li>淡斑</li>
-													<li>提亮肤色</li>
-													<li>淡化黑眼圈</li>
-												</ul>
-											</li>
-										</ul>
-										<ul class="navigation_list_all_text_body_title fl">
-											<li>防晒
-												<ul class="navigation_list_all_text_body_explain">
-													<li>去角质</li>
-													<li>卸妆清洁</li>
-												</ul>
-											</li>
-											<li>控油
-												<ul class="navigation_list_all_text_body_explain">
-													<li>淡斑</li>
-													<li>提亮肤色</li>
-													<li>淡化黑眼圈</li>
-												</ul>
-											</li>
-											<li>百变妆容
-												<ul class="navigation_list_all_text_body_explain">
-													<li>淡斑</li>
-													<li>提亮肤色</li>
-													<li>淡化黑眼圈</li>
-												</ul>
-											</li>
-										</ul>
-										<div class="clear"></div>
-									</div>
-								</div>
-								<div class="navigation_list_all_text_photo fr">
-									<img src="public_img/hp_tiffany_20181102.jpg " />
-								</div>
-								<div class="clear"></div>
-							</div>
-						</li>
-						<li>
-							<span class="navigation_list_detailed_text relative">香水
-							<span class="navigation_list_all_white"></span>
-							</span>
-							<a href="javascript:;">圣诞香氛礼盒</a>
-							<a href="javascript:;">Ta的香氛爱礼</a>
-							<div class="navigation_list_all_text">
-								<div class="fl" style="width: 600px;">
-									<div class="navigation_list_all_text_title">
-										<span>香水</span>
-									</div>
-									<div class="navigation_list_all_text_body">
-										<ul class="navigation_list_all_text_body_title fl">
-											<li>清洁
-												<ul class="navigation_list_all_text_body_explain">
-													<li>去角质</li>
-													<li>卸妆清洁</li>
-												</ul>
-											</li>
-											<li>美白
-												<ul class="navigation_list_all_text_body_explain">
-													<li>淡斑</li>
-													<li>提亮肤色</li>
-													<li>淡化黑眼圈</li>
-												</ul>
-											</li>
-										</ul>
-										<ul class="navigation_list_all_text_body_title fl">
-											<li>底妆修容
-												<ul class="navigation_list_all_text_body_explain">
-													<li>去角质</li>
-													<li>卸妆清洁</li>
-												</ul>
-											</li>
-											<li>抗老
-												<ul class="navigation_list_all_text_body_explain">
-													<li>淡斑</li>
-													<li>提亮肤色</li>
-													<li>淡化黑眼圈</li>
-												</ul>
-											</li>
-											<li>紧致
-												<ul class="navigation_list_all_text_body_explain ">
-													<li>淡斑</li>
-													<li>提亮肤色</li>
-													<li>淡化黑眼圈</li>
-												</ul>
-											</li>
-											<li>保湿
-												<ul class="navigation_list_all_text_body_explain">
-													<li>淡斑</li>
-													<li>提亮肤色</li>
-													<li>淡化黑眼圈</li>
-												</ul>
-											</li>
-										</ul>
-										<ul class="navigation_list_all_text_body_title fl">
-											<li>防晒
-												<ul class="navigation_list_all_text_body_explain">
-													<li>去角质</li>
-													<li>卸妆清洁</li>
-												</ul>
-											</li>
-											<li>控油
-												<ul class="navigation_list_all_text_body_explain">
-													<li>淡斑</li>
-													<li>提亮肤色</li>
-													<li>淡化黑眼圈</li>
-												</ul>
-											</li>
-											<li>百变妆容
-												<ul class="navigation_list_all_text_body_explain">
-													<li>淡斑</li>
-													<li>提亮肤色</li>
-													<li>淡化黑眼圈</li>
-												</ul>
-											</li>
-										</ul>
-										<div class="clear"></div>
-									</div>
-								</div>
-								<div class="navigation_list_all_text_photo fr">
-									<img src="public_img/hp_tiffany_20181102.jpg " />
-								</div>
-								<div class="clear"></div>
-							</div>
-						</li>
-						<li>
-							<span class="navigation_list_detailed_text relative">工具
-							<span class="navigation_list_all_white"></span>
-							</span>
-							<a href="javascript:;">美容仪器</a>
-							<a href="javascript:;">美妆蛋套装</a>
-							<div class="navigation_list_all_text">
-								<div class="fl" style="width: 600px;">
-									<div class="navigation_list_all_text_title">
-										<span>工具</span>
-									</div>
-									<div class="navigation_list_all_text_body">
-										<ul class="navigation_list_all_text_body_title fl">
-											<li>清洁
-												<ul class="navigation_list_all_text_body_explain">
-													<li>去角质</li>
-													<li>卸妆清洁</li>
-												</ul>
-											</li>
-											<li>美白
-												<ul class="navigation_list_all_text_body_explain">
-													<li>淡斑</li>
-													<li>提亮肤色</li>
-													<li>淡化黑眼圈</li>
-												</ul>
-											</li>
-										</ul>
-										<ul class="navigation_list_all_text_body_title fl">
-											<li>底妆修容
-												<ul class="navigation_list_all_text_body_explain">
-													<li>去角质</li>
-													<li>卸妆清洁</li>
-												</ul>
-											</li>
-											<li>抗老
-												<ul class="navigation_list_all_text_body_explain">
-													<li>淡斑</li>
-													<li>提亮肤色</li>
-													<li>淡化黑眼圈</li>
-												</ul>
-											</li>
-											<li>紧致
-												<ul class="navigation_list_all_text_body_explain ">
-													<li>淡斑</li>
-													<li>提亮肤色</li>
-													<li>淡化黑眼圈</li>
-												</ul>
-											</li>
-											<li>保湿
-												<ul class="navigation_list_all_text_body_explain">
-													<li>淡斑</li>
-													<li>提亮肤色</li>
-													<li>淡化黑眼圈</li>
-												</ul>
-											</li>
-										</ul>
-										<ul class="navigation_list_all_text_body_title fl">
-											<li>防晒
-												<ul class="navigation_list_all_text_body_explain">
-													<li>去角质</li>
-													<li>卸妆清洁</li>
-												</ul>
-											</li>
-											<li>控油
-												<ul class="navigation_list_all_text_body_explain">
-													<li>淡斑</li>
-													<li>提亮肤色</li>
-													<li>淡化黑眼圈</li>
-												</ul>
-											</li>
-											<li>百变妆容
-												<ul class="navigation_list_all_text_body_explain">
-													<li>淡斑</li>
-													<li>提亮肤色</li>
-													<li>淡化黑眼圈</li>
-												</ul>
-											</li>
-										</ul>
-										<div class="clear"></div>
-									</div>
-								</div>
-								<div class="navigation_list_all_text_photo fr">
-									<img src="public_img/hp_tiffany_20181102.jpg " />
-								</div>
-								<div class="clear"></div>
-							</div>
-						</li>
-						<li>
-							<span class="navigation_list_detailed_text relative">男士
-							<span class="navigation_list_all_white"></span>
-							</span>
-							<a href="javascript:;">秋冬男士护肤首选</a>
-							<a href="javascript:;">滋养紧致</a>
-							<div class="navigation_list_all_text">
-								<div class="fl" style="width: 600px;">
-									<div class="navigation_list_all_text_title">
-										<span>男士</span>
-									</div>
-									<div class="navigation_list_all_text_body">
-										<ul class="navigation_list_all_text_body_title fl">
-											<li>清洁
-												<ul class="navigation_list_all_text_body_explain">
-													<li>去角质</li>
-													<li>卸妆清洁</li>
-												</ul>
-											</li>
-											<li>美白
-												<ul class="navigation_list_all_text_body_explain">
-													<li>淡斑</li>
-													<li>提亮肤色</li>
-													<li>淡化黑眼圈</li>
-												</ul>
-											</li>
-										</ul>
-										<ul class="navigation_list_all_text_body_title fl">
-											<li>底妆修容
-												<ul class="navigation_list_all_text_body_explain">
-													<li>去角质</li>
-													<li>卸妆清洁</li>
-												</ul>
-											</li>
-											<li>抗老
-												<ul class="navigation_list_all_text_body_explain">
-													<li>淡斑</li>
-													<li>提亮肤色</li>
-													<li>淡化黑眼圈</li>
-												</ul>
-											</li>
-											<li>紧致
-												<ul class="navigation_list_all_text_body_explain ">
-													<li>淡斑</li>
-													<li>提亮肤色</li>
-													<li>淡化黑眼圈</li>
-												</ul>
-											</li>
-											<li>保湿
-												<ul class="navigation_list_all_text_body_explain">
-													<li>淡斑</li>
-													<li>提亮肤色</li>
-													<li>淡化黑眼圈</li>
-												</ul>
-											</li>
-										</ul>
-										<ul class="navigation_list_all_text_body_title fl">
-											<li>防晒
-												<ul class="navigation_list_all_text_body_explain">
-													<li>去角质</li>
-													<li>卸妆清洁</li>
-												</ul>
-											</li>
-											<li>控油
-												<ul class="navigation_list_all_text_body_explain">
-													<li>淡斑</li>
-													<li>提亮肤色</li>
-													<li>淡化黑眼圈</li>
-												</ul>
-											</li>
-											<li>百变妆容
-												<ul class="navigation_list_all_text_body_explain">
-													<li>淡斑</li>
-													<li>提亮肤色</li>
-													<li>淡化黑眼圈</li>
-												</ul>
-											</li>
-										</ul>
-										<div class="clear"></div>
-									</div>
-								</div>
-								<div class="navigation_list_all_text_photo fr">
-									<img src="public_img/hp_tiffany_20181102.jpg " />
-								</div>
-								<div class="clear"></div>
-							</div>
-						</li>
-						<li>
-							<span class="navigation_list_detailed_text relative">洗浴护体
-							<span class="navigation_list_all_white"></span>
-							</span>
-							<a href="javascript:;">滋润美体</a>
-							<a href="javascript:;">保湿手霜	</a>
-							<div class="navigation_list_all_text">
-								<div class="fl" style="width: 600px;">
-									<div class="navigation_list_all_text_title">
-										<span>洗浴护体</span>
-									</div>
-									<div class="navigation_list_all_text_body">
-										<ul class="navigation_list_all_text_body_title fl">
-											<li>清洁
-												<ul class="navigation_list_all_text_body_explain">
-													<li>去角质</li>
-													<li>卸妆清洁</li>
-												</ul>
-											</li>
-											<li>美白
-												<ul class="navigation_list_all_text_body_explain">
-													<li>淡斑</li>
-													<li>提亮肤色</li>
-													<li>淡化黑眼圈</li>
-												</ul>
-											</li>
-										</ul>
-										<ul class="navigation_list_all_text_body_title fl">
-											<li>底妆修容
-												<ul class="navigation_list_all_text_body_explain">
-													<li>去角质</li>
-													<li>卸妆清洁</li>
-												</ul>
-											</li>
-											<li>抗老
-												<ul class="navigation_list_all_text_body_explain">
-													<li>淡斑</li>
-													<li>提亮肤色</li>
-													<li>淡化黑眼圈</li>
-												</ul>
-											</li>
-											<li>紧致
-												<ul class="navigation_list_all_text_body_explain ">
-													<li>淡斑</li>
-													<li>提亮肤色</li>
-													<li>淡化黑眼圈</li>
-												</ul>
-											</li>
-											<li>保湿
-												<ul class="navigation_list_all_text_body_explain">
-													<li>淡斑</li>
-													<li>提亮肤色</li>
-													<li>淡化黑眼圈</li>
-												</ul>
-											</li>
-										</ul>
-										<ul class="navigation_list_all_text_body_title fl">
-											<li>防晒
-												<ul class="navigation_list_all_text_body_explain">
-													<li>去角质</li>
-													<li>卸妆清洁</li>
-												</ul>
-											</li>
-											<li>控油
-												<ul class="navigation_list_all_text_body_explain">
-													<li>淡斑</li>
-													<li>提亮肤色</li>
-													<li>淡化黑眼圈</li>
-												</ul>
-											</li>
-											<li>百变妆容
-												<ul class="navigation_list_all_text_body_explain">
-													<li>淡斑</li>
-													<li>提亮肤色</li>
-													<li>淡化黑眼圈</li>
-												</ul>
-											</li>
-										</ul>
-										<div class="clear"></div>
-									</div>
-								</div>
-								<div class="navigation_list_all_text_photo fr">
-									<img src="public_img/hp_tiffany_20181102.jpg " />
-								</div>
-								<div class="clear"></div>
-							</div>
-						</li>
-						<li>
-							<span class="navigation_list_detailed_text relative">美发护发
-							<span class="navigation_list_all_white"></span>
-							</span>
-							<a href="javascript:;">换季防脱</a>
-							<a href="javascript:;">润养秀发防毛躁</a>
-							<div class="navigation_list_all_text">
-								<div class="fl" style="width: 600px;">
-									<div class="navigation_list_all_text_title">
-										<span>美发护发</span>
-									</div>
-									<div class="navigation_list_all_text_body">
-										<ul class="navigation_list_all_text_body_title fl">
-											<li>清洁
-												<ul class="navigation_list_all_text_body_explain">
-													<li>去角质</li>
-													<li>卸妆清洁</li>
-												</ul>
-											</li>
-											<li>美白
-												<ul class="navigation_list_all_text_body_explain">
-													<li>淡斑</li>
-													<li>提亮肤色</li>
-													<li>淡化黑眼圈</li>
-												</ul>
-											</li>
-										</ul>
-										<ul class="navigation_list_all_text_body_title fl">
-											<li>底妆修容
-												<ul class="navigation_list_all_text_body_explain">
-													<li>去角质</li>
-													<li>卸妆清洁</li>
-												</ul>
-											</li>
-											<li>抗老
-												<ul class="navigation_list_all_text_body_explain">
-													<li>淡斑</li>
-													<li>提亮肤色</li>
-													<li>淡化黑眼圈</li>
-												</ul>
-											</li>
-											<li>紧致
-												<ul class="navigation_list_all_text_body_explain ">
-													<li>淡斑</li>
-													<li>提亮肤色</li>
-													<li>淡化黑眼圈</li>
-												</ul>
-											</li>
-											<li>保湿
-												<ul class="navigation_list_all_text_body_explain">
-													<li>淡斑</li>
-													<li>提亮肤色</li>
-													<li>淡化黑眼圈</li>
-												</ul>
-											</li>
-										</ul>
-										<ul class="navigation_list_all_text_body_title fl">
-											<li>防晒
-												<ul class="navigation_list_all_text_body_explain">
-													<li>去角质</li>
-													<li>卸妆清洁</li>
-												</ul>
-											</li>
-											<li>控油
-												<ul class="navigation_list_all_text_body_explain">
-													<li>淡斑</li>
-													<li>提亮肤色</li>
-													<li>淡化黑眼圈</li>
-												</ul>
-											</li>
-											<li>百变妆容
-												<ul class="navigation_list_all_text_body_explain">
-													<li>淡斑</li>
-													<li>提亮肤色</li>
-													<li>淡化黑眼圈</li>
-												</ul>
-											</li>
-										</ul>
-										<div class="clear"></div>
-									</div>
-								</div>
-								<div class="navigation_list_all_text_photo fr">
-									<img src="public_img/hp_tiffany_20181102.jpg " />
-								</div>
-								<div class="clear"></div>
-							</div>
-						</li>
-						<li>
-							<span class="navigation_list_detailed_text relative">肤食
-							<span class="navigation_list_all_white"></span>
-							</span>
-							<a href="javascript:;">胶原蛋白饮品</a>
-							<div class="navigation_list_all_text">
-								<div class="fl" style="width: 600px;">
-									<div class="navigation_list_all_text_title">
-										<span>肤食</span>
-									</div>
-									<div class="navigation_list_all_text_body">
-										<ul class="navigation_list_all_text_body_title fl">
-											<li>清洁
-												<ul class="navigation_list_all_text_body_explain">
-													<li>去角质</li>
-													<li>卸妆清洁</li>
-												</ul>
-											</li>
-											<li>美白
-												<ul class="navigation_list_all_text_body_explain">
-													<li>淡斑</li>
-													<li>提亮肤色</li>
-													<li>淡化黑眼圈</li>
-												</ul>
-											</li>
-										</ul>
-										<ul class="navigation_list_all_text_body_title fl">
-											<li>底妆修容
-												<ul class="navigation_list_all_text_body_explain">
-													<li>去角质</li>
-													<li>卸妆清洁</li>
-												</ul>
-											</li>
-											<li>抗老
-												<ul class="navigation_list_all_text_body_explain">
-													<li>淡斑</li>
-													<li>提亮肤色</li>
-													<li>淡化黑眼圈</li>
-												</ul>
-											</li>
-											<li>紧致
-												<ul class="navigation_list_all_text_body_explain ">
-													<li>淡斑</li>
-													<li>提亮肤色</li>
-													<li>淡化黑眼圈</li>
-												</ul>
-											</li>
-											<li>保湿
-												<ul class="navigation_list_all_text_body_explain">
-													<li>淡斑</li>
-													<li>提亮肤色</li>
-													<li>淡化黑眼圈</li>
-												</ul>
-											</li>
-										</ul>
-										<ul class="navigation_list_all_text_body_title fl">
-											<li>防晒
-												<ul class="navigation_list_all_text_body_explain">
-													<li>去角质</li>
-													<li>卸妆清洁</li>
-												</ul>
-											</li>
-											<li>控油
-												<ul class="navigation_list_all_text_body_explain">
-													<li>淡斑</li>
-													<li>提亮肤色</li>
-													<li>淡化黑眼圈</li>
-												</ul>
-											</li>
-											<li>百变妆容
-												<ul class="navigation_list_all_text_body_explain">
-													<li>淡斑</li>
-													<li>提亮肤色</li>
-													<li>淡化黑眼圈</li>
-												</ul>
-											</li>
-										</ul>
-										<div class="clear"></div>
-									</div>
-								</div>
-								<div class="navigation_list_all_text_photo fr">
-									<img src="public_img/hp_tiffany_20181102.jpg " />
-								</div>
-								<div class="clear"></div>
-							</div>
-						</li>
-					</ul>
-				</div>
-				<div class="navigation_list_quick fl">
-					<ul class="navigation_list_quick_text">
-						<li><a href="javascript:;">畅销榜单</a></li>
-						<li><a href="javascript:;">独家发售</a></li>
-						<li><a href="javascript:;">礼物套装</a></li>
-						<li><a href="javascript:;">全部品牌</a></li>
-						<li><a href="javascript:;">预约中心</a></li>
-					</ul>
-				</div>
-				<div class="clear"></div>
-			</div>
+		<div class="search_cart fr">
+			<a href="cart.html" class="search_cart_link">
+				<img src="public_img/ia_300000199.png">
+				<span>购物车<b class="">0</b>件</span><!-- 数据从购物车获取 -->
+			</a>
 		</div>
+		<div class="clear"></div>
+	</div>
+</div>
+<div class="navigation">
+	<div class="container relative">
+		<a href="javascript:;" class="search_promise"><img src="public_img/ia_300000001.png"></a>
+		<div class="navigation_list fl">
+			<span class="navigation_list_all">全部商品类目</span>
+			<ul class="navigation_list_detailed">
+				<li>
+					<span class="navigation_list_detailed_text relative">功效
+						<span class="navigation_list_all_white"></span>
+					</span>
+					<a href="javascript:;">保湿补水</a>
+					<a href="javascript:;">底妆修容</a>
+					<div class="navigation_list_all_text">
+						<div class="fl" style="width: 600px;">
+							<div class="navigation_list_all_text_title">
+								<span>功效</span>
+							</div>
+							<div class="navigation_list_all_text_body">
+								<ul class="navigation_list_all_text_body_title fl">
+									<li>清洁
+										<ul class="navigation_list_all_text_body_explain">
+											<li><a href="javascript:;">去角质</a></li>
+											<li><a href="javascript:;">卸妆清洁</a></li>
+										</ul>
+									</li>
+									<li>美白
+										<ul class="navigation_list_all_text_body_explain">
+											<li><a href="javascript:;">淡斑</a></li>
+											<li><a href="javascript:;">提亮肤色</a></li>
+											<li><a href="javascript:;">淡化黑眼圈</a></li>
+										</ul>
+									</li>
+								</ul>
+								<ul class="navigation_list_all_text_body_title fl">
+									<li>底妆修容
+										<ul class="navigation_list_all_text_body_explain">
+											<li><a href="javascript:;">去角质</a></li>
+											<li><a href="javascript:;">卸妆清洁</a></li>
+										</ul>
+									</li>
+									<li>抗老
+										<ul class="navigation_list_all_text_body_explain">
+											<li><a href="javascript:;">淡斑</a></li>
+											<li><a href="javascript:;">提亮肤色</a></li>
+											<li><a href="javascript:;">淡化黑眼圈</a></li>
+										</ul>
+									</li>
+									<li>紧致
+										<ul class="navigation_list_all_text_body_explain ">
+											<li><a href="javascript:;">淡斑</a></li>
+											<li><a href="javascript:;">提亮肤色</a></li>
+											<li><a href="javascript:;">淡化黑眼圈</a></li>
+										</ul>
+									</li>
+									<li>保湿
+										<ul class="navigation_list_all_text_body_explain">
+											<li><a href="javascript:;">淡斑</a></li>
+											<li><a href="javascript:;">提亮肤色</a></li>
+											<li><a href="javascript:;">淡化黑眼圈</a></li>
+										</ul>
+									</li>
+								</ul>
+								<ul class="navigation_list_all_text_body_title fl">
+									<li>防晒
+										<ul class="navigation_list_all_text_body_explain">
+											<li><a href="javascript:;">去角质</a></li>
+											<li><a href="javascript:;">卸妆清洁</a></li>
+										</ul>
+									</li>
+									<li>控油
+										<ul class="navigation_list_all_text_body_explain">
+											<li><a href="javascript:;">淡斑</a></li>
+											<li><a href="javascript:;">提亮肤色</a></li>
+											<li><a href="javascript:;">淡化黑眼圈</a></li>
+										</ul>
+									</li>
+									<li>百变妆容
+										<ul class="navigation_list_all_text_body_explain">
+											<li><a href="javascript:;">淡斑</a></li>
+											<li><a href="javascript:;">提亮肤色</a></li>
+											<li><a href="javascript:;">淡化黑眼圈</a></li>
+										</ul>
+									</li>
+								</ul>
+								<div class="clear"></div>
+							</div>
+						</div>
+						<div class="navigation_list_all_text_photo fr">
+							<img src="public_img/hp_tiffany_20181102.jpg " />
+						</div>
+						<div class="clear"></div>
+					</div>
+				</li>
+				<li>
+					<span class="navigation_list_detailed_text relative">护肤
+						<span class="navigation_list_all_white"></span>
+					</span>
+					<a href="javascript:;">新年当红首选</a>
+					<a href="javascript:;">我的'膜'力2020</a>
+					<div class="navigation_list_all_text">
+						<div class="fl" style="width: 600px;">
+							<div class="navigation_list_all_text_title">
+								<span>护肤</span>
+							</div>
+							<div class="navigation_list_all_text_body">
+								<ul class="navigation_list_all_text_body_title fl">
+									<li>清洁
+										<ul class="navigation_list_all_text_body_explain">
+											<li>去角质</li>
+											<li>卸妆清洁</li>
+										</ul>
+									</li>
+									<li>美白
+										<ul class="navigation_list_all_text_body_explain">
+											<li>淡斑</li>
+											<li>提亮肤色</li>
+											<li>淡化黑眼圈</li>
+										</ul>
+									</li>
+								</ul>
+								<ul class="navigation_list_all_text_body_title fl">
+									<li>底妆修容
+										<ul class="navigation_list_all_text_body_explain">
+											<li>去角质</li>
+											<li>卸妆清洁</li>
+										</ul>
+									</li>
+									<li>抗老
+										<ul class="navigation_list_all_text_body_explain">
+											<li>淡斑</li>
+											<li>提亮肤色</li>
+											<li>淡化黑眼圈</li>
+										</ul>
+									</li>
+									<li>紧致
+										<ul class="navigation_list_all_text_body_explain ">
+											<li>淡斑</li>
+											<li>提亮肤色</li>
+											<li>淡化黑眼圈</li>
+										</ul>
+									</li>
+									<li>保湿
+										<ul class="navigation_list_all_text_body_explain">
+											<li>淡斑</li>
+											<li>提亮肤色</li>
+											<li>淡化黑眼圈</li>
+										</ul>
+									</li>
+								</ul>
+								<ul class="navigation_list_all_text_body_title fl">
+									<li>防晒
+										<ul class="navigation_list_all_text_body_explain">
+											<li>去角质</li>
+											<li>卸妆清洁</li>
+										</ul>
+									</li>
+									<li>控油
+										<ul class="navigation_list_all_text_body_explain">
+											<li>淡斑</li>
+											<li>提亮肤色</li>
+											<li>淡化黑眼圈</li>
+										</ul>
+									</li>
+									<li>百变妆容
+										<ul class="navigation_list_all_text_body_explain">
+											<li>淡斑</li>
+											<li>提亮肤色</li>
+											<li>淡化黑眼圈</li>
+										</ul>
+									</li>
+								</ul>
+								<div class="clear"></div>
+							</div>
+						</div>
+						<div class="navigation_list_all_text_photo fr">
+							<img src="public_img/hp_tiffany_20181102.jpg " />
+						</div>
+						<div class="clear"></div>
+					</div>
+				</li>
+				<li>
+					<span class="navigation_list_detailed_text relative">彩妆
+						<span class="navigation_list_all_white"></span>
+					</span>
+					<a href="javascript:;">眉眼传情</a>
+					<a href="javascript:;">年度精选闪亮圣诞</a>
+					<div class="navigation_list_all_text">
+						<div class="fl" style="width: 600px;">
+							<div class="navigation_list_all_text_title">
+								<span>彩妆</span>
+							</div>
+							<div class="navigation_list_all_text_body">
+								<ul class="navigation_list_all_text_body_title fl">
+									<li>清洁
+										<ul class="navigation_list_all_text_body_explain">
+											<li>去角质</li>
+											<li>卸妆清洁</li>
+										</ul>
+									</li>
+									<li>美白
+										<ul class="navigation_list_all_text_body_explain">
+											<li>淡斑</li>
+											<li>提亮肤色</li>
+											<li>淡化黑眼圈</li>
+										</ul>
+									</li>
+								</ul>
+								<ul class="navigation_list_all_text_body_title fl">
+									<li>底妆修容
+										<ul class="navigation_list_all_text_body_explain">
+											<li>去角质</li>
+											<li>卸妆清洁</li>
+										</ul>
+									</li>
+									<li>抗老
+										<ul class="navigation_list_all_text_body_explain">
+											<li>淡斑</li>
+											<li>提亮肤色</li>
+											<li>淡化黑眼圈</li>
+										</ul>
+									</li>
+									<li>紧致
+										<ul class="navigation_list_all_text_body_explain ">
+											<li>淡斑</li>
+											<li>提亮肤色</li>
+											<li>淡化黑眼圈</li>
+										</ul>
+									</li>
+									<li>保湿
+										<ul class="navigation_list_all_text_body_explain">
+											<li>淡斑</li>
+											<li>提亮肤色</li>
+											<li>淡化黑眼圈</li>
+										</ul>
+									</li>
+								</ul>
+								<ul class="navigation_list_all_text_body_title fl">
+									<li>防晒
+										<ul class="navigation_list_all_text_body_explain">
+											<li>去角质</li>
+											<li>卸妆清洁</li>
+										</ul>
+									</li>
+									<li>控油
+										<ul class="navigation_list_all_text_body_explain">
+											<li>淡斑</li>
+											<li>提亮肤色</li>
+											<li>淡化黑眼圈</li>
+										</ul>
+									</li>
+									<li>百变妆容
+										<ul class="navigation_list_all_text_body_explain">
+											<li>淡斑</li>
+											<li>提亮肤色</li>
+											<li>淡化黑眼圈</li>
+										</ul>
+									</li>
+								</ul>
+								<div class="clear"></div>
+							</div>
+						</div>
+						<div class="navigation_list_all_text_photo fr">
+							<img src="public_img/hp_tiffany_20181102.jpg " />
+						</div>
+						<div class="clear"></div>
+					</div>
+				</li>
+				<li>
+					<span class="navigation_list_detailed_text relative">香水
+						<span class="navigation_list_all_white"></span>
+					</span>
+					<a href="javascript:;">圣诞香氛礼盒</a>
+					<a href="javascript:;">Ta的香氛爱礼</a>
+					<div class="navigation_list_all_text">
+						<div class="fl" style="width: 600px;">
+							<div class="navigation_list_all_text_title">
+								<span>香水</span>
+							</div>
+							<div class="navigation_list_all_text_body">
+								<ul class="navigation_list_all_text_body_title fl">
+									<li>清洁
+										<ul class="navigation_list_all_text_body_explain">
+											<li>去角质</li>
+											<li>卸妆清洁</li>
+										</ul>
+									</li>
+									<li>美白
+										<ul class="navigation_list_all_text_body_explain">
+											<li>淡斑</li>
+											<li>提亮肤色</li>
+											<li>淡化黑眼圈</li>
+										</ul>
+									</li>
+								</ul>
+								<ul class="navigation_list_all_text_body_title fl">
+									<li>底妆修容
+										<ul class="navigation_list_all_text_body_explain">
+											<li>去角质</li>
+											<li>卸妆清洁</li>
+										</ul>
+									</li>
+									<li>抗老
+										<ul class="navigation_list_all_text_body_explain">
+											<li>淡斑</li>
+											<li>提亮肤色</li>
+											<li>淡化黑眼圈</li>
+										</ul>
+									</li>
+									<li>紧致
+										<ul class="navigation_list_all_text_body_explain ">
+											<li>淡斑</li>
+											<li>提亮肤色</li>
+											<li>淡化黑眼圈</li>
+										</ul>
+									</li>
+									<li>保湿
+										<ul class="navigation_list_all_text_body_explain">
+											<li>淡斑</li>
+											<li>提亮肤色</li>
+											<li>淡化黑眼圈</li>
+										</ul>
+									</li>
+								</ul>
+								<ul class="navigation_list_all_text_body_title fl">
+									<li>防晒
+										<ul class="navigation_list_all_text_body_explain">
+											<li>去角质</li>
+											<li>卸妆清洁</li>
+										</ul>
+									</li>
+									<li>控油
+										<ul class="navigation_list_all_text_body_explain">
+											<li>淡斑</li>
+											<li>提亮肤色</li>
+											<li>淡化黑眼圈</li>
+										</ul>
+									</li>
+									<li>百变妆容
+										<ul class="navigation_list_all_text_body_explain">
+											<li>淡斑</li>
+											<li>提亮肤色</li>
+											<li>淡化黑眼圈</li>
+										</ul>
+									</li>
+								</ul>
+								<div class="clear"></div>
+							</div>
+						</div>
+						<div class="navigation_list_all_text_photo fr">
+							<img src="public_img/hp_tiffany_20181102.jpg " />
+						</div>
+						<div class="clear"></div>
+					</div>
+				</li>
+				<li>
+					<span class="navigation_list_detailed_text relative">工具
+						<span class="navigation_list_all_white"></span>
+					</span>
+					<a href="javascript:;">美容仪器</a>
+					<a href="javascript:;">美妆蛋套装</a>
+					<div class="navigation_list_all_text">
+						<div class="fl" style="width: 600px;">
+							<div class="navigation_list_all_text_title">
+								<span>工具</span>
+							</div>
+							<div class="navigation_list_all_text_body">
+								<ul class="navigation_list_all_text_body_title fl">
+									<li>清洁
+										<ul class="navigation_list_all_text_body_explain">
+											<li>去角质</li>
+											<li>卸妆清洁</li>
+										</ul>
+									</li>
+									<li>美白
+										<ul class="navigation_list_all_text_body_explain">
+											<li>淡斑</li>
+											<li>提亮肤色</li>
+											<li>淡化黑眼圈</li>
+										</ul>
+									</li>
+								</ul>
+								<ul class="navigation_list_all_text_body_title fl">
+									<li>底妆修容
+										<ul class="navigation_list_all_text_body_explain">
+											<li>去角质</li>
+											<li>卸妆清洁</li>
+										</ul>
+									</li>
+									<li>抗老
+										<ul class="navigation_list_all_text_body_explain">
+											<li>淡斑</li>
+											<li>提亮肤色</li>
+											<li>淡化黑眼圈</li>
+										</ul>
+									</li>
+									<li>紧致
+										<ul class="navigation_list_all_text_body_explain ">
+											<li>淡斑</li>
+											<li>提亮肤色</li>
+											<li>淡化黑眼圈</li>
+										</ul>
+									</li>
+									<li>保湿
+										<ul class="navigation_list_all_text_body_explain">
+											<li>淡斑</li>
+											<li>提亮肤色</li>
+											<li>淡化黑眼圈</li>
+										</ul>
+									</li>
+								</ul>
+								<ul class="navigation_list_all_text_body_title fl">
+									<li>防晒
+										<ul class="navigation_list_all_text_body_explain">
+											<li>去角质</li>
+											<li>卸妆清洁</li>
+										</ul>
+									</li>
+									<li>控油
+										<ul class="navigation_list_all_text_body_explain">
+											<li>淡斑</li>
+											<li>提亮肤色</li>
+											<li>淡化黑眼圈</li>
+										</ul>
+									</li>
+									<li>百变妆容
+										<ul class="navigation_list_all_text_body_explain">
+											<li>淡斑</li>
+											<li>提亮肤色</li>
+											<li>淡化黑眼圈</li>
+										</ul>
+									</li>
+								</ul>
+								<div class="clear"></div>
+							</div>
+						</div>
+						<div class="navigation_list_all_text_photo fr">
+							<img src="public_img/hp_tiffany_20181102.jpg " />
+						</div>
+						<div class="clear"></div>
+					</div>
+				</li>
+				<li>
+					<span class="navigation_list_detailed_text relative">男士
+						<span class="navigation_list_all_white"></span>
+					</span>
+					<a href="javascript:;">秋冬男士护肤首选</a>
+					<a href="javascript:;">滋养紧致</a>
+					<div class="navigation_list_all_text">
+						<div class="fl" style="width: 600px;">
+							<div class="navigation_list_all_text_title">
+								<span>男士</span>
+							</div>
+							<div class="navigation_list_all_text_body">
+								<ul class="navigation_list_all_text_body_title fl">
+									<li>清洁
+										<ul class="navigation_list_all_text_body_explain">
+											<li>去角质</li>
+											<li>卸妆清洁</li>
+										</ul>
+									</li>
+									<li>美白
+										<ul class="navigation_list_all_text_body_explain">
+											<li>淡斑</li>
+											<li>提亮肤色</li>
+											<li>淡化黑眼圈</li>
+										</ul>
+									</li>
+								</ul>
+								<ul class="navigation_list_all_text_body_title fl">
+									<li>底妆修容
+										<ul class="navigation_list_all_text_body_explain">
+											<li>去角质</li>
+											<li>卸妆清洁</li>
+										</ul>
+									</li>
+									<li>抗老
+										<ul class="navigation_list_all_text_body_explain">
+											<li>淡斑</li>
+											<li>提亮肤色</li>
+											<li>淡化黑眼圈</li>
+										</ul>
+									</li>
+									<li>紧致
+										<ul class="navigation_list_all_text_body_explain ">
+											<li>淡斑</li>
+											<li>提亮肤色</li>
+											<li>淡化黑眼圈</li>
+										</ul>
+									</li>
+									<li>保湿
+										<ul class="navigation_list_all_text_body_explain">
+											<li>淡斑</li>
+											<li>提亮肤色</li>
+											<li>淡化黑眼圈</li>
+										</ul>
+									</li>
+								</ul>
+								<ul class="navigation_list_all_text_body_title fl">
+									<li>防晒
+										<ul class="navigation_list_all_text_body_explain">
+											<li>去角质</li>
+											<li>卸妆清洁</li>
+										</ul>
+									</li>
+									<li>控油
+										<ul class="navigation_list_all_text_body_explain">
+											<li>淡斑</li>
+											<li>提亮肤色</li>
+											<li>淡化黑眼圈</li>
+										</ul>
+									</li>
+									<li>百变妆容
+										<ul class="navigation_list_all_text_body_explain">
+											<li>淡斑</li>
+											<li>提亮肤色</li>
+											<li>淡化黑眼圈</li>
+										</ul>
+									</li>
+								</ul>
+								<div class="clear"></div>
+							</div>
+						</div>
+						<div class="navigation_list_all_text_photo fr">
+							<img src="public_img/hp_tiffany_20181102.jpg " />
+						</div>
+						<div class="clear"></div>
+					</div>
+				</li>
+				<li>
+					<span class="navigation_list_detailed_text relative">洗浴护体
+						<span class="navigation_list_all_white"></span>
+					</span>
+					<a href="javascript:;">滋润美体</a>
+					<a href="javascript:;">保湿手霜 </a>
+					<div class="navigation_list_all_text">
+						<div class="fl" style="width: 600px;">
+							<div class="navigation_list_all_text_title">
+								<span>洗浴护体</span>
+							</div>
+							<div class="navigation_list_all_text_body">
+								<ul class="navigation_list_all_text_body_title fl">
+									<li>清洁
+										<ul class="navigation_list_all_text_body_explain">
+											<li>去角质</li>
+											<li>卸妆清洁</li>
+										</ul>
+									</li>
+									<li>美白
+										<ul class="navigation_list_all_text_body_explain">
+											<li>淡斑</li>
+											<li>提亮肤色</li>
+											<li>淡化黑眼圈</li>
+										</ul>
+									</li>
+								</ul>
+								<ul class="navigation_list_all_text_body_title fl">
+									<li>底妆修容
+										<ul class="navigation_list_all_text_body_explain">
+											<li>去角质</li>
+											<li>卸妆清洁</li>
+										</ul>
+									</li>
+									<li>抗老
+										<ul class="navigation_list_all_text_body_explain">
+											<li>淡斑</li>
+											<li>提亮肤色</li>
+											<li>淡化黑眼圈</li>
+										</ul>
+									</li>
+									<li>紧致
+										<ul class="navigation_list_all_text_body_explain ">
+											<li>淡斑</li>
+											<li>提亮肤色</li>
+											<li>淡化黑眼圈</li>
+										</ul>
+									</li>
+									<li>保湿
+										<ul class="navigation_list_all_text_body_explain">
+											<li>淡斑</li>
+											<li>提亮肤色</li>
+											<li>淡化黑眼圈</li>
+										</ul>
+									</li>
+								</ul>
+								<ul class="navigation_list_all_text_body_title fl">
+									<li>防晒
+										<ul class="navigation_list_all_text_body_explain">
+											<li>去角质</li>
+											<li>卸妆清洁</li>
+										</ul>
+									</li>
+									<li>控油
+										<ul class="navigation_list_all_text_body_explain">
+											<li>淡斑</li>
+											<li>提亮肤色</li>
+											<li>淡化黑眼圈</li>
+										</ul>
+									</li>
+									<li>百变妆容
+										<ul class="navigation_list_all_text_body_explain">
+											<li>淡斑</li>
+											<li>提亮肤色</li>
+											<li>淡化黑眼圈</li>
+										</ul>
+									</li>
+								</ul>
+								<div class="clear"></div>
+							</div>
+						</div>
+						<div class="navigation_list_all_text_photo fr">
+							<img src="public_img/hp_tiffany_20181102.jpg " />
+						</div>
+						<div class="clear"></div>
+					</div>
+				</li>
+				<li>
+					<span class="navigation_list_detailed_text relative">美发护发
+						<span class="navigation_list_all_white"></span>
+					</span>
+					<a href="javascript:;">换季防脱</a>
+					<a href="javascript:;">润养秀发防毛躁</a>
+					<div class="navigation_list_all_text">
+						<div class="fl" style="width: 600px;">
+							<div class="navigation_list_all_text_title">
+								<span>美发护发</span>
+							</div>
+							<div class="navigation_list_all_text_body">
+								<ul class="navigation_list_all_text_body_title fl">
+									<li>清洁
+										<ul class="navigation_list_all_text_body_explain">
+											<li>去角质</li>
+											<li>卸妆清洁</li>
+										</ul>
+									</li>
+									<li>美白
+										<ul class="navigation_list_all_text_body_explain">
+											<li>淡斑</li>
+											<li>提亮肤色</li>
+											<li>淡化黑眼圈</li>
+										</ul>
+									</li>
+								</ul>
+								<ul class="navigation_list_all_text_body_title fl">
+									<li>底妆修容
+										<ul class="navigation_list_all_text_body_explain">
+											<li>去角质</li>
+											<li>卸妆清洁</li>
+										</ul>
+									</li>
+									<li>抗老
+										<ul class="navigation_list_all_text_body_explain">
+											<li>淡斑</li>
+											<li>提亮肤色</li>
+											<li>淡化黑眼圈</li>
+										</ul>
+									</li>
+									<li>紧致
+										<ul class="navigation_list_all_text_body_explain ">
+											<li>淡斑</li>
+											<li>提亮肤色</li>
+											<li>淡化黑眼圈</li>
+										</ul>
+									</li>
+									<li>保湿
+										<ul class="navigation_list_all_text_body_explain">
+											<li>淡斑</li>
+											<li>提亮肤色</li>
+											<li>淡化黑眼圈</li>
+										</ul>
+									</li>
+								</ul>
+								<ul class="navigation_list_all_text_body_title fl">
+									<li>防晒
+										<ul class="navigation_list_all_text_body_explain">
+											<li>去角质</li>
+											<li>卸妆清洁</li>
+										</ul>
+									</li>
+									<li>控油
+										<ul class="navigation_list_all_text_body_explain">
+											<li>淡斑</li>
+											<li>提亮肤色</li>
+											<li>淡化黑眼圈</li>
+										</ul>
+									</li>
+									<li>百变妆容
+										<ul class="navigation_list_all_text_body_explain">
+											<li>淡斑</li>
+											<li>提亮肤色</li>
+											<li>淡化黑眼圈</li>
+										</ul>
+									</li>
+								</ul>
+								<div class="clear"></div>
+							</div>
+						</div>
+						<div class="navigation_list_all_text_photo fr">
+							<img src="public_img/hp_tiffany_20181102.jpg " />
+						</div>
+						<div class="clear"></div>
+					</div>
+				</li>
+				<li>
+					<span class="navigation_list_detailed_text relative">肤食
+						<span class="navigation_list_all_white"></span>
+					</span>
+					<a href="javascript:;">胶原蛋白饮品</a>
+					<div class="navigation_list_all_text">
+						<div class="fl" style="width: 600px;">
+							<div class="navigation_list_all_text_title">
+								<span>肤食</span>
+							</div>
+							<div class="navigation_list_all_text_body">
+								<ul class="navigation_list_all_text_body_title fl">
+									<li>清洁
+										<ul class="navigation_list_all_text_body_explain">
+											<li>去角质</li>
+											<li>卸妆清洁</li>
+										</ul>
+									</li>
+									<li>美白
+										<ul class="navigation_list_all_text_body_explain">
+											<li>淡斑</li>
+											<li>提亮肤色</li>
+											<li>淡化黑眼圈</li>
+										</ul>
+									</li>
+								</ul>
+								<ul class="navigation_list_all_text_body_title fl">
+									<li>底妆修容
+										<ul class="navigation_list_all_text_body_explain">
+											<li>去角质</li>
+											<li>卸妆清洁</li>
+										</ul>
+									</li>
+									<li>抗老
+										<ul class="navigation_list_all_text_body_explain">
+											<li>淡斑</li>
+											<li>提亮肤色</li>
+											<li>淡化黑眼圈</li>
+										</ul>
+									</li>
+									<li>紧致
+										<ul class="navigation_list_all_text_body_explain ">
+											<li>淡斑</li>
+											<li>提亮肤色</li>
+											<li>淡化黑眼圈</li>
+										</ul>
+									</li>
+									<li>保湿
+										<ul class="navigation_list_all_text_body_explain">
+											<li>淡斑</li>
+											<li>提亮肤色</li>
+											<li>淡化黑眼圈</li>
+										</ul>
+									</li>
+								</ul>
+								<ul class="navigation_list_all_text_body_title fl">
+									<li>防晒
+										<ul class="navigation_list_all_text_body_explain">
+											<li>去角质</li>
+											<li>卸妆清洁</li>
+										</ul>
+									</li>
+									<li>控油
+										<ul class="navigation_list_all_text_body_explain">
+											<li>淡斑</li>
+											<li>提亮肤色</li>
+											<li>淡化黑眼圈</li>
+										</ul>
+									</li>
+									<li>百变妆容
+										<ul class="navigation_list_all_text_body_explain">
+											<li>淡斑</li>
+											<li>提亮肤色</li>
+											<li>淡化黑眼圈</li>
+										</ul>
+									</li>
+								</ul>
+								<div class="clear"></div>
+							</div>
+						</div>
+						<div class="navigation_list_all_text_photo fr">
+							<img src="public_img/hp_tiffany_20181102.jpg " />
+						</div>
+						<div class="clear"></div>
+					</div>
+				</li>
+			</ul>
+		</div>
+		<div class="navigation_list_quick fl">
+			<ul class="navigation_list_quick_text">
+				<li><a href="javascript:;">畅销榜单</a></li>
+				<li><a href="javascript:;">独家发售</a></li>
+				<li><a href="javascript:;">礼物套装</a></li>
+				<li><a href="javascript:;">全部品牌</a></li>
+				<li><a href="javascript:;">预约中心</a></li>
+			</ul>
+		</div>
+		<div class="clear"></div>
+	</div>
+</div>
