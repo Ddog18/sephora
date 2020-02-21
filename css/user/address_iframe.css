@@ -1,0 +1,130 @@
+form .form_title{
+	width: 100%;
+	padding: 15px 0;
+	color: white;
+	font-size: 18px;
+	text-align: center;
+}
+form .title_box{
+	background-color: #000000;
+}
+form .em {
+	width: 4px;
+	height: 4px;
+	background-color: #e00;
+	margin-top: 5px;
+	margin-right: 5px;
+	border-radius: 5px;
+	clear: both;
+	float: left;
+}
+.bg{
+	background-color: white;
+	padding: 30px 50px 30px;
+}
+form{
+	width: 830px;
+	position: absolute;
+	top: 20px;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	margin: 0 auto;
+	color: #575757;
+}
+
+form p {
+	padding-right: 20px;
+	font-size: 14px;
+	color: #151515;
+}
+
+form .link {
+	margin-bottom: 32px;
+}
+
+form select,
+form input {
+	width: 150px;
+	height: 30px;
+	padding-left: 10px;
+	outline: none;
+}
+
+
+form input {
+	height: 24px;
+	border-radius: 3px;
+}
+
+form .link .person {
+	padding-right: 25px;
+}
+
+form span {
+	padding-right: 10px;
+}
+
+form .address {
+	width: 445px;
+}
+
+.fl {
+	float: left;
+}
+
+.clearfix {
+	*zoom: 1;
+}
+
+.clearfix:before,
+.clearfix:after {
+	display: table;
+	line-height: 0;
+	content: "";
+}
+
+.clearfix:after {
+	clear: both;
+}
+
+form input,
+.zcityGroup .zcityItem .zcityItem-head {
+	border: 1px solid #C0C4CC;
+}
+
+form .submit_btn {
+	width: 140px;
+	height: 30px;
+	line-height: 30px;
+	text-align: center;
+	cursor: pointer;
+	margin-right: 20px;
+	background-color: #000;
+	border: none;
+	color: #fff;
+	margin-left: 84px;
+}
+
+form .close_btn {
+	width: 140px;
+	height: 30px;
+	line-height: 30px;
+	text-align: center;
+	cursor: pointer;
+	background-color: #ddd;
+	color: #000;
+	border: none;
+}
+
+form .default input {
+	width: 15px;
+	height: 15px;
+}
+
+form .default {
+	margin-left: 84px;
+	color: #000000;
+	margin-bottom: 20px;
+	font-size: 14px;
+}
