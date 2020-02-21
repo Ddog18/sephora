@@ -1,7 +1,7 @@
 .ico{
 	background-image: url(../img/index/ia_300000224.png);
 }
-.category_title_photo_a{
+.category_title_photo_a,.category_title_photo_b,.category_title_photo_c,.category_title_photo_d,.category_title_photo_e,.category_title_photo_f,.category_title_photo_j,.category_title_photo_h{
 	width: 387px;
 	height: 36px;
 	background-repeat: no-repeat;
@@ -280,6 +280,27 @@
 }
 .category_title_photo_a{
 		background-position: -20px -78px;
+}
+.category_title_photo_b{
+	background-position: -20px -113px;
+}
+.category_title_photo_c{
+	background-position: -20px -146px;
+}
+.category_title_photo_d{
+	background-position: -20px -247px;
+}
+.category_title_photo_e{
+	background-position: -20px -279px;
+}
+.category_title_photo_f{
+	background-position: -20px -179px;
+}
+.category_title_photo_j{
+	background-position: -20px -212px;
+}
+.category_title_photo_h{
+	background-position: -20px -345px;
 }
 .category_title_text{
 	height: 36px;
