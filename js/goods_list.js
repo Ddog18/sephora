@@ -31,6 +31,8 @@ $('.brand').on('click', '.down', function() {
 //+多选
 $('.brand').on('click', '.more', function() {
 	$('.brand_right_text').hide();
+	$('.brand_btn_title').show();
+	$('.brand_btn').show();
 	$(this).parents('.brand_right_text ').siblings('.brand_log_box').css('height', '100%');
 	$(this).parents('.brand_right_text ').siblings('.brand_log_box').find('ul').css({
 		'overflow-y': 'auto',
@@ -45,6 +47,8 @@ $('.brand').on('click', '.cancel', function() {
 		'overflow-y': 'hiden'
 	})
 	$('.brand_right_text').show();
+	$('.brand_btn_title').hide();
+	$('.brand_btn').hide();
 
 })
 //按钮选中状态

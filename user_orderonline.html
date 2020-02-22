@@ -24,27 +24,27 @@
 								<ul class="clearfix">
 									<li class="fl">
 										<div class="text">
-											<p class="now">全部</p>
+											<p class="now" id="all_btn">全部</p>
 										</div>
 									</li>
 									<li class="fl">
 										<div class="text">
-											<p>待支付</p>
+											<p id="wait_btn">待支付</p>
 										</div>
 									</li>
 									<li class="fl">
 										<div class="text">
-											<p>处理中</p>
+											<p id="handle_btn">处理中</p>
 										</div>
 									</li>
 									<li class="fl">
 										<div class="text">
-											<p>配送中</p>
+											<p id="delivery_btn">配送中</p>
 										</div>
 									</li>
 									<li class="fl">
 										<div class="text">
-											<p>已完成</p>
+											<p id="finish_btn">已完成</p>
 										</div>
 									</li>
 								</ul>
@@ -95,14 +95,14 @@
 											</div>
 											<div class="state_list">
 												<div class="link clearfix">
-													<a href="javascript:;" class="fl">全部状态</a>
+													<a href="javascript:;" class="fl" id="top_item">全部状态</a>
 													<div class="fl order_triangle "></div>
 												</div>
-												<div class="link"><a href="javascript:;">全部状态</a></div>
-												<div class="link"><a href="javascript:;">待支付</a></div>
-												<div class="link"><a href="javascript:;">处理中</a></div>
-												<div class="link"><a href="javascript:;">配送中</a></div>
-												<div class="link"><a href="javascript:;">已完成</a></div>
+												<div class="link"id="all_item"><a href="javascript:;">全部状态</a></div>
+												<div class="link"id="wait_item"><a href="javascript:;">待支付</a></div>
+												<div class="link"id="handle_item"><a href="javascript:;">处理中</a></div>
+												<div class="link"id="delivery_item"><a href="javascript:;">配送中</a></div>
+												<div class="link"id="finish_item"><a href="javascript:;">已完成</a></div>
 											</div>
 										</th>
 										<th class="">&nbsp;</th>
@@ -113,7 +113,7 @@
 								</table>
 							</div>
 							<div class="tips">
-								<div class="buy_goods clearfix">
+								<div class="buy_goods clearfix" id="wait">
 									<div class="order_info">
 										<span class="grey">订单号 :</span>
 										<span>1192778225545448</span>
@@ -133,7 +133,7 @@
 										</div>
 										<div class="goods_num fl">1</div>
 										<div class="goods_price fl">￥310.00</div>
-										<div class="get_goods_name fl">张玥</div>
+										<div class="get_goods_name fl">张三</div>
 										<div class="sum_price fl">
 											<p>￥310.00</p>
 											<p class="grey">(含运费￥0.00)</p>
@@ -149,7 +149,7 @@
 										</div>
 									</div>
 								</div>
-								<div class="buy_goods clearfix">
+								<div class="buy_goods clearfix"id="wait">
 									<div class="order_info">
 										<span class="grey">订单号 :</span>
 										<span>1192778225545448</span>
@@ -169,7 +169,7 @@
 										</div>
 										<div class="goods_num fl">1</div>
 										<div class="goods_price fl">￥310.00</div>
-										<div class="get_goods_name fl">张玥</div>
+										<div class="get_goods_name fl">张三</div>
 										<div class="sum_price fl">
 											<p>￥310.00</p>
 											<p class="grey">(含运费￥0.00)</p>
@@ -177,6 +177,114 @@
 										</div>
 										<div class="goods_state fl">
 											<span>待支付</span>
+										</div>
+										<div class="operation  fl">
+											<div class="pay_button"><span>立即支付</span></div>
+											<div class="order_infor_button"><a href="order_details.html">订单详情</a></div>
+											<div class="dele_button"><a href="javascript:;">取消订单</a></div>
+										</div>
+									</div>
+								</div>
+								<div class="buy_goods clearfix" id="finish">
+									<div class="order_info">
+										<span class="grey">订单号 :</span>
+										<span>1192778225545448</span>
+										<span class="cody_butn">复制</span>
+										<span class="buy_time grey">2020-02-21 11:24</span>
+									</div>
+									<div class="goods_info clearfix">
+										<div class="goods fl clearfix">
+											<div class="goods_img fl">
+												<img src="img/user/goods_img.jpg">
+											</div>
+											<div class="infor fl">
+												<div class="goods_name">DIOR</div>
+												<div class="subname">克丽丝汀迪奥魅惑润唇膏</div>
+												<div class="spec">规格: 004,3.5G</div>
+											</div>
+										</div>
+										<div class="goods_num fl">1</div>
+										<div class="goods_price fl">￥310.00</div>
+										<div class="get_goods_name fl">张三</div>
+										<div class="sum_price fl">
+											<p>￥310.00</p>
+											<p class="grey">(含运费￥0.00)</p>
+											<p class="grey">在线支付</p>
+										</div>
+										<div class="goods_state fl">
+											<span>已完成</span>
+										</div>
+										<div class="operation  fl">
+											<div class="pay_button"><span>立即支付</span></div>
+											<div class="order_infor_button"><a href="order_details.html">订单详情</a></div>
+											<div class="dele_button"><a href="javascript:;">取消订单</a></div>
+										</div>
+									</div>
+								</div>
+								<div class="buy_goods clearfix" id="handle">
+									<div class="order_info">
+										<span class="grey">订单号 :</span>
+										<span>1192778225545448</span>
+										<span class="cody_butn">复制</span>
+										<span class="buy_time grey">2020-02-21 11:24</span>
+									</div>
+									<div class="goods_info clearfix">
+										<div class="goods fl clearfix">
+											<div class="goods_img fl">
+												<img src="img/user/goods_img.jpg">
+											</div>
+											<div class="infor fl">
+												<div class="goods_name">DIOR</div>
+												<div class="subname">克丽丝汀迪奥魅惑润唇膏</div>
+												<div class="spec">规格: 004,3.5G</div>
+											</div>
+										</div>
+										<div class="goods_num fl">1</div>
+										<div class="goods_price fl">￥310.00</div>
+										<div class="get_goods_name fl">张三</div>
+										<div class="sum_price fl">
+											<p>￥310.00</p>
+											<p class="grey">(含运费￥0.00)</p>
+											<p class="grey">在线支付</p>
+										</div>
+										<div class="goods_state fl">
+											<span>处理中</span>
+										</div>
+										<div class="operation  fl">
+											<div class="pay_button"><span>立即支付</span></div>
+											<div class="order_infor_button"><a href="order_details.html">订单详情</a></div>
+											<div class="dele_button"><a href="javascript:;">取消订单</a></div>
+										</div>
+									</div>
+								</div>
+								<div class="buy_goods clearfix" id="delivery">
+									<div class="order_info">
+										<span class="grey">订单号 :</span>
+										<span>1192778225545448</span>
+										<span class="cody_butn">复制</span>
+										<span class="buy_time grey">2020-02-21 11:24</span>
+									</div>
+									<div class="goods_info clearfix">
+										<div class="goods fl clearfix">
+											<div class="goods_img fl">
+												<img src="img/user/goods_img.jpg">
+											</div>
+											<div class="infor fl">
+												<div class="goods_name">DIOR</div>
+												<div class="subname">克丽丝汀迪奥魅惑润唇膏</div>
+												<div class="spec">规格: 004,3.5G</div>
+											</div>
+										</div>
+										<div class="goods_num fl">1</div>
+										<div class="goods_price fl">￥310.00</div>
+										<div class="get_goods_name fl">张三</div>
+										<div class="sum_price fl">
+											<p>￥310.00</p>
+											<p class="grey">(含运费￥0.00)</p>
+											<p class="grey">在线支付</p>
+										</div>
+										<div class="goods_state fl">
+											<span>配送中</span>
 										</div>
 										<div class="operation  fl">
 											<div class="pay_button"><span>立即支付</span></div>
