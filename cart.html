@@ -647,11 +647,11 @@
 			}
 			$('.cart_body_settlement_alldel').click(function(){
 				$('.cart_body_content').find('.cart_body_yes').each(function(){
-					console.log($(this))
 					if($(this).hasClass('newico')){
 						$(this).parents('.cart_body_content_item').remove()
 					}
 				})
+				allend()
 			})
 			$('.cart_body_content_item').children('.cart_body_yes ').click(function(){
 				
