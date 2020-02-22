@@ -10,7 +10,13 @@
 	<link rel="stylesheet" type="text/css" href="css/cart_order.css"/>
 	<link rel="stylesheet" type="text/css" href="css/order_list_public.css"/>
 	<link rel="stylesheet" type="text/css" href="css/order_gift.css"/>
+	<link rel="stylesheet" type="text/css" href="css/user/address_iframe.css"/>
+	<link rel="stylesheet" type="text/css" href="lib/district/css/zcity.css" />
+	
 	<style>
+		.cart_top_step_wrap,.cart_top_step_line{
+			z-index: 0;
+		}
 		.cart_top_step_wrap_a{
 			background-position: -145px 0;
 		}
@@ -19,6 +25,14 @@
 		}
 		.operation{
 			display: none;
+		}
+		.edit_add{
+			display: none;
+			background-color: rgba(0,0,0,0.6);
+		}
+		.cart_address_content_text{
+			border: 2px solid white;
+			margin-bottom:10px ;
 		}
 	</style>
 	<body>
@@ -49,14 +63,16 @@
 				<div class="cart_address_content relative">
 					<div class="cart_address_content_title">收货信息</div>
 					<div class="cart_address_content_add">+ 新建收货地址</div>
-					<div class="cart_address_content_text clearfix">
-						<span class="cart_address_content_text_num">1</span>
-						<span class="cart_address_content_text_address">北京 北京市 东城区</span>
-						<span class="cart_address_content_text_phone">132****1234</span>
-						<span class="cart_address_content_text_null fr">
-							<a href="javascript:;">编辑</a>
-							<a href="javascript:;">删除</a>
-						</span>
+					<div id="clone_to">
+						<div class="cart_address_content_text clearfix" id="name_content">
+							<span class="cart_address_content_text_num">张玥</span>
+							<span class="cart_address_content_text_address">北京 北京市 东城区</span>
+							<span class="cart_address_content_text_phone">13212341234</span>
+							<span class="cart_address_content_text_null fr">
+								<a href="javascript:;" id="edit">编辑</a>
+								<a href="javascript:;" id="del">删除</a>
+							</span>
+						</div>
 					</div>
 				</div>
 			</div>
@@ -156,14 +172,82 @@
 		</div>
 		<div class="foot_log" style="margin-top: 80px;"></div>
 		<div class="foot"></div>
-		<script src="./js/jquery-3.4.1.min.js"></script>
+		<div class="edit_add"></div>
+		<script src="js/jquery-3.4.1.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="lib/district/js/jquery-1.9.1.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/user_public.js" type="text/javascript" charset="utf-8"></script>
+		<script src="lib/district/js/zcity.js" type="text/javascript"></script>
 		<script>
 			$(function() {
-				$('.address_list').load('order_list_public.html');
 				$('.heard_top').load('heard_top.html');
 				$('.head').load('head.html');
 				$('.foot_log').load('footer_log.html');
 				$('.foot').load('footer.html');
+				$('.edit_add').load('address_iframe.html')
+			})
+		</script>
+		<script>
+			var flag;
+			var clone =$('#name_content').clone();
+			var find;
+			var city;
+			var allcity
+			$('body').on('click','#edit',function (){
+				console.log($.cookie('name'))
+				flag=false;
+				zcityrun('.zcityGroup');
+				$('.edit_add').show();
+				find=$(this).parents('.cart_address_content_text');
+				$('#username').val($(this).parents('.cart_address_content_text').find('.cart_address_content_text_num').text())
+				$('#userphone').val($(this).parents('.cart_address_content_text').find('.cart_address_content_text_phone').text())
+			})
+			$('body').on('click','#del',function () {
+				$(this).parents('#name_content').remove();
+			})
+			$('body').on('click','.close_X',function () {
+				$(this).parents('.edit_add').hide()
+			})
+			$('body').on('click','.submit_btn',function () {
+				if(flag){
+					clone.find('.cart_address_content_text_num').text($('#username').val());
+					clone.find('.cart_address_content_text_phone').text($('#userphone').val());
+					
+					allcity=$('.currentValue').each(function(){
+						city =city+$(this).val()+' ';
+					});
+					clone.find('.cart_address_content_text_address').text(city);
+					clone =$('#name_content').clone();
+					clone.appendTo('#clone_to');
+					$(this).parents('.edit_add').hide()
+				}else{
+					find.find('.cart_address_content_text_num').text($('#username').val())
+					find.find('.cart_address_content_text_phone').text($('#userphone').val())
+					allcity=$('.currentValue').each(function(){
+						city =city+$(this).val()+' ';
+					});
+					find.find('.cart_address_content_text_address').text(city)
+					
+					$(this).parents('.edit_add').hide()
+				}
+				
+			})
+			$('body').on('click','.close_btn',function () {
+				$(this).parents('.edit_add').hide()
+			})
+			$('.cart_address_content_add').click(function(){
+				flag=true;
+				zcityrun('.zcityGroup');
+				$('.edit_add').show();
+			})
+			$('body').on('click','#name_content',function () {
+				if($(this).css('border')=='2px solid rgb(255, 255, 255)'){
+					$(this).css('border','2px solid red');
+				}else{
+					$(this).css('border','2px solid white');
+				}
+				$(this).siblings('.cart_address_content_text ').each(function(){
+					$(this).css('border','2px solid white');
+				})
 			})
 		</script>
 	</body>

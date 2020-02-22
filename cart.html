@@ -537,19 +537,20 @@
 			})
 		</script>
 		<script>
-			var left =  - 1190;
+			var left =  - $('.cart_youlike_content_title').width();
+			var maxleft=$('.cart_youlike_content_title_ul').width()
+			 //left宽度是按当前安全距离
+			 //maxleft是循环的总宽度
 			$('.cart_youlike_control_right').click(function() {
-				
-				if(left>-3570){
-					left = left - 1190;
-					//$('.cart_youlike_content_title_ul').css('left', left + 'px');
+				if(left>-(maxleft-$('.cart_youlike_content_title').width())){
+					left = left - $('.cart_youlike_content_title').width();
+					console.log(left)
 					$('.cart_youlike_content_title_ul').stop().animate({
 						left:left
 					})
-					
 					$('.cart_youlike_control_left').css('background-position-y','-60px');
 				}
-				if(left==-3570){
+				if(left==-(maxleft-$('.cart_youlike_content_title').width())){
 					$('.cart_youlike_control_right').css('background-position-y','-90px');
 				}
 				
@@ -557,7 +558,7 @@
 			$('.cart_youlike_control_left').click(function() {
 				
 				if(left<0){
-					left = left + 1190;
+					left = left + $('.cart_youlike_content_title').width();
 					$('.cart_youlike_content_title_ul').stop().animate({
 						left:left
 					})
