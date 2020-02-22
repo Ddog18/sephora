@@ -1,6 +1,6 @@
 var flag;
 //新增--显示表单
-$('.added').click(function() {
+$('#add').click(function() {
 	flag = true;
 	$('form').find('.form_title').children('.title').text('新增地址');
 	$('.addedForm_get').show();
@@ -39,11 +39,26 @@ $('body').on('click', '.submit_btn', function() {
 		} else {
 			alert('必填项不能为空,请检查');
 		}
-	}else{
-		console.log(2)
-	}
-	
+	} else {
+		var newName = $('form').find('.link').find('#username').val();
+		var $newAddress = $('form').find('.link').find('.zcityGroup').find('.currentValue');
+		var newAddressInfor = "";
+		$newAddress.each(function() {
+			newAddressInfor = $(this).val() + " " + newAddressInfor;
+		})
+		var newDetailed = $('form').find('.link').find('.address').val();
+		var newPhone = $('form').find('.link').find('#userphone').val();
+		if (newName != "" && newAddressInfor != "" && newDetailed != "" && newPhone != "") {
+			$('.address_link').find('.name').text(newName);
+			$('.address_link').find('.address_infor').find('.address_detailed').text(newDetailed);
+			$('.address_link').find('.address_infor').find('.phone').text(newPhone);
+			clear();
+			$('.submit_btn').parents('.addedForm_get').hide();
+		} else {
+			alert('必填项不能为空,请检查');
+		}
 
+	}
 });
 //删除
 $('body').on('click', '.close', function() {
@@ -70,7 +85,6 @@ $('body').on('click', '.edit_btn', function() {
 	$('form').find('.link').find('.address').val(addressDetailed);
 	var userphone = $(this).parents('.edit').siblings('.infor').find('.phone').text().trim()
 	$('form').find('.link').find('#userphone').val(userphone);
-
 })
 //清空
 function clear() {
