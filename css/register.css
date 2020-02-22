@@ -154,6 +154,7 @@ form input:hover {
 }
 
 .errorTip {
+	padding-left: 20px;
 	margin-left: 110px;
 	height: 34px;
 	line-height: 24px;
@@ -163,7 +164,7 @@ form input:hover {
 
 .icon {
 	display: inline-block;
-	background: url(../img/register/icon.png) no-repeat;
+	background-image: url(../img/register/icon.png);
 }
 
 .errorTip .errorRedIcon {
@@ -179,7 +180,6 @@ form input:hover {
 	display: block;
 	color: red;
 	margin-left: 5px;
-	opacity: 0;
 }
 .table .errorRed {
 	width: 18px;

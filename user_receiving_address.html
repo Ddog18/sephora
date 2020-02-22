@@ -66,10 +66,12 @@
 			$('.left_box').load('user_public.html');
 			$('.foot_log').load('footer_log.html')
 			$('.foot_get').load('footer.html');
-			$('.addedForm_get').load('address_iframe.html');
+			$('.addedForm_get').load('address_iframe.html').ready(function(){
+				 zcityrun('.zcityGroup');
+			});
 		</script>
 		<script type="text/javascript">
-			 zcityrun('.zcityGroup');
+			
 		</script>
 	</body>
 </html>
