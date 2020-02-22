@@ -601,19 +601,29 @@
 				var allnum = 0;
 				var allmoney = 0.00;
 				$('.cart_body_content_item_sum').each(function(index) {
-					allnum = parseInt($(this).text()) + allnum;
+					var flag=$(this).parents('.cart_body_content_item').children('.cart_body_yes');
+					if(flag.hasClass('newico')){
+						allnum = parseInt($(this).text()) + allnum;
+					}
+					
 				})
 				$('.cart_body_content_item_subtotal').children('span').each(function(index) {
-					allmoney = parseInt($(this).text()) + allmoney;
+					var flag=$(this).parents('.cart_body_content_item').children('.cart_body_yes ');
+					if(flag.hasClass('newico')){
+						allmoney = parseInt($(this).text()) + allmoney;
+					}
+					
 				})
 				$('.cart_allnum').text(allnum);
 				$('.cart_allmoney').text(allmoney.toFixed(2));
 			}
 			$('.cart_body_content_item_deltis').click(function(){
 				$(this).parents('.cart_body_content_item').remove()
+				allend()
 			})
 			$('#cart_body_yesall').click(function(){
 				newico()
+				allend()
 			})
 			
 			$(".cart_body_settlement_all").click(function(){
@@ -633,6 +643,7 @@
 				else{
 					$('.cart_body_yes').addClass('newico')
 				}
+				allend()
 			}
 			$('.cart_body_settlement_alldel').click(function(){
 				$('.cart_body_content').find('.cart_body_yes').each(function(){
@@ -643,12 +654,14 @@
 				})
 			})
 			$('.cart_body_content_item').children('.cart_body_yes ').click(function(){
+				
 				if($(this).hasClass('newico')){
 					$(this).removeClass('newico')
 				}
 				else{
 					$(this).addClass('newico')
 				}
+				allend()
 			})
 		
 		</script>
