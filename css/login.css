@@ -102,19 +102,19 @@ form .input_box input {
 	height: 14px;
 	background-position: -38px -14px;
 	margin: 9px 4px 0 0;
-	display: block;
+	display: none;
 }
 
 .error_tip .errorFont {
 	color: #f12526;
-	display: block;
+	display: none;
 }
 
 .form .error_tip {
 	width: 100%;
 	height: 32px;
 	line-height: 32px;
-	opacity: 0;
+	/* opacity: 0; */
 }
 
 .form {
