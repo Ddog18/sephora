@@ -7,7 +7,7 @@
 		<link rel="stylesheet" type="text/css" href="css/public.css" />
 		<link rel="stylesheet" type="text/css" href="css/register.css" />
 		<link rel="stylesheet" type="text/css" href="css/cart.css" />
-		<script src="js/jquery-3.4.1.min.js"></script>
+		
 	</head>
 	<style>
 	.newico{
@@ -55,7 +55,7 @@
 						<div class="fl cart_body_box" style="width: 50px;">操作</div>
 					</div>
 					<div class="cart_body_content">
-						<div class="cart_body_content_item">
+						<div class="cart_body_content_item" id="one">
 							<em class="cart_body_yes cart_body_ico" style="top: 50%;"></em>
 							<div class="cart_body_content_item_info">
 								<a href="goods_details.html"><img src="img/cart/1_n_08106_150x150.jpg" /></a>
@@ -529,6 +529,8 @@
 		</div>
 		<div class="footer_log"></div>
 		<div class="footer"></div>
+		<script src="js/jquery-3.4.1.min.js"></script>
+		<script src="lib/carhartl-jquery-cookie-92b7715/jquery.cookie.js"></script>
 		<script>
 			$(function() {
 				$('.heard_top').load('heard_top.html');
@@ -574,7 +576,7 @@
 			var price;
 			var number;
 			var here;
-			$('.cart_body_content_item_add').click(function() {
+			$('body').on('click','.cart_body_content_item_add',function(){
 				 price = $(this).parents('.cart_body_content_item_num').siblings('.cart_body_content_item_money').children().text();
 				$(this).prev('span').text(parseInt($(this).prev('span').text()) + 1);
 				number = $(this).prev('span').text();
@@ -582,7 +584,7 @@
 				subtotal(number, price, here)
 				allend()
 			})
-			$('.cart_body_content_item_cut').click(function() {
+			$('body').on('click','.cart_body_content_item_cut',function(){
 				if ($(this).next('span').text() > 1) {
 					$(this).next('span').text(parseInt($(this).next('span').text()) - 1);
 					 price= $(this).parents('.cart_body_content_item_num').siblings('.cart_body_content_item_money').children().text();
@@ -618,16 +620,15 @@
 				$('.cart_allnum').text(allnum);
 				$('.cart_allmoney').text(allmoney.toFixed(2));
 			}
-			$('.cart_body_content_item_deltis').click(function(){
+			$('body').on('click','.cart_body_content_item_deltis',function(){
 				$(this).parents('.cart_body_content_item').remove()
 				allend()
 			})
-			$('#cart_body_yesall').click(function(){
+			$('body').on('click','#cart_body_yesall',function(){
 				newico()
 				allend()
 			})
-			
-			$(".cart_body_settlement_all").click(function(){
+			$('body').on('click','.cart_body_settlement_all',function(){
 				newico()
 				if($(this).siblings('.cart_body_yes ').hasClass('newico')){
 					$(this).removeClass('newico')
@@ -646,7 +647,7 @@
 				}
 				allend()
 			}
-			$('.cart_body_settlement_alldel').click(function(){
+			$('body').on('click','.cart_body_settlement_alldel',function(){
 				$('.cart_body_content').find('.cart_body_yes').each(function(){
 					if($(this).hasClass('newico')){
 						$(this).parents('.cart_body_content_item').remove()
@@ -654,8 +655,7 @@
 				})
 				allend()
 			})
-			$('.cart_body_content_item').children('.cart_body_yes ').click(function(){
-				
+			$('.cart_body_content').on('click','.cart_body_yes',function(){
 				if($(this).hasClass('newico')){
 					$(this).removeClass('newico')
 				}
@@ -666,5 +666,51 @@
 			})
 		
 		</script>
+		<script>
+			var oneclass =$('#one').clone();
+			$(function(){
+				if($.cookie('goods_money')){
+					console.log($.cookie('goods_money'));
+					var goods_money= $.cookie('goods_money');
+					var goods_specs= $.cookie('goods_specs');
+					var goods_numtext= $.cookie('goods_numtext');
+					var goods_name= $.cookie('goods_name');
+					var goods_img= $.cookie('goods_img');
+					var goods_text=$.cookie('goods_text');
+					oneclass.find('.cart_body_content_item_info_text').children('a').eq(0).text(goods_name);
+					oneclass.find('.cart_body_content_item_info_text').children('a').eq(1).text(goods_text);
+					oneclass.find('.cart_body_content_item_info_text').children('a').eq(2).text(goods_specs);
+					oneclass.find('.cart_body_content_item_money').children('span').text(goods_money);
+					oneclass.find('.cart_body_content_item_sum').text(goods_numtext);
+					oneclass.find('.cart_body_content_item_subtotal').children('span').text(goods_money);
+					oneclass.find('.cart_body_content_item_info').children('a').children('img').attr('src',goods_img);
+					oneclass.appendTo('.cart_body_content');
+				}
+			})
+		
+		</script>
+		<script>
+			var maxnum=0;
+			$('.cart_settlement_right_submit ').click(function(){
+				if($('.cart_allnum').text()!=0){
+					$('.cart_body_content').children('.cart_body_content_item').each(function(index){
+						if($(this).children('em').hasClass('newico')){
+							maxnum++;
+							$.cookie('goods_money'+index,$(this).find('.cart_body_content_item_money').children('span').text(),{ path: '/' })
+							$.cookie('goods_specs'+index,$(this).find('.cart_body_content_item_info_text').children('a').eq(2).text(),{ path: '/' })
+							$.cookie('goods_numtext'+index,$(this).find('.cart_body_content_item_sum').text(),{ path: '/' })
+							$.cookie('goods_name'+index,$(this).find('.cart_body_content_item_info_text').children('a').eq(0).text(),{ path: '/' })
+							$.cookie('goods_img'+index,$(this).find('.cart_body_content_item_info').children('a').children('img').attr('src'),{ path: '/' })
+							$.cookie('goods_text'+index,$(this).find('.cart_body_content_item_info_text').children('a').eq(1).text(),{ path: '/' })
+						}
+					})
+					$.cookie('cart_allnum',$('.cart_allnum').text());
+					$.cookie('cart_allmoney',$('.cart_allmoney').text());
+					$.cookie('maxnum',maxnum);
+					$(location).attr('href','cart_order .html')
+				}
+			})
+		</script>
+	
 	</body>
 </html>

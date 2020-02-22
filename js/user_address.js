@@ -2,6 +2,7 @@ var flag;
 //新增--显示表单
 $('.added').click(function() {
 	flag = true;
+	console.log($(this))
 	$('form').find('.form_title').children('.title').text('新增地址');
 	$('.addedForm_get').show();
 });
@@ -53,7 +54,7 @@ $('body').on('click', '.close', function() {
 $('body').on('click', '.edit_btn', function() {
 	console.log(1)
 	flag = false;
-	console.log(flag)
+	
 	$('form').find('.form_title').children('.title').text('修改地址');
 	$('.submit_btn').parents('.addedForm_get').show();
 	var username = $(this).parents('.edit').siblings('.infor').find('.name').text().trim();
@@ -70,7 +71,7 @@ $('body').on('click', '.edit_btn', function() {
 	$('form').find('.link').find('.address').val(addressDetailed);
 	var userphone = $(this).parents('.edit').siblings('.infor').find('.phone').text().trim()
 	$('form').find('.link').find('#userphone').val(userphone);
-
+console.log(flag)
 })
 //清空
 function clear() {

@@ -52,9 +52,9 @@
 					<div class="goods_body_explain_price clearfix">
 						<p class="goods_body_explain_price_a fl">价格</p>
 						<p class="goods_body_explain_price_b fl">￥</p>
-						<p class="goods_body_explain_price_c fl">470</p>
+						<p class="goods_body_explain_price_c fl">470.00</p>
 						<p class="goods_body_explain_price_d fl">价值</p>
-						<p class="goods_body_explain_price_e fl">￥580</p>
+						<p class="goods_body_explain_price_e fl">￥580.00</p>
 					</div>
 					<div class="goods_body_explain_activity clearfix">
 						<p class="fl">活动</p>
@@ -109,7 +109,7 @@
 					</div>
 					<div class="goods_body_explain_shopp clearfix" style="display: inline-block;margin: 20px 10px 0px 40px;">
 						<div class="goods_body_explain_price_add fl clearfix">
-							<span class="fl">加入购物车</span>
+							<span class="fl" id="add_cart">加入购物车</span>
 							<i class="goods_body_explain_add_photo goods_ico fl"></i>
 						</div>
 					</div>
@@ -271,7 +271,7 @@
 									<img src="img/goods_details/1_n_06519_150x150.jpg" />
 								</div>
 								<div class="goodsmain_box_content_text fl relative">
-									<p>SHISEIDO</p>
+									<p id="goods_name">SHISEIDO</p>
 									<p>资生堂新红妍肌活精华露 50ml</p>
 									<p>￥860.00</p>
 									<span>X1</span>
@@ -337,6 +337,7 @@
 			<div class="footer"></div>
 		</div>
 		</div>
+		<script src="lib/carhartl-jquery-cookie-92b7715/jquery.cookie.js"></script>
 		<script>
 			$(function() {
 				$('.head').load('head.html');
@@ -385,6 +386,22 @@
 				$(document).scrollTop(5449)
 			})
 				
+		</script>
+		<script>
+			$('.goods_body_explain_price_add ').click(function(){
+				$.cookie('goods_money',$('.goods_body_explain_price_c').text(),{ path: '/' })
+				$.cookie('goods_specs',$('.goods_body_explain_norms_specs').text(),{ path: '/' })
+				$.cookie('goods_numtext',$('#numtext').val(),{ path: '/' })
+				$.cookie('goods_name',$('#goods_name').text(),{ path: '/' })
+				$.cookie('goods_img',$('.items ul').children('li').eq(0).children('img').attr('src'),{ path: '/' })
+				$.cookie('goods_text',$('.goods_body_explain_text').children('h1').text(),{ path: '/' })
+				 
+				console.log($('.goods_body_explain_price_c').text());
+				console.log($('.goods_body_explain_norms_specs').text());
+				console.log($('#numtext').val());
+				console.log($('#goods_name').text());
+				console.log($('.items ul').children('li').eq(0).children('img').attr('src'))
+			})
 		</script>
 	</body>
 </html>

@@ -34,6 +34,9 @@
 			border: 2px solid white;
 			margin-bottom:10px ;
 		}
+		.goods_list_infor:first-child{
+			display: none;
+		}
 	</style>
 	<body>
 		<div class="heard_top"></div>
@@ -120,7 +123,32 @@
 				<div class="cart_address_content relative">
 					<div class="cart_address_content_title">已购清单</div>
 					<div class="cart_address_content_text " style="border: 0;height: auto; padding: 20px ;" >
-						<div class="address_list"></div>
+						<div class="address_list">
+							<ul class="goods_list_infor_title clearfix">
+								<li class="fl">商品信息</li>
+								<li class="fl">单价(元)</li>
+								<li class="fl">数量</li>
+								<li class="fl">小计(元)</li>
+							</ul>
+						</div>
+						<div id="cart_order">
+							<div class="goods_list_infor clearfix" id="theone">
+								<div class="goods_img fl">
+									<img src="img/user/goods_img.jpg">
+								</div>
+								<div class="infor fl">
+									<div class="goods_name">DIOR</div>
+									<div class="subname">克丽丝汀迪奥魅惑润唇膏</div>
+									<div class="spec grey">规格: 004,3.5G</div>
+								</div>
+								<div class="goods_price fl">310.00</div>
+								<div class="goods_num fl">1</div>
+								<div class="subtotal fl">
+									<p>310.00</p>
+								</div>
+								
+							</div>
+						</div>
 					</div>
 				</div>
 			</div>
@@ -133,7 +161,7 @@
 							<div class="fr list">
 								<div class="link ">
 									<span>商品总额：</span>
-									<span>￥310.00</span>
+									<span>￥<span id="allmoney">310.00</span></span>
 								</div>
 								<div class="link ">
 									<span>折扣金额：</span>
@@ -177,6 +205,7 @@
 		<script src="lib/district/js/jquery-1.9.1.min.js" type="text/javascript" charset="utf-8"></script>
 		<script src="js/user_public.js" type="text/javascript" charset="utf-8"></script>
 		<script src="lib/district/js/zcity.js" type="text/javascript"></script>
+		<script src="lib/carhartl-jquery-cookie-92b7715/jquery.cookie.js"></script>
 		<script>
 			$(function() {
 				$('.heard_top').load('heard_top.html');
@@ -250,5 +279,34 @@
 				})
 			})
 		</script>
+		<script>
+			$(function(){
+				var maxnum =$.cookie('maxnum');
+				for(var i=1;i<=maxnum;i++ ){
+					console.log()
+					var goods_money= $.cookie('goods_money'+i);
+					var goods_specs= $.cookie('goods_specs'+i);
+					var goods_numtext= $.cookie('goods_numtext'+i);
+					var goods_name= $.cookie('goods_name'+i);
+					var goods_img= $.cookie('goods_img'+i);
+					var goods_text=$.cookie('goods_text'+i);
+					var oneclass =$('#theone').clone();
+					oneclass.find('subname').text(goods_text);
+					oneclass.find('goods_name').text(goods_name);
+					oneclass.find('spec').text(goods_specs);
+					oneclass.find('.goods_price').text(goods_money);
+					oneclass.find('.goods_num').text(goods_numtext);
+					oneclass.find('.subtotal').children('p').text(goods_money);
+					oneclass.find('.goods_img').children('img').attr('src',goods_img);
+					oneclass.appendTo('#cart_order');
+				}
+				var allnum=$.cookie('cart_allnum');
+				var allmoney=$.cookie('cart_allmoney');
+				$('#allmoney').text(allmoney)
+				$('.cart_allnum').text(allnum);
+				$('.cart_allmoney').text(allmoney);
+			})
+		</script>
+		
 	</body>
 </html>
