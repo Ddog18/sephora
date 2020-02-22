@@ -122,6 +122,11 @@
 
 .brand_btn_title {
 	font-size: 14px;
+	display: none;
+}
+
+.brand_log_box .brand_btn {
+	display: none;
 }
 
 .brand_log_box .brand_btn .confirm {
@@ -283,6 +288,7 @@
 	line-height: 30px;
 	cursor: pointer;
 	margin-bottom: 20px;
+	margin-top: -1px;
 }
 
 .subsort_box .black_arrow_icon {
@@ -310,7 +316,7 @@
 	cursor: pointer;
 }
 
-.price_butn{
+.price_butn {
 	width: 100px;
 	height: 32px;
 	font-size: 14px;
@@ -319,17 +325,21 @@
 	margin-left: -1px;
 	cursor: pointer;
 }
-.dispay{
+
+.dispay {
 	display: none;
 }
+
 .black {
 	background-color: #000000;
 	color: white;
 }
-.white{
+
+.white {
 	background-color: white;
 	color: #000000;
 }
+
 .black_triangle_icon {
 	display: inline-block;
 	width: 8px;

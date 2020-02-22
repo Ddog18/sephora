@@ -201,3 +201,7 @@ a:hover {
 .tips .null_tips p{
 	margin-top: 100px;
 }
+.tips #finish .dele_button,
+.tips #finish .pay_button{
+	opacity: 0;
+}
