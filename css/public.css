@@ -427,7 +427,7 @@ a:hover {
 .footer_explain_ico_d{
 	background-position: -180px 0;
 }
-.footer_explain_ico>em .footer_explain_ico_e{
+.footer_explain_ico>em.footer_explain_ico_e{
 	width: 45px;
 	background-position: -47px 0;
 }
