@@ -206,7 +206,7 @@
 	overflow: hidden;
 }
 
-.brand_list .select_on {
+.select_on {
 	width: 131px;
 	height: 54px;
 	position: absolute;
@@ -216,7 +216,7 @@
 	box-sizing: border-box;
 }
 
-.brand_list .select_on::after {
+.select_on::after {
 	content: "";
 	width: 16px;
 	height: 16px;
@@ -236,7 +236,33 @@
 	background-size: contain;
 }
 
+.brand_select {
+	display: inline-block;
+	border: 1px solid transparent;
+	padding-left: 5px;
+	margin: 0 10px 5px;
+	cursor: pointer;
+}
+
+.brand_select:hover {
+	border: 1px solid #e00;
+	color: #e00;
+}
+ 
+.brand_select:hover::after {
+	content: "";
+	display: inline-block;
+	width: 12px;
+	height: 12px;
+	margin: 0 5px;
+	background-position: -24px -59px;
+	background: url(../img/list_img/ia_2700000113.png) no-repeat;
+}
+
+
 .sort_box {
+	height: 227px;
+	overflow: hidden;
 	margin-top: 22px;
 	border-top: 1px solid #CCCCCC;
 	border-bottom: 1px solid #CCCCCC;
@@ -262,6 +288,7 @@
 .sort_link .sort_item {
 	font-size: 14px;
 	width: 138px;
+	margin-bottom: 10px;
 }
 
 .sort_item_box {
@@ -290,7 +317,6 @@
 	margin-bottom: 20px;
 	margin-top: -1px;
 }
-
 .subsort_box .black_arrow_icon {
 	display: inline-block;
 	width: 8px;

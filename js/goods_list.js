@@ -28,6 +28,7 @@ $('.brand').on('click', '.down', function() {
 	}
 
 })
+
 //+多选
 $('.brand').on('click', '.more', function() {
 	$('.brand_right_text').hide();
@@ -46,11 +47,49 @@ $('.brand').on('click', '.cancel', function() {
 	$(this).parents('brand_log_box').find('ul').css({
 		'overflow-y': 'hiden'
 	})
+	$('.brand_select').remove();
+	$('.brand_clear_btn').hide();
 	$('.brand_right_text').show();
 	$('.brand_btn_title').hide();
 	$('.brand_btn').hide();
 
 })
+//多选 动画 点击效果
+$('.brand_log_box').on('click', '#mask', function() {
+	var falg = $('.brand_btn').css('display');
+	if (falg == 'block') {
+		var isMask = $(this).hasClass('mask');
+		if (isMask) {
+			$(this).removeClass('mask');
+			$(this).children('span').hide();
+			$(this).addClass('select_on');
+			var orderName = $(this).text().trim();
+			var $orderSpan = '<span class="brand_select">' + orderName + '</span>'
+			$('.brand_clear_btn').before($orderSpan);
+			var isHas = $('.brand_btn_title').children('span').hasClass('brand_select');
+			if (isHas) {
+				$('.brand_clear_btn').show();
+			} else {
+				$('.brand_clear_btn').hide();
+			}
+		} else {
+			$(this).removeClass('select_on');
+			$(this).children('span').show();
+			$(this).addClass('mask');
+		}
+	}
+});
+//清空按钮
+$('.brand_btn_title').on('click', '.brand_clear_btn', function() {
+	$('.brand_select').remove();
+})
+$('.brand_btn_title').on('click', '.brand_select', function() {
+	$(this).remove();
+})
+$('.brand_list').click(function() {
+
+})
+
 //按钮选中状态
 $('.subsort_left').on('click', '.subsort_item', function() {
 	var isWhite = $(this).hasClass('white');
@@ -74,6 +113,8 @@ $('.subsort_left').on('click', '.subsort_item', function() {
 		$(this).find('.subsort_line').hide();
 	}
 });
+
+
 //价格 排序
 $('.price_butn').click(function() {
 	//选中 价格
@@ -123,10 +164,21 @@ $('.sort_more_item').mouseenter(function() {
 		border: '1px solid #dc002f',
 		'border-top': '1px solid white',
 	});
-	$('.down_icon').css({
-		transition: 'background-position 0.15s ease-in-out',
-		'background-position': '0 -42px',
-	});
+	var isText = $(this).children('span').text();
+	if (isText == '更多选择') {
+		$('.sort_more_item ').children('.down_icon').css({
+			transition: 'background-position 0.15s ease-in-out',
+			'background-position': '0 -42px',
+		});
+	}
+	if (isText == '精简选项') {
+		$('.sort_more_item ').children('.down_icon').css({
+			transition: 'background-position 0.15s ease-in-out',
+			'background-position': '0 -20px',
+		});
+	}
+
+
 	$('.sort_box').css('border-bottom-color', '#dc002f');
 });
 $('.sort_more_item').mouseleave(function() {
@@ -135,12 +187,37 @@ $('.sort_more_item').mouseleave(function() {
 		border: '1px solid #CCCCCC',
 		'border-top': '1px solid white',
 	});
-	$('.down_icon').css({
-		transition: 'background-position 0.15s ease-in-out',
-		'background-position': '0 -33px',
-	});
+	var isText = $(this).children('span').text();
+	if (isText == '更多选择') {
+		$('.sort_more_item ').children('.down_icon').css({
+			transition: 'background-position 0.15s ease-in-out',
+			'background-position': '0 -33px',
+		});
+	}
+	if (isText == '精简选项') {
+		$('.sort_more_item ').children('.down_icon').css({
+			transition: 'background-position 0.15s ease-in-out',
+			'background-position': '0 -11px',
+		});
+	}
 	$('.sort_box').css('border-bottom-color', '#CCCCCC');
 })
+
+//点击更多选择 展示全部
+$('.sort_more_item').click(function() {
+	var height = $('.sort_box').css('height');
+	if (height == '227px') {
+		$('.sort_box').css('height', '100%');
+		$(this).children('span').text('精简选项');
+		$(this).children('.down_icon').css('background-position', '0px -20px')
+	} else {
+		$('.sort_box').css('height', '227px');
+		$(this).children('span').text('更多选择');
+		$(this).children('.down_icon').css('background-position', '0 -33px')
+	}
+
+})
+
 $('.goods_list li').mouseenter(function() {
 	$(this).find('.goods_mask').show();
 })
