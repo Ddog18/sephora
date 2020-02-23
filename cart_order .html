@@ -219,10 +219,8 @@
 			var flag;
 			var clone =$('#name_content').clone();
 			var find;
-			var city;
 			var allcity
 			$('body').on('click','#edit',function (){
-				console.log($.cookie('name'))
 				flag=false;
 				zcityrun('.zcityGroup');
 				$('.edit_add').show();
@@ -237,10 +235,10 @@
 				$(this).parents('.edit_add').hide()
 			})
 			$('body').on('click','.submit_btn',function () {
+				var city='';
 				if(flag){
 					clone.find('.cart_address_content_text_num').text($('#username').val());
 					clone.find('.cart_address_content_text_phone').text($('#userphone').val());
-					
 					allcity=$('.currentValue').each(function(){
 						city =city+$(this).val()+' ';
 					});
@@ -252,10 +250,11 @@
 					find.find('.cart_address_content_text_num').text($('#username').val())
 					find.find('.cart_address_content_text_phone').text($('#userphone').val())
 					allcity=$('.currentValue').each(function(){
+						console.log(city)
 						city =city+$(this).val()+' ';
 					});
+					console.log(city)
 					find.find('.cart_address_content_text_address').text(city)
-					
 					$(this).parents('.edit_add').hide()
 				}
 				
@@ -307,6 +306,11 @@
 				$('.cart_allmoney').text(allmoney);
 			})
 		</script>
-		
+		<script>
+			$('.cart_pay').click(function(){
+				$(this).css('border','1px solid red')
+				$(this).siblings('span').css('border','1px solid #bdbdbd')
+			})
+		</script>
 	</body>
 </html>
