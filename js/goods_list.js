@@ -30,8 +30,8 @@ $('.brand').on('click', '.down', function() {
 })
 
 //+多选
-$('.brand').on('click', '.more', function() {
-	$('.brand_right_text').hide();
+$('.brand_top').on('click', '.more', function() {
+	$('.brand_top').children('.brand_right_text').hide();
 	$('.brand_btn_title').show();
 	$('.brand_btn').show();
 	$(this).parents('.brand_right_text ').siblings('.brand_log_box').css('height', '100%');
@@ -41,7 +41,7 @@ $('.brand').on('click', '.more', function() {
 	$(this).parents('.brand_right_text ').siblings('.brand_log_box').find('.brand_search').show();
 
 });
-$('.brand').on('click', '.cancel', function() {
+$('.brand_top').on('click', '.cancel', function() {
 	$(this).parents('.brand_btn ').siblings('.brand_search ').hide();
 	$(this).parents('.brand_log_box ').css('height', '109px');
 	$(this).parents('brand_log_box').find('ul').css({
@@ -49,7 +49,7 @@ $('.brand').on('click', '.cancel', function() {
 	})
 	$('.brand_select').remove();
 	$('.brand_clear_btn').hide();
-	$('.brand_right_text').show();
+	$('.brand_top').children('.brand_right_text').show();
 	$('.brand_btn_title').hide();
 	$('.brand_btn').hide();
 
