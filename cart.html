@@ -7,32 +7,31 @@
 		<link rel="stylesheet" type="text/css" href="css/public.css" />
 		<link rel="stylesheet" type="text/css" href="css/register.css" />
 		<link rel="stylesheet" type="text/css" href="css/cart.css" />
-		
+
 	</head>
 	<style>
-	.newico{
+		.newico{
 		background-position: -42px  0;
 	}
 	
-	.picScroll-left{ width:1190px;  overflow:hidden; position:relative;  border:1px solid #ccc;   }
-	.picScroll-left .hd{ overflow:hidden;  height:30px; background:#f4f4f4; padding:0 10px;  }
-	.picScroll-left .hd .prev,.picScroll-left .hd .next{ display:block;  width:5px; height:9px; float:right; margin-right:5px; margin-top:10px;  overflow:hidden;cursor:pointer; background:url("images/arrow.png") no-repeat;}
-	.picScroll-left .hd .next{ background-position:0 -50px;  }
-	.picScroll-left .hd .prevStop{ background-position:-60px 0; }
-	.picScroll-left .hd .nextStop{ background-position:-60px -50px; }
+	.picScroll-left{ width:1190px;  overflow:hidden; position:relative;  margin: 30px auto; }
+	.picScroll-left .hd{ overflow:hidden;  height:30px; background:#f4f4f4; padding:0 10px;  margin-bottom:10px ;}
+	.picScroll-left .hd .prev,.picScroll-left .hd .next{ display:inline-block;  width:50px; height:30px; float:right; margin-right:1px; margin-top:0px;cursor:pointer; background-image: url(./img/cart/checkout_tab_slider_control.png);}
+	.picScroll-left .hd .next{ background-position-x: -50px ;    background-position-y: -60px;  }
+	.picScroll-left .hd .prev{ background-position:0px -60px;}
+	.picScroll-left .hd .prevStop{ background-position:0px 0px; }
+	.picScroll-left .hd .nextStop{ background-position:-50px -90px; }
 	.picScroll-left .hd ul{ float:right; overflow:hidden; zoom:1; margin-top:10px; zoom:1; }
-	.picScroll-left .hd ul li{ float:left;  width:9px; height:9px; overflow:hidden; margin-right:5px; text-indent:-999px; cursor:pointer; background:url("images/icoCircle.gif") 0 -9px no-repeat; }
+	.picScroll-left .hd ul li{ float:left;  width:9px; height:9px; overflow:hidden; margin-right:5px; text-indent:-999px; cursor:pointer; background:url("images/icoCircle.gif") 0 -9px no-repeat;  }
 	.picScroll-left .hd ul li.on{ background-position:0 0; }
 	.picScroll-left .bd{ padding:10px;   }
 	.picScroll-left .bd ul{ overflow:hidden; zoom:1; }
-	.picScroll-left .bd ul li{ margin:0; float:left; _display:inline; overflow:hidden; text-align:center;  }
+	.picScroll-left .bd ul li{ margin:0; float:left; _display:inline; overflow:hidden; text-align:center; background-color: white; }
 	.picScroll-left .bd ul li .pic{ text-align:center; }
 	.picScroll-left .bd ul li .pic img{ width:120px; height:90px; display:block;  padding:2px; border:1px solid #ccc; }
 	.picScroll-left .bd ul li .pic a:hover img{ border-color:#999;  }
 	.picScroll-left .bd ul li .title{ line-height:24px;   }
-	.tempWrap{
-		width: 1190px;
-	}
+	
 	</style>
 	<body>
 		<div class="heard_top"></div>
@@ -133,7 +132,7 @@
 				</div>
 				<div class="cart_body_settlement clearfix">
 					<div class="cart_body_settlement_left fl relative">
-						
+
 						<a href="javascript:;" class="cart_body_settlement_all" style="margin-left: 30px;">全选</a>
 						<a href="javascript:;" class="cart_body_settlement_alldel">批量删除</a>
 					</div>
@@ -146,726 +145,308 @@
 						<div class="cart_settlement_right_submit fl">立即结算</div>
 					</div>
 				</div>
-				<div class="cart_body_youlike">
-					<div class="cart_body_youlike_text">
-						<div>猜你喜欢</div>
-					</div>
-					<div class="cart_body_youlike_content relative">
-						<div class="cart_youlike_content_title ">
-							<div class="cart_youlike_content_title_ul clearfix ">
-								<div class="cart_youlike_content_title_li">
-									<div class="cart_youlike_content_title_li_img">
-										<a href="goods_details.html">
-											<img src="./img/cart/1_n_07912_280x280.jpg" />
-										</a>
-									</div>
-									<div class="cart_youlike_content_title_li_info">
-										<div class="">M.A.C</div>
-										<div class="">魅可丝缎柔雾唇膏</div>
-										<div class="">￥170.00</div>
-									</div>
+
+			</div>
+			<div class="picScroll-left">
+				<div class="hd">
+					<span class="fl" style="font-size: 18px;">猜你喜欢</span>
+					<a class="next"></a>
+					<a class="prev"></a>
+				</div>
+				<div class="bd">
+					<ul class="picList">
+						<li>
+							<div class="cart_youlike_content_title_li">
+								<div class="cart_youlike_content_title_li_img">
+									<a href="goods_details.html">
+										<img src="./img/cart/1_n_07912_280x280.jpg" />
+									</a>
 								</div>
-								<div class="cart_youlike_content_title_li">
-									<div class="cart_youlike_content_title_li_img">
-										<a href="goods_details.html">
-											<img src="./img/cart/1_n_07912_280x280.jpg" />
-										</a>
-									</div>
-									<div class="cart_youlike_content_title_li_info">
-										<div class="">M.A.C</div>
-										<div class="">魅可丝缎柔雾唇膏</div>
-										<div class="">￥170.00</div>
-									</div>
-								</div>
-								<div class="cart_youlike_content_title_li">
-									<div class="cart_youlike_content_title_li_img">
-										<a href="goods_details.html">
-											<img src="./img/cart/1_n_08088_280x280.jpg" />
-										</a>
-									</div>
-									<div class="cart_youlike_content_title_li_info">
-										<div class="">M.A.C</div>
-										<div class="">魅可丝缎柔雾唇膏</div>
-										<div class="">￥170.00</div>
-									</div>
-								</div>
-								<div class="cart_youlike_content_title_li">
-									<div class="cart_youlike_content_title_li_img">
-										<a href="goods_details.html">
-											<img src="./img/cart/1_n_07912_280x280.jpg" />
-										</a>
-									</div>
-									<div class="cart_youlike_content_title_li_info">
-										<div class="">M.A.C</div>
-										<div class="">魅可丝缎柔雾唇膏</div>
-										<div class="">￥170.00</div>
-									</div>
-								</div>
-								<div class="cart_youlike_content_title_li">
-									<div class="cart_youlike_content_title_li_img">
-										<a href="goods_details.html">
-											<img src="./img/cart/1_n_07912_280x280.jpg" />
-										</a>
-									</div>
-									<div class="cart_youlike_content_title_li_info">
-										<div class="">M.A.C</div>
-										<div class="">魅可丝缎柔雾唇膏</div>
-										<div class="">￥170.00</div>
-									</div>
-								</div>
-								<div class="cart_youlike_content_title_li">
-									<div class="cart_youlike_content_title_li_img">
-										<a href="goods_details.html">
-											<img src="./img/cart/1_n_08088_280x280.jpg" />
-										</a>
-									</div>
-									<div class="cart_youlike_content_title_li_info">
-										<div class="">M.A.C</div>
-										<div class="">魅可丝缎柔雾唇膏</div>
-										<div class="">￥170.00</div>
-									</div>
-								</div>
-								<div class="cart_youlike_content_title_li">
-									<div class="cart_youlike_content_title_li_img">
-										<a href="goods_details.html">
-											<img src="./img/cart/1_n_07912_280x280.jpg" />
-										</a>
-									</div>
-									<div class="cart_youlike_content_title_li_info">
-										<div class="">M.A.C</div>
-										<div class="">魅可丝缎柔雾唇膏</div>
-										<div class="">￥170.00</div>
-									</div>
-								</div>
-								<div class="cart_youlike_content_title_li">
-									<div class="cart_youlike_content_title_li_img">
-										<a href="goods_details.html">
-											<img src="./img/cart/1_n_08042_280x280.jpg" />
-										</a>
-									</div>
-									<div class="cart_youlike_content_title_li_info">
-										<div class="">M.A.C</div>
-										<div class="">魅可丝缎柔雾唇膏</div>
-										<div class="">￥170.00</div>
-									</div>
-								</div>
-								<div class="cart_youlike_content_title_li">
-									<div class="cart_youlike_content_title_li_img">
-										<a href="goods_details.html">
-											<img src="./img/cart/1_n_07912_280x280.jpg" />
-										</a>
-									</div>
-									<div class="cart_youlike_content_title_li_info">
-										<div class="">M.A.C</div>
-										<div class="">魅可丝缎柔雾唇膏</div>
-										<div class="">￥170.00</div>
-									</div>
-								</div>
-								<div class="cart_youlike_content_title_li">
-									<div class="cart_youlike_content_title_li_img">
-										<a href="goods_details.html">
-											<img src="./img/cart/1_n_07912_280x280.jpg" />
-										</a>
-									</div>
-									<div class="cart_youlike_content_title_li_info">
-										<div class="">M.A.C</div>
-										<div class="">魅可丝缎柔雾唇膏</div>
-										<div class="">￥170.00</div>
-									</div>
-								</div>
-								<div class="cart_youlike_content_title_li">
-									<div class="cart_youlike_content_title_li_img">
-										<a href="goods_details.html">
-											<img src="./img/cart/1_n_08042_280x280.jpg" />
-										</a>
-									</div>
-									<div class="cart_youlike_content_title_li_info">
-										<div class="">M.A.C</div>
-										<div class="">魅可丝缎柔雾唇膏</div>
-										<div class="">￥170.00</div>
-									</div>
-								</div>
-								<div class="cart_youlike_content_title_li">
-									<div class="cart_youlike_content_title_li_img">
-										<a href="goods_details.html">
-											<img src="./img/cart/1_n_07912_280x280.jpg" />
-										</a>
-									</div>
-									<div class="cart_youlike_content_title_li_info">
-										<div class="">M.A.C</div>
-										<div class="">魅可丝缎柔雾唇膏</div>
-										<div class="">￥170.00</div>
-									</div>
-								</div>
-								<div class="cart_youlike_content_title_li">
-									<div class="cart_youlike_content_title_li_img">
-										<a href="goods_details.html">
-											<img src="./img/cart/1_n_07912_280x280.jpg" />
-										</a>
-									</div>
-									<div class="cart_youlike_content_title_li_info">
-										<div class="">M.A.C</div>
-										<div class="">魅可丝缎柔雾唇膏</div>
-										<div class="">￥170.00</div>
-									</div>
-								</div>
-								<div class="cart_youlike_content_title_li">
-									<div class="cart_youlike_content_title_li_img">
-										<a href="goods_details.html">
-											<img src="./img/cart/1_n_07912_280x280.jpg" />
-										</a>
-									</div>
-									<div class="cart_youlike_content_title_li_info">
-										<div class="">M.A.C</div>
-										<div class="">魅可丝缎柔雾唇膏</div>
-										<div class="">￥170.00</div>
-									</div>
-								</div>
-								<div class="cart_youlike_content_title_li">
-									<div class="cart_youlike_content_title_li_img">
-										<a href="goods_details.html">
-											<img src="./img/cart/1_n_07912_280x280.jpg" />
-										</a>
-									</div>
-									<div class="cart_youlike_content_title_li_info">
-										<div class="">M.A.C</div>
-										<div class="">魅可丝缎柔雾唇膏</div>
-										<div class="">￥170.00</div>
-									</div>
-								</div>
-								<div class="cart_youlike_content_title_li">
-									<div class="cart_youlike_content_title_li_img">
-										<a href="goods_details.html">
-											<img src="./img/cart/1_n_07912_280x280.jpg" />
-										</a>
-									</div>
-									<div class="cart_youlike_content_title_li_info">
-										<div class="">M.A.C</div>
-										<div class="">魅可丝缎柔雾唇膏</div>
-										<div class="">￥170.00</div>
-									</div>
-								</div>
-								<div class="cart_youlike_content_title_li">
-									<div class="cart_youlike_content_title_li_img">
-										<a href="goods_details.html">
-											<img src="./img/cart/1_n_07912_280x280.jpg" />
-										</a>
-									</div>
-									<div class="cart_youlike_content_title_li_info">
-										<div class="">M.A.C</div>
-										<div class="">魅可丝缎柔雾唇膏</div>
-										<div class="">￥170.00</div>
-									</div>
-								</div>
-								<div class="cart_youlike_content_title_li">
-									<div class="cart_youlike_content_title_li_img">
-										<a href="goods_details.html">
-											<img src="./img/cart/1_n_07912_280x280.jpg" />
-										</a>
-									</div>
-									<div class="cart_youlike_content_title_li_info">
-										<div class="">M.A.C</div>
-										<div class="">魅可丝缎柔雾唇膏</div>
-										<div class="">￥170.00</div>
-									</div>
-								</div>
-								<div class="cart_youlike_content_title_li">
-									<div class="cart_youlike_content_title_li_img">
-										<a href="goods_details.html">
-											<img src="./img/cart/1_n_07912_280x280.jpg" />
-										</a>
-									</div>
-									<div class="cart_youlike_content_title_li_info">
-										<div class="">M.A.C</div>
-										<div class="">魅可丝缎柔雾唇膏</div>
-										<div class="">￥170.00</div>
-									</div>
-								</div>
-								<div class="cart_youlike_content_title_li">
-									<div class="cart_youlike_content_title_li_img">
-										<a href="goods_details.html">
-											<img src="./img/cart/1_n_07912_280x280.jpg" />
-										</a>
-									</div>
-									<div class="cart_youlike_content_title_li_info">
-										<div class="">M.A.C</div>
-										<div class="">魅可丝缎柔雾唇膏</div>
-										<div class="">￥170.00</div>
-									</div>
-								</div>
-								<div class="cart_youlike_content_title_li">
-									<div class="cart_youlike_content_title_li_img">
-										<a href="goods_details.html">
-											<img src="./img/cart/1_n_07912_280x280.jpg" />
-										</a>
-									</div>
-									<div class="cart_youlike_content_title_li_info">
-										<div class="">M.A.C</div>
-										<div class="">魅可丝缎柔雾唇膏</div>
-										<div class="">￥170.00</div>
-									</div>
-								</div>
-								<div class="cart_youlike_content_title_li">
-									<div class="cart_youlike_content_title_li_img">
-										<a href="goods_details.html">
-											<img src="./img/cart/1_n_07912_280x280.jpg" />
-										</a>
-									</div>
-									<div class="cart_youlike_content_title_li_info">
-										<div class="">M.A.C</div>
-										<div class="">魅可丝缎柔雾唇膏</div>
-										<div class="">￥170.00</div>
-									</div>
-								</div>
-								<div class="cart_youlike_content_title_li">
-									<div class="cart_youlike_content_title_li_img">
-										<a href="goods_details.html">
-											<img src="./img/cart/1_n_07912_280x280.jpg" />
-										</a>
-									</div>
-									<div class="cart_youlike_content_title_li_info">
-										<div class="">M.A.C</div>
-										<div class="">魅可丝缎柔雾唇膏</div>
-										<div class="">￥170.00</div>
-									</div>
-								</div>
-								<div class="cart_youlike_content_title_li">
-									<div class="cart_youlike_content_title_li_img">
-										<a href="goods_details.html">
-											<img src="./img/cart/1_n_08042_280x280.jpg" />
-										</a>
-									</div>
-									<div class="cart_youlike_content_title_li_info">
-										<div class="">M.A.C</div>
-										<div class="">魅可丝缎柔雾唇膏</div>
-										<div class="">￥170.00</div>
-									</div>
-								</div>
-								<div class="cart_youlike_content_title_li">
-									<div class="cart_youlike_content_title_li_img">
-										<a href="goods_details.html">
-											<img src="./img/cart/1_n_08042_280x280.jpg" />
-										</a>
-									</div>
-									<div class="cart_youlike_content_title_li_info">
-										<div class="">M.A.C</div>
-										<div class="">魅可丝缎柔雾唇膏</div>
-										<div class="">￥170.00</div>
-									</div>
-								</div>
-								<div class="cart_youlike_content_title_li">
-									<div class="cart_youlike_content_title_li_img">
-										<a href="goods_details.html">
-											<img src="./img/cart/1_n_07912_280x280.jpg" />
-										</a>
-									</div>
-									<div class="cart_youlike_content_title_li_info">
-										<div class="">M.A.C</div>
-										<div class="">魅可丝缎柔雾唇膏</div>
-										<div class="">￥170.00</div>
-									</div>
-								</div>
-								<div class="cart_youlike_content_title_li">
-									<div class="cart_youlike_content_title_li_img">
-										<a href="goods_details.html">
-											<img src="./img/cart/1_n_07983_280x280.jpg" />
-										</a>
-									</div>
-									<div class="cart_youlike_content_title_li_info">
-										<div class="">M.A.C</div>
-										<div class="">魅可丝缎柔雾唇膏</div>
-										<div class="">￥170.00</div>
-									</div>
-								</div>
-								<div class="cart_youlike_content_title_li">
-									<div class="cart_youlike_content_title_li_img">
-										<a href="goods_details.html">
-											<img src="./img/cart/1_n_07912_280x280.jpg" />
-										</a>
-									</div>
-									<div class="cart_youlike_content_title_li_info">
-										<div class="">M.A.C</div>
-										<div class="">魅可丝缎柔雾唇膏</div>
-										<div class="">￥170.00</div>
-									</div>
-								</div>
-								<div class="cart_youlike_content_title_li">
-									<div class="cart_youlike_content_title_li_img">
-										<a href="goods_details.html">
-											<img src="./img/cart/1_n_07983_280x280.jpg" />
-										</a>
-									</div>
-									<div class="cart_youlike_content_title_li_info">
-										<div class="">M.A.C</div>
-										<div class="">魅可丝缎柔雾唇膏</div>
-										<div class="">￥170.00</div>
-									</div>
-								</div>
-								<div class="cart_youlike_content_title_li">
-									<div class="cart_youlike_content_title_li_img">
-										<a href="goods_details.html">
-											<img src="./img/cart/1_n_07912_280x280.jpg" />
-										</a>
-									</div>
-									<div class="cart_youlike_content_title_li_info">
-										<div class="">M.A.C</div>
-										<div class="">魅可丝缎柔雾唇膏</div>
-										<div class="">￥170.00</div>
-									</div>
-								</div>
-								<div class="cart_youlike_content_title_li">
-									<div class="cart_youlike_content_title_li_img">
-										<a href="goods_details.html">
-											<img src="./img/cart/1_n_07983_280x280.jpg" />
-										</a>
-									</div>
-									<div class="cart_youlike_content_title_li_info">
-										<div class="">M.A.C</div>
-										<div class="">魅可丝缎柔雾唇膏</div>
-										<div class="">￥170.00</div>
-									</div>
-								</div>
-								<div class="cart_youlike_content_title_li">
-									<div class="cart_youlike_content_title_li_img">
-										<a href="goods_details.html">
-											<img src="./img/cart/1_n_07912_280x280.jpg" />
-										</a>
-									</div>
-									<div class="cart_youlike_content_title_li_info">
-										<div class="">M.A.C</div>
-										<div class="">魅可丝缎柔雾唇膏</div>
-										<div class="">￥170.00</div>
-									</div>
+								<div class="cart_youlike_content_title_li_info">
+									<div class="">M.A.C</div>
+									<div class="">魅可丝缎柔雾唇膏</div>
+									<div class="">￥170.00</div>
 								</div>
 							</div>
-						</div>
-						<div class="cart_youlike_control clearfix">
-							<div class="cart_youlike_control_left fl "></div>
-							<div class="cart_youlike_control_right fl "></div>
-						</div>
-					</div>
+						</li>
+						<li>
+							<div class="cart_youlike_content_title_li">
+								<div class="cart_youlike_content_title_li_img">
+									<a href="goods_details.html">
+										<img src="./img/cart/1_n_07912_280x280.jpg" />
+									</a>
+								</div>
+								<div class="cart_youlike_content_title_li_info">
+									<div class="">M.A.C</div>
+									<div class="">魅可丝缎柔雾唇膏</div>
+									<div class="">￥170.00</div>
+								</div>
+							</div>
+						</li>
+						<li>
+							<div class="cart_youlike_content_title_li">
+								<div class="cart_youlike_content_title_li_img">
+									<a href="goods_details.html">
+										<img src="./img/cart/1_n_08088_280x280.jpg" />
+									</a>
+								</div>
+								<div class="cart_youlike_content_title_li_info">
+									<div class="">M.A.C</div>
+									<div class="">魅可丝缎柔雾唇膏</div>
+									<div class="">￥170.00</div>
+								</div>
+							</div>
+						</li>
+						<li>
+							<div class="cart_youlike_content_title_li">
+								<div class="cart_youlike_content_title_li_img">
+									<a href="goods_details.html">
+										<img src="./img/cart/1_n_07912_280x280.jpg" />
+									</a>
+								</div>
+								<div class="cart_youlike_content_title_li_info">
+									<div class="">M.A.C</div>
+									<div class="">魅可丝缎柔雾唇膏</div>
+									<div class="">￥170.00</div>
+								</div>
+							</div>
+						</li>
+						<li>
+							<div class="cart_youlike_content_title_li">
+								<div class="cart_youlike_content_title_li_img">
+									<a href="goods_details.html">
+										<img src="./img/cart/1_n_08088_280x280.jpg" />
+									</a>
+								</div>
+								<div class="cart_youlike_content_title_li_info">
+									<div class="">M.A.C</div>
+									<div class="">魅可丝缎柔雾唇膏</div>
+									<div class="">￥170.00</div>
+								</div>
+							</div>
+						</li>
+						<li>
+							<div class="cart_youlike_content_title_li">
+								<div class="cart_youlike_content_title_li_img">
+									<a href="goods_details.html">
+										<img src="./img/cart/1_n_07912_280x280.jpg" />
+									</a>
+								</div>
+								<div class="cart_youlike_content_title_li_info">
+									<div class="">M.A.C</div>
+									<div class="">魅可丝缎柔雾唇膏</div>
+									<div class="">￥170.00</div>
+								</div>
+							</div>
+						</li>
+						<li>
+							<div class="cart_youlike_content_title_li">
+								<div class="cart_youlike_content_title_li_img">
+									<a href="goods_details.html">
+										<img src="./img/cart/1_n_07912_280x280.jpg" />
+									</a>
+								</div>
+								<div class="cart_youlike_content_title_li_info">
+									<div class="">M.A.C</div>
+									<div class="">魅可丝缎柔雾唇膏</div>
+									<div class="">￥170.00</div>
+								</div>
+							</div>
+						</li>
+						<li>
+							<div class="cart_youlike_content_title_li">
+								<div class="cart_youlike_content_title_li_img">
+									<a href="goods_details.html">
+										<img src="./img/cart/1_n_07912_280x280.jpg" />
+									</a>
+								</div>
+								<div class="cart_youlike_content_title_li_info">
+									<div class="">M.A.C</div>
+									<div class="">魅可丝缎柔雾唇膏</div>
+									<div class="">￥170.00</div>
+								</div>
+							</div>
+						</li>
+					</ul>
 				</div>
 			</div>
-		</div>
-	
-		
-		<div class="picScroll-left">
-			<div class="hd">
-				<a class="next"></a>
-				<ul></ul>
-				<a class="prev"></a>
-				<span class="pageState"></span>
-			</div>
-			<div class="bd">
-				<ul class="picList">
-					<li>
-						<div class="cart_youlike_content_title_li">
-							<div class="cart_youlike_content_title_li_img">
-								<a href="goods_details.html">
-									<img src="./img/cart/1_n_07912_280x280.jpg" />
-								</a>
-							</div>
-							<div class="cart_youlike_content_title_li_info">
-								<div class="">M.A.C</div>
-								<div class="">魅可丝缎柔雾唇膏</div>
-								<div class="">￥170.00</div>
-							</div>
-						</div>
-					</li>
-					<li>
-						<div class="cart_youlike_content_title_li">
-							<div class="cart_youlike_content_title_li_img">
-								<a href="goods_details.html">
-									<img src="./img/cart/1_n_07912_280x280.jpg" />
-								</a>
-							</div>
-							<div class="cart_youlike_content_title_li_info">
-								<div class="">M.A.C</div>
-								<div class="">魅可丝缎柔雾唇膏</div>
-								<div class="">￥170.00</div>
-							</div>
-						</div>
-					</li>
-					<li>
-						<div class="cart_youlike_content_title_li">
-							<div class="cart_youlike_content_title_li_img">
-								<a href="goods_details.html">
-									<img src="./img/cart/1_n_08088_280x280.jpg" />
-								</a>
-							</div>
-							<div class="cart_youlike_content_title_li_info">
-								<div class="">M.A.C</div>
-								<div class="">魅可丝缎柔雾唇膏</div>
-								<div class="">￥170.00</div>
-							</div>
-						</div>
-					</li>
-					<li>
-						<div class="cart_youlike_content_title_li">
-							<div class="cart_youlike_content_title_li_img">
-								<a href="goods_details.html">
-									<img src="./img/cart/1_n_07912_280x280.jpg" />
-								</a>
-							</div>
-							<div class="cart_youlike_content_title_li_info">
-								<div class="">M.A.C</div>
-								<div class="">魅可丝缎柔雾唇膏</div>
-								<div class="">￥170.00</div>
-							</div>
-						</div>
-					</li>
-					<li>
-						<div class="cart_youlike_content_title_li">
-							<div class="cart_youlike_content_title_li_img">
-								<a href="goods_details.html">
-									<img src="./img/cart/1_n_08088_280x280.jpg" />
-								</a>
-							</div>
-							<div class="cart_youlike_content_title_li_info">
-								<div class="">M.A.C</div>
-								<div class="">魅可丝缎柔雾唇膏</div>
-								<div class="">￥170.00</div>
-							</div>
-						</div>
-					</li>
-					<li>
-						<div class="cart_youlike_content_title_li">
-							<div class="cart_youlike_content_title_li_img">
-								<a href="goods_details.html">
-									<img src="./img/cart/1_n_07912_280x280.jpg" />
-								</a>
-							</div>
-							<div class="cart_youlike_content_title_li_info">
-								<div class="">M.A.C</div>
-								<div class="">魅可丝缎柔雾唇膏</div>
-								<div class="">￥170.00</div>
-							</div>
-						</div>
-					</li>
-					<li>
-						<div class="cart_youlike_content_title_li">
-							<div class="cart_youlike_content_title_li_img">
-								<a href="goods_details.html">
-									<img src="./img/cart/1_n_07912_280x280.jpg" />
-								</a>
-							</div>
-							<div class="cart_youlike_content_title_li_info">
-								<div class="">M.A.C</div>
-								<div class="">魅可丝缎柔雾唇膏</div>
-								<div class="">￥170.00</div>
-							</div>
-						</div>
-					</li>
-					<li>
-						<div class="cart_youlike_content_title_li">
-							<div class="cart_youlike_content_title_li_img">
-								<a href="goods_details.html">
-									<img src="./img/cart/1_n_07912_280x280.jpg" />
-								</a>
-							</div>
-							<div class="cart_youlike_content_title_li_info">
-								<div class="">M.A.C</div>
-								<div class="">魅可丝缎柔雾唇膏</div>
-								<div class="">￥170.00</div>
-							</div>
-						</div>
-					</li>
-				</ul>
-			</div>
-		</div>
-		
-	
-		
-		
-		<div class="footer_log"></div>
-		<div class="footer"></div>
-		<script src="js/jquery-3.4.1.min.js"></script>
-		<script src="lib/carhartl-jquery-cookie-92b7715/jquery.cookie.js"></script>
-		<script src="./lib/SuperSlide2.1-demo-00/jquery.SuperSlide.2.1.3.js"></script>
-		<script src="./js/swiper.animate1.0.3.min.js"></script>
-		<script type="text/javascript">
-		jQuery(".picScroll-left").slide({titCell:".hd ul",mainCell:".bd ul",autoPage:true,effect:"left",autoPlay:true,vis:5,trigger:"click"});
-		</script>
-		<script>
-			$(function() {
-				$('.heard_top').load('heard_top.html');
-				$('.footer_log').load('footer_log.html');
-				$('.footer').load('footer.html');
-			})
-		</script>
-		<script>
-			var left =  - $('.cart_youlike_content_title').width();
-			var maxleft=$('.cart_youlike_content_title_ul').width()
-			 //left宽度是按当前安全距离
-			 //maxleft是循环的总宽度
-			$('.cart_youlike_control_right').click(function() {
-				if(left>-(maxleft-$('.cart_youlike_content_title').width())){
-					left = left - $('.cart_youlike_content_title').width();
-					console.log(left)
-					$('.cart_youlike_content_title_ul').stop().animate({
-						left:left
-					})
-					$('.cart_youlike_control_left').css('background-position-y','-60px');
-				}
-				if(left==-(maxleft-$('.cart_youlike_content_title').width())){
-					$('.cart_youlike_control_right').css('background-position-y','-90px');
-				}
-				
-			})
-			$('.cart_youlike_control_left').click(function() {
-				
-				if(left<0){
-					left = left + $('.cart_youlike_content_title').width();
-					$('.cart_youlike_content_title_ul').stop().animate({
-						left:left
-					})
-				}
-				if(left==0){
-					$('.cart_youlike_control_left').css('background-position-y','0px');
-					$('.cart_youlike_control_right').css('background-position-y','-60px');
-				}
-				
-			})
-		</script>
-		<script>
-			var price;
-			var number;
-			var here;
-			$('body').on('click','.cart_body_content_item_add',function(){
-				 price = $(this).parents('.cart_body_content_item_num').siblings('.cart_body_content_item_money').children().text();
-				$(this).prev('span').text(parseInt($(this).prev('span').text()) + 1);
-				number = $(this).prev('span').text();
-				here = $(this).parents('.cart_body_content_item_num').siblings('.cart_body_content_item_subtotal').children();
-				subtotal(number, price, here)
-				allend()
-			})
-			$('body').on('click','.cart_body_content_item_cut',function(){
-				if ($(this).next('span').text() > 1) {
-					$(this).next('span').text(parseInt($(this).next('span').text()) - 1);
-					 price= $(this).parents('.cart_body_content_item_num').siblings('.cart_body_content_item_money').children().text();
-					number = $(this).next('span').text();
+
+
+
+
+			<div class="footer_log"></div>
+			<div class="footer"></div>
+			<script src="js/jquery-3.4.1.min.js"></script>
+			<script src="lib/carhartl-jquery-cookie-92b7715/jquery.cookie.js"></script>
+			<script src="./lib/SuperSlide2.1-demo-00/jquery.SuperSlide.2.1.3.js"></script>
+			<script src="./js/swiper.animate1.0.3.min.js"></script>
+			<script type="text/javascript">
+				jQuery(".picScroll-left").slide({
+					titCell: ".hd ul",
+					mainCell: ".bd ul",
+					autoPage: true,
+					effect: "left",
+					autoPlay: true,
+					vis: 5,
+					trigger: "click",
+					pnLoop: false
+				});
+			</script>
+			<script>
+				$(function() {
+					$('.heard_top').load('heard_top.html');
+					$('.footer_log').load('footer_log.html');
+					$('.footer').load('footer.html');
+				})
+			</script>
+
+			<script>
+				var price;
+				var number;
+				var here;
+				$('body').on('click', '.cart_body_content_item_add', function() {
+					price = $(this).parents('.cart_body_content_item_num').siblings('.cart_body_content_item_money').children().text();
+					$(this).prev('span').text(parseInt($(this).prev('span').text()) + 1);
+					number = $(this).prev('span').text();
 					here = $(this).parents('.cart_body_content_item_num').siblings('.cart_body_content_item_subtotal').children();
 					subtotal(number, price, here)
 					allend()
-				}
-			})
+				})
+				$('body').on('click', '.cart_body_content_item_cut', function() {
+					if ($(this).next('span').text() > 1) {
+						$(this).next('span').text(parseInt($(this).next('span').text()) - 1);
+						price = $(this).parents('.cart_body_content_item_num').siblings('.cart_body_content_item_money').children().text();
+						number = $(this).next('span').text();
+						here = $(this).parents('.cart_body_content_item_num').siblings('.cart_body_content_item_subtotal').children();
+						subtotal(number, price, here)
+						allend()
+					}
+				})
 
-			function subtotal(sum, money, where) {
-				console.log(parseFloat(money).toFixed(2));
-				where.text((parseFloat(money) * parseFloat(sum)).toFixed(2));
-			}
+				function subtotal(sum, money, where) {
+					console.log(parseFloat(money).toFixed(2));
+					where.text((parseFloat(money) * parseFloat(sum)).toFixed(2));
+				}
 
-			function allend() {
-				var allnum = 0;
-				var allmoney = 0.00;
-				$('.cart_body_content_item_sum').each(function(index) {
-					var flag=$(this).parents('.cart_body_content_item').children('.cart_body_yes');
-					if(flag.hasClass('newico')){
-						allnum = parseInt($(this).text()) + allnum;
-					}
-					
+				function allend() {
+					var allnum = 0;
+					var allmoney = 0.00;
+					$('.cart_body_content_item_sum').each(function(index) {
+						var flag = $(this).parents('.cart_body_content_item').children('.cart_body_yes');
+						if (flag.hasClass('newico')) {
+							allnum = parseInt($(this).text()) + allnum;
+						}
+
+					})
+					$('.cart_body_content_item_subtotal').children('span').each(function(index) {
+						var flag = $(this).parents('.cart_body_content_item').children('.cart_body_yes ');
+						if (flag.hasClass('newico')) {
+							allmoney = parseInt($(this).text()) + allmoney;
+						}
+
+					})
+					$('.cart_allnum').text(allnum);
+					$('.cart_allmoney').text(allmoney.toFixed(2));
+				}
+				$('body').on('click', '.cart_body_content_item_deltis', function() {
+					$(this).parents('.cart_body_content_item').remove()
+					allend()
 				})
-				$('.cart_body_content_item_subtotal').children('span').each(function(index) {
-					var flag=$(this).parents('.cart_body_content_item').children('.cart_body_yes ');
-					if(flag.hasClass('newico')){
-						allmoney = parseInt($(this).text()) + allmoney;
-					}
-					
+				$('body').on('click', '#cart_body_yesall', function() {
+					newico()
+					allend()
 				})
-				$('.cart_allnum').text(allnum);
-				$('.cart_allmoney').text(allmoney.toFixed(2));
-			}
-			$('body').on('click','.cart_body_content_item_deltis',function(){
-				$(this).parents('.cart_body_content_item').remove()
-				allend()
-			})
-			$('body').on('click','#cart_body_yesall',function(){
-				newico()
-				allend()
-			})
-			$('body').on('click','.cart_body_settlement_all',function(){
-				newico()
-				if($(this).siblings('.cart_body_yes ').hasClass('newico')){
-					$(this).removeClass('newico')
-				}
-				else{
-					$(this).addClass('newico')
-				}
-			})
-		
-			function newico(){
-				if($('.cart_body_yes').hasClass('newico')){
-					$('.cart_body_yes').removeClass('newico')
-				}
-				else{
-					$('.cart_body_yes').addClass('newico')
-				}
-				allend()
-			}
-			$('body').on('click','.cart_body_settlement_alldel',function(){
-				$('.cart_body_content').find('.cart_body_yes').each(function(){
-					if($(this).hasClass('newico')){
-						$(this).parents('.cart_body_content_item').remove()
+				$('body').on('click', '.cart_body_settlement_all', function() {
+					newico()
+					if ($(this).siblings('.cart_body_yes ').hasClass('newico')) {
+						$(this).removeClass('newico')
+					} else {
+						$(this).addClass('newico')
 					}
 				})
-				allend()
-			})
-			$('.cart_body_content').on('click','.cart_body_yes',function(){
-				if($(this).hasClass('newico')){
-					$(this).removeClass('newico')
+
+				function newico() {
+					if ($('.cart_body_yes').hasClass('newico')) {
+						$('.cart_body_yes').removeClass('newico')
+					} else {
+						$('.cart_body_yes').addClass('newico')
+					}
+					allend()
 				}
-				else{
-					$(this).addClass('newico')
-				}
-				allend()
-			})
-		
-		</script>
-		<script>
-			var oneclass =$('#one').clone();
-			$(function(){
-				if($.cookie('goods_money')){
-					console.log($.cookie('goods_money'));
-					var goods_money= $.cookie('goods_money');
-					var goods_specs= $.cookie('goods_specs');
-					var goods_numtext= $.cookie('goods_numtext');
-					var goods_name= $.cookie('goods_name');
-					var goods_img= $.cookie('goods_img');
-					var goods_text=$.cookie('goods_text');
-					oneclass.find('.cart_body_content_item_info_text').children('a').eq(0).text(goods_name);
-					oneclass.find('.cart_body_content_item_info_text').children('a').eq(1).text(goods_text);
-					oneclass.find('.cart_body_content_item_info_text').children('a').eq(2).text(goods_specs);
-					oneclass.find('.cart_body_content_item_money').children('span').text(goods_money);
-					oneclass.find('.cart_body_content_item_sum').text(goods_numtext);
-					oneclass.find('.cart_body_content_item_subtotal').children('span').text(goods_money);
-					oneclass.find('.cart_body_content_item_info').children('a').children('img').attr('src',goods_img);
-					oneclass.appendTo('.cart_body_content');
-				}
-			})
-		
-		</script>
-		<script>
-			var maxnum=0;
-			$('.cart_settlement_right_submit ').click(function(){
-				if($('.cart_allnum').text()!=0){
-					$('.cart_body_content').children('.cart_body_content_item').each(function(index){
-						if($(this).children('em').hasClass('newico')){
-							maxnum++;
-							$.cookie('goods_money'+index,$(this).find('.cart_body_content_item_money').children('span').text(),{ path: '/' })
-							$.cookie('goods_specs'+index,$(this).find('.cart_body_content_item_info_text').children('a').eq(2).text(),{ path: '/' })
-							$.cookie('goods_numtext'+index,$(this).find('.cart_body_content_item_sum').text(),{ path: '/' })
-							$.cookie('goods_name'+index,$(this).find('.cart_body_content_item_info_text').children('a').eq(0).text(),{ path: '/' })
-							$.cookie('goods_img'+index,$(this).find('.cart_body_content_item_info').children('a').children('img').attr('src'),{ path: '/' })
-							$.cookie('goods_text'+index,$(this).find('.cart_body_content_item_info_text').children('a').eq(1).text(),{ path: '/' })
+				$('body').on('click', '.cart_body_settlement_alldel', function() {
+					$('.cart_body_content').find('.cart_body_yes').each(function() {
+						if ($(this).hasClass('newico')) {
+							$(this).parents('.cart_body_content_item').remove()
 						}
 					})
-					$.cookie('cart_allnum',$('.cart_allnum').text());
-					$.cookie('cart_allmoney',$('.cart_allmoney').text());
-					$.cookie('maxnum',maxnum);
-					$(location).attr('href','cart_order .html')
-				}
-			})
-		</script>
-	
+					allend()
+				})
+				$('.cart_body_content').on('click', '.cart_body_yes', function() {
+					if ($(this).hasClass('newico')) {
+						$(this).removeClass('newico')
+					} else {
+						$(this).addClass('newico')
+					}
+					allend()
+				})
+			</script>
+			<script>
+				var oneclass = $('#one').clone();
+				$(function() {
+					if ($.cookie('goods_money')) {
+						console.log($.cookie('goods_money'));
+						var goods_money = $.cookie('goods_money');
+						var goods_specs = $.cookie('goods_specs');
+						var goods_numtext = $.cookie('goods_numtext');
+						var goods_name = $.cookie('goods_name');
+						var goods_img = $.cookie('goods_img');
+						var goods_text = $.cookie('goods_text');
+						oneclass.find('.cart_body_content_item_info_text').children('a').eq(0).text(goods_name);
+						oneclass.find('.cart_body_content_item_info_text').children('a').eq(1).text(goods_text);
+						oneclass.find('.cart_body_content_item_info_text').children('a').eq(2).text(goods_specs);
+						oneclass.find('.cart_body_content_item_money').children('span').text(goods_money);
+						oneclass.find('.cart_body_content_item_sum').text(goods_numtext);
+						oneclass.find('.cart_body_content_item_subtotal').children('span').text(goods_money);
+						oneclass.find('.cart_body_content_item_info').children('a').children('img').attr('src', goods_img);
+						oneclass.appendTo('.cart_body_content');
+					}
+				})
+			</script>
+			<script>
+				var maxnum = 0;
+				$('.cart_settlement_right_submit ').click(function() {
+					if ($('.cart_allnum').text() != 0) {
+						$('.cart_body_content').children('.cart_body_content_item').each(function(index) {
+							if ($(this).children('em').hasClass('newico')) {
+								maxnum++;
+								$.cookie('goods_money' + index, $(this).find('.cart_body_content_item_money').children('span').text(), {
+									path: '/'
+								})
+								$.cookie('goods_specs' + index, $(this).find('.cart_body_content_item_info_text').children('a').eq(2).text(), {
+									path: '/'
+								})
+								$.cookie('goods_numtext' + index, $(this).find('.cart_body_content_item_sum').text(), {
+									path: '/'
+								})
+								$.cookie('goods_name' + index, $(this).find('.cart_body_content_item_info_text').children('a').eq(0).text(), {
+									path: '/'
+								})
+								$.cookie('goods_img' + index, $(this).find('.cart_body_content_item_info').children('a').children('img').attr(
+									'src'), {
+									path: '/'
+								})
+								$.cookie('goods_text' + index, $(this).find('.cart_body_content_item_info_text').children('a').eq(1).text(), {
+									path: '/'
+								})
+							}
+						})
+						$.cookie('cart_allnum', $('.cart_allnum').text());
+						$.cookie('cart_allmoney', $('.cart_allmoney').text());
+						$.cookie('maxnum', maxnum);
+						$(location).attr('href', 'cart_order .html')
+					}
+				})
+			</script>
+
 	</body>
 </html>
