@@ -1,4 +1,5 @@
 var flag;
+var thisclass;
 //新增--显示表单
 $('#add').click(function() {
 	flag = true;
@@ -49,10 +50,11 @@ $('body').on('click', '.submit_btn', function() {
 		})
 		var newDetailed = $('form').find('.link').find('.address').val();
 		var newPhone = $('form').find('.link').find('#userphone').val();
+		console.log(newPhone);
 		if (newName != "" && newAddressInfor != "" && newDetailed != "" && newPhone != "") {
-			$('.address_link').find('.name').text(newName);
-			$('.address_link').find('.address_infor').find('.address_detailed').text(newDetailed);
-			$('.address_link').find('.address_infor').find('.phone').text(newPhone);
+			thisclass.find('.name').text(newName);
+			thisclass.find('.address_infor').find('.address_detailed').text(newDetailed);
+			thisclass.find('.phone').text(newPhone);
 			clear();
 			$('.submit_btn').parents('.addedForm_get').hide();
 		} else {
@@ -69,7 +71,8 @@ $('body').on('click', '.close', function() {
 $('body').on('click', '.edit_btn', function() {
 	console.log(1)
 	flag = false;
-	
+	thisclass=$(this).parents('.address_link');
+	console.log(thisclass)
 	$('form').find('.form_title').children('.title').text('修改地址');
 	$('.submit_btn').parents('.addedForm_get').show();
 	var username = $(this).parents('.edit').siblings('.infor').find('.name').text().trim();
