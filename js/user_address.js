@@ -86,7 +86,10 @@ $('body').on('click', '.edit_btn', function() {
 	$('form').find('.link').find('.address').val(addressDetailed);
 	var userphone = $(this).parents('.edit').siblings('.infor').find('.phone').text().trim()
 	$('form').find('.link').find('#userphone').val(userphone);
+<<<<<<< HEAD
 console.log(flag)
+=======
+>>>>>>> 16287df284bd5cb210476a385011ef45a357b036
 })
 //清空
 function clear() {

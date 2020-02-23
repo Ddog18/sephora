@@ -5,6 +5,7 @@
 		<title></title>
 		<link rel="stylesheet" type="text/css" href="css/reset.css" />
 		<link rel="stylesheet" type="text/css" href="css/public.css" />
+		<link rel="stylesheet" type="text/css" href="lib/district/css/zcity.css" />
 		<link rel="stylesheet" type="text/css" href="css/sidebar.css" />
 		<link rel="stylesheet" type="text/css" href="css/user/user_public.css" />
 		<link rel="stylesheet" type="text/css" href="css/youlike.css" />
@@ -24,17 +25,17 @@
 								<div class="clearfix link">
 									<div class="em fl"></div>
 									<p class="fl">姓名/称谓</p>
-									<input type="text" name="" id="username" value="" class="input"/>
+									<input type="text" name="" id="username" value="" class="input" />
 								</div>
 								<div class="clearfix link">
 									<div class="em fl marg"></div>
 									<p class="fl">手&nbsp;机</p>
-									<input type="text" name="" id="userphone" value="" class="input" />
+									<input type="text" name="" id="userphone" value="" class="input" disabled="disabled" />
 								</div>
 								<div class="clearfix link">
 									<div class="em fl marg"></div>
 									<p class="fl">邮&nbsp;箱</p>
-									<input type="text" name="" id="usermail" value="" class="input"/>
+									<input type="text" name="" id="usermail" value="" class="input" />
 									<div class="tip">
 										<em>*</em>
 										<span>E-mail地址默认为注册账户邮箱,修改E-mail地址同时会修改注册账户。邮箱仅能设置一次,请谨慎填写</span>
@@ -51,7 +52,7 @@
 								<div class="clearfix link">
 									<div class="em fl marg"></div>
 									<p class="fl">生&nbsp;日</p>
-									<input  id="birthday" type="text" onclick="WdatePicker({dateFmt:'yyyy年MM月dd日'})"placeholder="1993年1月1日" class="input"/>
+									<input id="birthday" type="text" onclick="WdatePicker({dateFmt:'yyyy年MM月dd日'})" placeholder="1993年1月1日" class="input" />
 									<div class="tip">
 										<em>*</em>
 										<span>生日仅能设置一次，请谨慎填写。</span>
@@ -68,45 +69,37 @@
 									<!-- 推荐头像 -->
 									<div class="recommend">
 										<ul class="clearfix">
-											<li class="fl"><img src="img/user/headportrait/ia_1100000003.png" ></li>
-											<li class="fl"><img src="img/user/headportrait/ia_1100000004.png" ></li>
-											<li class="fl"><img src="img/user/headportrait/ia_1100000005.png" ></li>
-											<li class="fl"><img src="img/user/headportrait/ia_1100000006.png" ></li>
-											<li class="fl"><img src="img/user/headportrait/ia_1100000007.png" ></li>
-											<li class="fl"><img src="img/user/headportrait/ia_1100000008.png" ></li>
-											<li class="fl"><img src="img/user/headportrait/ia_1100000009.png" ></li>
-											<li class="fl"><img src="img/user/headportrait/ia_1100000010.png" ></li>
-											<li class="fl"><img src="img/user/headportrait/ia_1100000011.png" ></li>
-											<li class="fl"><img src="img/user/headportrait/ia_1100000012.png" ></li>
-											<li class="fl"><img src="img/user/headportrait/ia_1100000013.png" ></li>
-											<li class="fl"><img src="img/user/headportrait/ia_1100000014.png" ></li>
+											<li class="fl"><img src="img/user/headportrait/ia_1100000003.png"></li>
+											<li class="fl"><img src="img/user/headportrait/ia_1100000004.png"></li>
+											<li class="fl"><img src="img/user/headportrait/ia_1100000005.png"></li>
+											<li class="fl"><img src="img/user/headportrait/ia_1100000006.png"></li>
+											<li class="fl"><img src="img/user/headportrait/ia_1100000007.png"></li>
+											<li class="fl"><img src="img/user/headportrait/ia_1100000008.png"></li>
+											<li class="fl"><img src="img/user/headportrait/ia_1100000009.png"></li>
+											<li class="fl"><img src="img/user/headportrait/ia_1100000010.png"></li>
+											<li class="fl"><img src="img/user/headportrait/ia_1100000011.png"></li>
+											<li class="fl"><img src="img/user/headportrait/ia_1100000012.png"></li>
+											<li class="fl"><img src="img/user/headportrait/ia_1100000013.png"></li>
+											<li class="fl"><img src="img/user/headportrait/ia_1100000014.png"></li>
 										</ul>
 									</div>
 									<!-- 上传头像 -->
 									<div class="upload relative">
-											<img src="img/user/headportrait/upload.jpg" >
-											<div class="mask">修改头像</div>
+										<img src="img/user/headportrait/upload.jpg">
+										<div class="mask">修改头像</div>
 									</div>
 								</div>
 								<div class="link clearfix noem_marg">
 									<p class="fl">昵&nbsp;称</p>
 									<input type="text" name="" id="" value="" class="input" />
 								</div>
-								<div class="link clearfix ">
+								<div class="link clearfix">
 									<p class="fl">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;省市区</p>
-									<select name="province">
-										<option value="" selected="">请选择</option>
-									</select>
-									<select name="city">
-										<option value="" selected="">请选择</option>
-									</select>
-									<select name="area">
-										<option value="" selected="">请选择</option>
-									</select>
+									<div class="zcityGroup" city-range="{'level_start':1,'level_end':3}"></div>
 								</div>
 								<div class="link clearfix noem_marg">
 									<p class="fl">地&nbsp;址</p>
-									<input type="text" name="" id="" value="" class="address"/>
+									<input type="text" name="" id="" value="" class="address" />
 								</div>
 								<button type="button" id="btn">保存修改</button>
 							</form>
@@ -120,6 +113,8 @@
 		<div class="foot_get"></div>
 		<script src="js/jquery-3.4.1.min.js" type="text/javascript" charset="utf-8"></script>
 		<script src="lib/My97DatePicker/WdatePicker.js" type="text/javascript" charset="utf-8"></script>
+		<script src="lib/district/js/jquery-1.9.1.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="lib/district/js/zcity.js" type="text/javascript"></script>
 		<script src="js/user_public.js" type="text/javascript" charset="utf-8"></script>
 		<script src="js/sidebar.js" type="text/javascript" charset="utf-8"></script>
 		<script src="js/user_infor.js" type="text/javascript" charset="utf-8"></script>
@@ -132,7 +127,16 @@
 				$('.youLike').load('userlike.html');
 				$('.foot_log').load('footer_log.html')
 				$('.sidebar_get').load('sidebar.html');
+				
 			});
+		</script>
+		<script type="text/javascript">
+			zcityrun('.zcityGroup');
+			var cookie = document.cookie;
+			cookie = cookie.replace(/=/g, ';');
+			var arr = cookie.split(';');
+			var phone = document.querySelector('#userphone');
+			phone.value = arr[1];
 		</script>
 	</body>
 </html>

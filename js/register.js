@@ -19,10 +19,9 @@ $('.form').Validform({
 				red.css('display', 'none');
 				redline.css('display', 'none');
 			}
-			console.log(o.obj.is("form"))
 
 		} else {
-
+			
 		}
 	},
 	beforeSubmit: function(curform) {
@@ -30,6 +29,9 @@ $('.form').Validform({
 		var userpass = $('#pass1').val();
 		document.cookie = "username=" + username;
 		document.cookie = "userpass=" + userpass;
+		$(location).attr('href', 'index.html');
+		return false;
+
 	}
 
 });

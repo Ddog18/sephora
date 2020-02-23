@@ -55,17 +55,24 @@ $('.brand').on('click', '.cancel', function() {
 
 })
 //多选 动画 点击效果
+var orderName ;
+var $orderSpan;
 $('.brand_log_box').on('click', '#mask', function() {
 	var falg = $('.brand_btn').css('display');
 	if (falg == 'block') {
 		var isMask = $(this).hasClass('mask');
 		if (isMask) {
+			var has=true;
+			var thisclass;
 			$(this).removeClass('mask');
 			$(this).children('span').hide();
 			$(this).addClass('select_on');
-			var orderName = $(this).text().trim();
-			var $orderSpan = '<span class="brand_select">' + orderName + '</span>'
+			orderName = $(this).text().trim();
+			$orderSpan = '<span class="brand_select">' + orderName + '</span>';
 			$('.brand_clear_btn').before($orderSpan);
+			
+	
+			
 			var isHas = $('.brand_btn_title').children('span').hasClass('brand_select');
 			if (isHas) {
 				$('.brand_clear_btn').show();
@@ -76,9 +83,19 @@ $('.brand_log_box').on('click', '#mask', function() {
 			$(this).removeClass('select_on');
 			$(this).children('span').show();
 			$(this).addClass('mask');
+			orderName = $(this).text().trim();
+			$('.brand_btn_title ').children('.brand_select').each(function(){
+				if(orderName==$(this).text()){
+					$(this).remove();
+					}
+			})
 		}
 	}
 });
+
+function istrue(){
+
+}
 //清空按钮
 $('.brand_btn_title').on('click', '.brand_clear_btn', function() {
 	$('.brand_select').remove();
