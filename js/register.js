@@ -29,7 +29,7 @@ $('.form').Validform({
 		var userpass = $('#pass1').val();
 		document.cookie = "username=" + username;
 		document.cookie = "userpass=" + userpass;
-		$(location).attr('href', 'index.html');
+		$(location).attr('href', 'login.html');
 		return false;
 
 	}

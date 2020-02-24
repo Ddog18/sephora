@@ -27,24 +27,18 @@ $('.form').Validform({
 	},
 
 });
-var oLgin=document.querySelector('.login');
-oLgin.onclick=function () {
-		var cookie = document.cookie;
-		cookie=cookie.replace(/=/g,';');
-		var arr=cookie.split(';');
-		console.log(arr)
-		var telText = $('#tel').val();
-		var passText=$('#pass1').val();
-		console.log(telText);
-		console.log(passText);
-		if(telText==arr[1]&&passText==arr[3]){
-			window.location.href="index.html";
-		}else{
-			var errorFont=document.querySelector('.errorFont');
-			console.log(errorFont);
-			errorFont.innerText ='账号或密码错误!'
-			errorFont.style.display='block';
-			var errorRedIcon=document.querySelector('.errorRedIcon');
-			errorRedIcon.style.display='block';
-		}
-}
+
+$('.login').click(function () {
+	var telText = $('#tel').val();
+	var passText=$('#pass1').val();
+	if(telText==$.cookie('username')&&passText==$.cookie('userpass')){
+		document.cookie="isLogin="+true;
+		window.location.href="index.html";
+	}else{
+		var errorFont=document.querySelector('.errorFont');
+		console.log(errorFont);
+		$('.errorFont').text('账号或密码错误!');
+		$('.errorFont').css('display','block');
+		$('.errorRedIcon').css('display','block')
+	}
+})
