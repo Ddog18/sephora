@@ -447,6 +447,25 @@
 					}
 				})
 			</script>
-
+			<script>
+				var thisyes;
+				$('.cart_body_content').on('click', '.cart_body_yes', function() {
+					thisyes=true;
+					allyes()
+					if(thisyes){
+						$('#cart_body_yesall').addClass('newico');
+					}else{
+						$('#cart_body_yesall').removeClass('newico');
+					}
+				})
+				function allyes(){
+					$('.cart_body_content').find('.cart_body_yes').each(function(){
+						if(!$(this).hasClass('newico')){
+							thisyes=false;
+							console.log(thisyes);
+						}
+					})
+				}
+			</script>
 	</body>
 </html>
