@@ -196,7 +196,7 @@ $('.sort_more_item').mouseenter(function() {
 	}
 
 
-	$('.sort_box').css('border-bottom-color', '#dc002f');
+	$('.sort').css('border-bottom-color', '#dc002f');
 });
 $('.sort_more_item').mouseleave(function() {
 	$('.sort_more_item').css({
@@ -217,18 +217,18 @@ $('.sort_more_item').mouseleave(function() {
 			'background-position': '0 -11px',
 		});
 	}
-	$('.sort_box').css('border-bottom-color', '#CCCCCC');
+	$('.sort').css('border-bottom-color', '#CCCCCC');
 })
 
 //点击更多选择 展示全部
 $('.sort_more_item').click(function() {
-	var height = $('.sort_box').css('height');
+	var height = $('.sort').css('height');
 	if (height == '227px') {
-		$('.sort_box').css('height', '100%');
+		$('.sort').css('height', '100%');
 		$(this).children('span').text('精简选项');
 		$(this).children('.down_icon').css('background-position', '0px -20px')
 	} else {
-		$('.sort_box').css('height', '227px');
+		$('.sort').css('height', '227px');
 		$(this).children('span').text('更多选择');
 		$(this).children('.down_icon').css('background-position', '0 -33px')
 	}
