@@ -21,10 +21,12 @@ $('body').on('click', '.submit_btn', function() {
 	if (flag == true) {
 		var username = $('form').find('.link').find('#username').val();
 		var $address = $('form').find('.link').find('.zcityGroup').find('.currentValue');
+		console.log($address)
 		var addressInfor = "";
 		$address.each(function() {
-			addressInfor = $(this).val() + " " + addressInfor;
+			addressInfor = addressInfor + " " + $(this).val();
 		})
+		console.log($address)
 		var addressDetailed = $('form').find('.link').find('.address').val();
 		var userphone = $('form').find('.link').find('#userphone').val();
 		var telephone = $('form').find('.link').find('#telephone').val();
@@ -46,15 +48,17 @@ $('body').on('click', '.submit_btn', function() {
 		var $newAddress = $('form').find('.link').find('.zcityGroup').find('.currentValue');
 		var newAddressInfor = "";
 		$newAddress.each(function() {
-			newAddressInfor = $(this).val() + " " + newAddressInfor;
+			newAddressInfor = newAddressInfor + " " + $(this).val();
 		})
+		
 		var newDetailed = $('form').find('.link').find('.address').val();
 		var newPhone = $('form').find('.link').find('#userphone').val();
 		console.log(newPhone);
 		if (newName != "" && newAddressInfor != "" && newDetailed != "" && newPhone != "") {
 			thisclass.find('.name').text(newName);
-			thisclass.find('.address_infor').find('.address_detailed').text(newDetailed);
 			thisclass.find('.phone').text(newPhone);
+			thisclass.find('.address_infor').children('.address_detailed').text(newDetailed);
+			thisclass.find('.address_infor').children('.infor').text(newAddressInfor);
 			clear();
 			$('.submit_btn').parents('.addedForm_get').hide();
 		} else {
