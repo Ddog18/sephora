@@ -17,31 +17,40 @@ $('body').on('click', '.close_X', function() {
 })
 //保存按钮
 $('body').on('click', '.submit_btn', function() {
-	console.log(flag);
+	var reg=/^[1]([3-9])[0-9]{9}$/;
+	// console.log(flag);
 	if (flag == true) {
 		var username = $('form').find('.link').find('#username').val();
 		var $address = $('form').find('.link').find('.zcityGroup').find('.currentValue');
-		console.log($address)
+		// console.log($address)
 		var addressInfor = "";
 		$address.each(function() {
 			addressInfor = addressInfor + " " + $(this).val();
 		})
-		console.log($address)
+		// console.log($address)
 		var addressDetailed = $('form').find('.link').find('.address').val();
 		var userphone = $('form').find('.link').find('#userphone').val();
 		var telephone = $('form').find('.link').find('#telephone').val();
 		var mail = $('form').find('.link').find('#postalCode').val();
 		//var isCheck=$('form').find('.default').$("input[type='checkbox']").is(':checked');
-		if (username != "" && addressInfor != "" && addressDetailed != "") {
-			var $div = '<div class="address_link clearfix"><div class="infor fl clearfix"><div class="name fl"><span>' +
-				username + '</span></div><div class="address_infor fl"><span class="infor">' + addressInfor +
-				'</span><span class="address_detailed">' + addressDetailed + '</span></div><div class="phone fl">' + userphone +
-				'</div></div><div class="edit fr"><div class="addressIcon close"></div><p class="edit_btn">编辑地址</p></div></div>'
-			$('.addressList').append($div);
-			clear();
-			$('.submit_btn').parents('.addedForm_get').hide();
+		var isPhone=reg.test(userphone);
+	
+		if (username != "" && addressInfor != "" && addressDetailed != ""&&userphone!="") {
+			if(isPhone==true){
+				var $div = '<div class="address_link clearfix"><div class="infor fl clearfix"><div class="name fl"><span>' +
+					username + '</span></div><div class="address_infor fl"><span class="infor">' + addressInfor +
+					'</span><span class="address_detailed">' + addressDetailed + '</span></div><div class="phone fl">' + userphone +
+					'</div></div><div class="edit fr"><div class="addressIcon close"></div><p class="edit_btn">编辑地址</p></div></div>'
+				$('.addressList').append($div);
+				clear();
+				$('.submit_btn').parents('.addedForm_get').hide();
+			}else{
+				alert('请输入正确的手机号!');
+				
+			}
 		} else {
 			alert('必填项不能为空,请检查');
+			return;
 		}
 	} else {
 		var newName = $('form').find('.link').find('#username').val();
@@ -53,14 +62,20 @@ $('body').on('click', '.submit_btn', function() {
 		
 		var newDetailed = $('form').find('.link').find('.address').val();
 		var newPhone = $('form').find('.link').find('#userphone').val();
-		console.log(newPhone);
+		// console.log(newPhone);
+		var isNewphone=reg.test(newPhone);
 		if (newName != "" && newAddressInfor != "" && newDetailed != "" && newPhone != "") {
-			thisclass.find('.name').text(newName);
-			thisclass.find('.phone').text(newPhone);
-			thisclass.find('.address_infor').children('.address_detailed').text(newDetailed);
-			thisclass.find('.address_infor').children('.infor').text(newAddressInfor);
-			clear();
-			$('.submit_btn').parents('.addedForm_get').hide();
+			if(isNewphone==true){
+				thisclass.find('.name').text(newName);
+				thisclass.find('.phone').text(newPhone);
+				thisclass.find('.address_infor').children('.address_detailed').text(newDetailed);
+				thisclass.find('.address_infor').children('.infor').text(newAddressInfor);
+				clear();
+				$('.submit_btn').parents('.addedForm_get').hide();
+			}else{
+				alert('请输入正确的手机号!');
+				
+			}
 		} else {
 			alert('必填项不能为空,请检查');
 		}
