@@ -6,13 +6,13 @@
 	</head>
 	<link rel="stylesheet" type="text/css" href="./css/reset.css" />
 	<link rel="stylesheet" type="text/css" href="css/public.css" />
-	<link rel="stylesheet" type="text/css" href="css/cart.css"/>
-	<link rel="stylesheet" type="text/css" href="css/cart_order.css"/>
-	<link rel="stylesheet" type="text/css" href="css/order_list_public.css"/>
-	<link rel="stylesheet" type="text/css" href="css/order_gift.css"/>
-	<link rel="stylesheet" type="text/css" href="css/user/address_iframe.css"/>
+	<link rel="stylesheet" type="text/css" href="css/cart.css" />
+	<link rel="stylesheet" type="text/css" href="css/cart_order.css" />
+	<link rel="stylesheet" type="text/css" href="css/order_list_public.css" />
+	<link rel="stylesheet" type="text/css" href="css/order_gift.css" />
+	<link rel="stylesheet" type="text/css" href="css/user/address_iframe.css" />
 	<link rel="stylesheet" type="text/css" href="lib/district/css/zcity.css" />
-	
+
 	<style>
 		.cart_top_step_wrap,.cart_top_step_line{
 			z-index: 0;
@@ -28,7 +28,14 @@
 		}
 		.edit_add{
 			display: none;
-			background-color: rgba(0,0,0,0.6);
+			width: 100%;
+			height: 100%;
+			position: fixed;
+			top: 0;
+			bottom: 0;
+			left: 0;
+			right: 0;
+			background-color: rgba(0,0,0,0.7);
 		}
 		.cart_address_content_text{
 			border: 2px solid white;
@@ -44,7 +51,7 @@
 			<div class="container clearfix">
 				<div class="cart_top_log fl">
 					<a href="index.html">
-						<img src="img/cart/search_logo.png"/>
+						<img src="img/cart/search_logo.png" />
 					</a>
 				</div>
 				<div class="cart_top_step relative fr clearfix">
@@ -84,7 +91,7 @@
 			<div class="container">
 				<div class="cart_address_content relative">
 					<div class="cart_address_content_title">支付方式</div>
-					<div class="cart_address_content_text clearfix" style="border: 0;height: auto; padding: 20px ;" >
+					<div class="cart_address_content_text clearfix" style="border: 0;height: auto; padding: 20px ;">
 						<span class="cart_pay">
 							<span class="cart_pay_photo_a cart_pay_ico"></span>
 							<span class="cart_pay_text">在线支付</span>
@@ -101,18 +108,18 @@
 			<div class="container">
 				<div class="cart_address_content relative">
 					<div class="cart_address_content_title">配送信息</div>
-					<div class="cart_address_content_text " style="border: 0;height: auto; padding: 20px ;" >
+					<div class="cart_address_content_text " style="border: 0;height: auto; padding: 20px ;">
 						<label class="cart_address_content_news">
-							<input type="radio" value="on" name="news_radio" style="margin-right: 10px;"/>
+							<input type="radio" value="on" name="news_radio" style="margin-right: 10px;" />
 							工作日、双休与假日均可送货
 						</label>
 						<label class="cart_address_content_news">
-							<input type="radio" value="on" name="news_radio" style="margin-right: 10px;"/>
-							只双休日、假日送货  (工作日不送)
+							<input type="radio" value="on" name="news_radio" style="margin-right: 10px;" />
+							只双休日、假日送货 (工作日不送)
 						</label>
 						<label class="cart_address_content_news">
-							<input type="radio" value="on" name="news_radio" style="margin-right: 10px;"/>
-							只工作日送货  (双休日、假日不用送) (注: 写字楼/商用地址客户请选择)
+							<input type="radio" value="on" name="news_radio" style="margin-right: 10px;" />
+							只工作日送货 (双休日、假日不用送) (注: 写字楼/商用地址客户请选择)
 						</label>
 					</div>
 				</div>
@@ -122,7 +129,7 @@
 			<div class="container">
 				<div class="cart_address_content relative">
 					<div class="cart_address_content_title">已购清单</div>
-					<div class="cart_address_content_text " style="border: 0;height: auto; padding: 20px ;" >
+					<div class="cart_address_content_text " style="border: 0;height: auto; padding: 20px ;">
 						<div class="address_list">
 							<ul class="goods_list_infor_title clearfix">
 								<li class="fl">商品信息</li>
@@ -146,7 +153,7 @@
 								<div class="subtotal fl">
 									<p>310.00</p>
 								</div>
-								
+
 							</div>
 						</div>
 					</div>
@@ -156,7 +163,7 @@
 		<div class="cart_address">
 			<div class="container">
 				<div class="cart_address_content relative">
-					<div class="cart_address_content_text"style="height: auto; border: 0;padding: 19px ;">
+					<div class="cart_address_content_text" style="height: auto; border: 0;padding: 19px ;">
 						<div class="order_detail_result clearfix" style="margin: 0;">
 							<div class="fr list">
 								<div class="link ">
@@ -185,15 +192,14 @@
 			<div class="container">
 				<div class="cart_body_settlement clearfix">
 					<div class="cart_body_settlement_left fl relative">
-						<a href="cart.html" style="margin-left: 50px;"><返回购物车</a>
-					</div>
-					<div class="cart_body_settlement_right fr clearfix">
-						<div class="cart_settlement_right_text fl">
-								<span>已选 <em class="cart_allnum">0</em> 件</span>
-								<span>合计</span>
-								<span>￥<em class="cart_allmoney">0.00</em></span>
-						</div>
-						<div class="cart_settlement_right_submit fl"><a href="index.html" style="color: white;">立即结算</a></div>
+						<a href="cart.html" style="margin-left: 50px;">
+							<返回购物车</a> </div> <div class="cart_body_settlement_right fr clearfix">
+								<div class="cart_settlement_right_text fl">
+									<span>已选 <em class="cart_allnum">0</em> 件</span>
+									<span>合计</span>
+									<span>￥<em class="cart_allmoney">0.00</em></span>
+								</div>
+								<div class="cart_settlement_right_submit fl"><a href="index.html" style="color: white;">立即结算</a></div>
 					</div>
 				</div>
 			</div>
@@ -217,99 +223,99 @@
 		</script>
 		<script>
 			var flag;
-			var clone =$('#name_content').clone();
+			var clone = $('#name_content').clone();
 			var find;
 			var allcity
-			$('body').on('click','#edit',function (){
-				flag=false;
+			$('body').on('click', '#edit', function() {
+				flag = false;
 				zcityrun('.zcityGroup');
 				$('.edit_add').show();
-				find=$(this).parents('.cart_address_content_text');
+				find = $(this).parents('.cart_address_content_text');
 				$('#username').val($(this).parents('.cart_address_content_text').find('.cart_address_content_text_num').text())
 				$('#userphone').val($(this).parents('.cart_address_content_text').find('.cart_address_content_text_phone').text())
 			})
-			$('body').on('click','#del',function () {
+			$('body').on('click', '#del', function() {
 				$(this).parents('#name_content').remove();
 			})
-			$('body').on('click','.close_X',function () {
+			$('body').on('click', '.close_X', function() {
 				$(this).parents('.edit_add').hide()
 			})
-			$('body').on('click','.submit_btn',function () {
-				var city='';
-				if(flag){
+			$('body').on('click', '.submit_btn', function() {
+				var city = '';
+				if (flag) {
 					clone.find('.cart_address_content_text_num').text($('#username').val());
 					clone.find('.cart_address_content_text_phone').text($('#userphone').val());
-					allcity=$('.currentValue').each(function(){
-						city =city+$(this).val()+' ';
+					allcity = $('.currentValue').each(function() {
+						city = city + $(this).val() + ' ';
 					});
 					clone.find('.cart_address_content_text_address').text(city);
-					clone =$('#name_content').clone();
+					clone = $('#name_content').clone();
 					clone.appendTo('#clone_to');
 					$(this).parents('.edit_add').hide()
-				}else{
+				} else {
 					find.find('.cart_address_content_text_num').text($('#username').val())
 					find.find('.cart_address_content_text_phone').text($('#userphone').val())
-					allcity=$('.currentValue').each(function(){
+					allcity = $('.currentValue').each(function() {
 						console.log(city)
-						city =city+$(this).val()+' ';
+						city = city + $(this).val() + ' ';
 					});
 					console.log(city)
 					find.find('.cart_address_content_text_address').text(city)
 					$(this).parents('.edit_add').hide()
 				}
-				
+
 			})
-			$('body').on('click','.close_btn',function () {
+			$('body').on('click', '.close_btn', function() {
 				$(this).parents('.edit_add').hide()
 			})
-			$('.cart_address_content_add').click(function(){
-				flag=true;
+			$('.cart_address_content_add').click(function() {
+				flag = true;
 				zcityrun('.zcityGroup');
 				$('.edit_add').show();
 			})
-			$('body').on('click','#name_content',function () {
-				if($(this).css('border')=='2px solid rgb(255, 255, 255)'){
-					$(this).css('border','2px solid red');
-				}else{
-					$(this).css('border','2px solid white');
+			$('body').on('click', '#name_content', function() {
+				if ($(this).css('border') == '2px solid rgb(255, 255, 255)') {
+					$(this).css('border', '2px solid red');
+				} else {
+					$(this).css('border', '2px solid white');
 				}
-				$(this).siblings('.cart_address_content_text ').each(function(){
-					$(this).css('border','2px solid white');
+				$(this).siblings('.cart_address_content_text ').each(function() {
+					$(this).css('border', '2px solid white');
 				})
 			})
 		</script>
 		<script>
-			$(function(){
-				var maxnum =$.cookie('maxnum');
-				for(var i=1;i<=maxnum;i++ ){
+			$(function() {
+				var maxnum = $.cookie('maxnum');
+				for (var i = 1; i <= maxnum; i++) {
 					console.log()
-					var goods_money= $.cookie('goods_money'+i);
-					var goods_specs= $.cookie('goods_specs'+i);
-					var goods_numtext= $.cookie('goods_numtext'+i);
-					var goods_name= $.cookie('goods_name'+i);
-					var goods_img= $.cookie('goods_img'+i);
-					var goods_text=$.cookie('goods_text'+i);
-					var oneclass =$('#theone').clone();
+					var goods_money = $.cookie('goods_money' + i);
+					var goods_specs = $.cookie('goods_specs' + i);
+					var goods_numtext = $.cookie('goods_numtext' + i);
+					var goods_name = $.cookie('goods_name' + i);
+					var goods_img = $.cookie('goods_img' + i);
+					var goods_text = $.cookie('goods_text' + i);
+					var oneclass = $('#theone').clone();
 					oneclass.find('subname').text(goods_text);
 					oneclass.find('goods_name').text(goods_name);
 					oneclass.find('spec').text(goods_specs);
 					oneclass.find('.goods_price').text(goods_money);
 					oneclass.find('.goods_num').text(goods_numtext);
 					oneclass.find('.subtotal').children('p').text(goods_money);
-					oneclass.find('.goods_img').children('img').attr('src',goods_img);
+					oneclass.find('.goods_img').children('img').attr('src', goods_img);
 					oneclass.appendTo('#cart_order');
 				}
-				var allnum=$.cookie('cart_allnum');
-				var allmoney=$.cookie('cart_allmoney');
+				var allnum = $.cookie('cart_allnum');
+				var allmoney = $.cookie('cart_allmoney');
 				$('#allmoney').text(allmoney)
 				$('.cart_allnum').text(allnum);
 				$('.cart_allmoney').text(allmoney);
 			})
 		</script>
 		<script>
-			$('.cart_pay').click(function(){
-				$(this).css('border','1px solid red')
-				$(this).siblings('span').css('border','1px solid #bdbdbd')
+			$('.cart_pay').click(function() {
+				$(this).css('border', '1px solid red')
+				$(this).siblings('span').css('border', '1px solid #bdbdbd')
 			})
 		</script>
 	</body>
