@@ -218,17 +218,22 @@
 				$('.head').load('head.html');
 				$('.foot_log').load('footer_log.html');
 				$('.foot').load('footer.html');
-				$('.edit_add').load('address_iframe.html')
+				$('.edit_add').load('address_iframe.html');
 			})
 		</script>
 		<script>
+			window.onload=function(){
+				zcityrun('.zcityGroup');
+				console.log(2);
+			}
 			var flag;
 			var clone = $('#name_content').clone();
 			var find;
-			var allcity
+			var allcity;
+			
 			$('body').on('click', '#edit', function() {
 				flag = false;
-				zcityrun('.zcityGroup');
+				
 				$('.edit_add').show();
 				find = $(this).parents('.cart_address_content_text');
 				$('#username').val($(this).parents('.cart_address_content_text').find('.cart_address_content_text_num').text())
@@ -240,39 +245,54 @@
 			$('body').on('click', '.close_X', function() {
 				$(this).parents('.edit_add').hide()
 			})
+			$('.cart_address_content_add').click(function() {
+				console.log(flag)
+				flag = true;
+				//zcityrun('.zcityGroup');
+				$('.edit_add').show();
+				
+			})
 			$('body').on('click', '.submit_btn', function() {
+				var text=true;
 				var city = '';
-				if (flag) {
-					clone.find('.cart_address_content_text_num').text($('#username').val());
-					clone.find('.cart_address_content_text_phone').text($('#userphone').val());
-					allcity = $('.currentValue').each(function() {
-						city = city + $(this).val() + ' ';
-					});
-					clone.find('.cart_address_content_text_address').text(city);
-					clone = $('#name_content').clone();
-					clone.appendTo('#clone_to');
-					$(this).parents('.edit_add').hide()
-				} else {
-					find.find('.cart_address_content_text_num').text($('#username').val())
-					find.find('.cart_address_content_text_phone').text($('#userphone').val())
-					allcity = $('.currentValue').each(function() {
-						console.log(city)
-						city = city + $(this).val() + ' ';
-					});
-					console.log(city)
-					find.find('.cart_address_content_text_address').text(city)
-					$(this).parents('.edit_add').hide()
+				var username=$('#username').val();
+				var userphone=$('#userphone').val();
+				$('.currentValue').each(function() {
+					city = city + $(this).val() + ' ';
+					if($(this).val()==''){
+						text=false;
+					}
+				});
+				var address=$('.address').val();
+				var regu = /^[ ]+$/;
+				console.log()
+				if(username!=''&&!regu.test(username)&&userphone!=''&&city!=''&&!regu.test(city)&&address!=''&&!regu.test(address)&&text){
+					if (flag) {
+						clone.find('.cart_address_content_text_num').text(username);
+						clone.find('.cart_address_content_text_phone').text(userphone);
+						clone.find('.cart_address_content_text_address').text(city);
+						clone.appendTo('#clone_to');
+						clone = $('#name_content').clone();
+						$(this).parents('.edit_add').hide()
+						$('#username').val('');
+						$('#userphone').val('');
+						$('.address').val('');
+					} else {
+						find.find('.cart_address_content_text_num').text(username)
+						find.find('.cart_address_content_text_phone').text(userphone)
+						find.find('.cart_address_content_text_address').text(city)
+						$(this).parents('.edit_add').hide()
+					}
+				}else{
+					alert('必填项不能为空或空格');
 				}
+				
 
 			})
 			$('body').on('click', '.close_btn', function() {
 				$(this).parents('.edit_add').hide()
 			})
-			$('.cart_address_content_add').click(function() {
-				flag = true;
-				zcityrun('.zcityGroup');
-				$('.edit_add').show();
-			})
+		
 			$('body').on('click', '#name_content', function() {
 				if ($(this).css('border') == '2px solid rgb(255, 255, 255)') {
 					$(this).css('border', '2px solid red');
@@ -288,7 +308,6 @@
 			$(function() {
 				var maxnum = $.cookie('maxnum');
 				for (var i = 1; i <= maxnum; i++) {
-					console.log()
 					var goods_money = $.cookie('goods_money' + i);
 					var goods_specs = $.cookie('goods_specs' + i);
 					var goods_numtext = $.cookie('goods_numtext' + i);
